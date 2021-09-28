@@ -25,7 +25,7 @@ $densidade: (
 );
 
 // Box Shadow
-$box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+$box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 
 // Mixin de display flex padrão
 @mixin display-flex($direction, $justify, $align) {
@@ -64,17 +64,32 @@ p {
 }
 
 input:focus {
-    border: 2px solid $alaranjado;
+    border: 0.125rem solid $alaranjado;
 }
 
 body {
+    width: 100vw;
     @include display-flex(column, flex-start, flex-start);
 
     font-family: 'Roboto', sans-serif;
 }
 
+body::-webkit-scrollbar {
+    width: 0.65vw;
+}
+  
+body::-webkit-scrollbar-track {
+    background: $escura;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: $alaranjado;
+    border-radius: 1.25rem;
+    border: 0.188rem solid $alaranjado;
+}
+
 header {
-    @include box(170px, 100%);
+    @include box(20.25vh, 100vw);
 
     @include display-flex(column, space-between, center);
     
@@ -83,7 +98,7 @@ header {
 }
 
 #container-midia {
-    @include box(40px, 1440px);
+    @include box(4.77vh, 1440px);
 
     @include display-flex(row, space-between, center);
 }
@@ -91,25 +106,28 @@ header {
 #contatos {
     @include box(inherit, 400px);
 
+
     @include display-flex(row, space-between, flex-start);
+    
+    .midia {
+        @include box(1.25rem, 1.25rem);
+            
+        color: $alaranjado;
+    }
 
     #telefone {
-        @include box(inherit, 149px);
+        @include box(inherit, 151px);
 
         @include display-flex(row, space-between, center);
 
-        img {
-            @include box(19px, 19px);
-        }
-
         span {
             font-size: map-get($size, span);
-            color: $alaranjado;
+            color: $neutra;
             font-weight: map-get($densidade, extraBold);
             cursor: pointer;
 
             &:hover {
-                text-decoration: underline;
+                filter: brightness(80%);
             }
         }
     }
@@ -119,49 +137,54 @@ header {
 
         @include display-flex(row, space-between, center);
 
-        img {
-            @include box(19px, 19px);
-        }
-
         span {
             font-size: map-get($size, span);
-            color: $alaranjado;
+            color: $neutra;
             font-weight: map-get($densidade, extraBold);
             cursor: default;
 
             &:hover {
-                text-decoration: underline;
+                filter: brightness(80%);
             }
         }
     }
 }
 
 #redes-sociais {
-    @include box(inherit, 130px);
+    @include box(inherit, 133px);
 
     @include display-flex(row, space-between, center);
 
-    img {
-        @include box(29px, 29px);
+    .img {
+        @include box(1.75rem, 1.75rem);
         cursor: pointer;
+
+        &:hover {
+            filter: brightness(80%);
+        }
     }
 }
 
 .container {
-    @include box(inherit, 1350px);
+    @include box(inherit, 85vw);
 
     @include display-flex(row, space-between, center);
 }
 
 #logo {
-    @include box(100px, 350px);
+    min-height: 50px;
+    min-width: 50px;
+    width: auto;
+    height: auto;
 
     @include display-flex(row, flex-start, center);
 
     img {
-        @include box(90px, 95px);
+        @include box(6.875rem, 7.188rem);
+        
         border-radius: 50%;
         transition: 0.5s;
+        box-shadow: $box-shadow;
         cursor: pointer;
 
         &:hover {
@@ -175,12 +198,14 @@ header {
         font-size: map-get($size, titulo);
         color: $neutra;
         letter-spacing: 1px;
-        margin-left: 8px;
+        margin-left: 0.5rem;
     }
 }
 
 #navigation {
-    @include box(110px, 580px);
+    @include box(130px, 580px);
+
+    @include display-flex(row, flex-start, flex-start);
 
     ul {
         @include box(inherit, inherit);
@@ -196,7 +221,7 @@ header {
                 color: $neutra;
 
                 &:hover {
-                    color: rgb(187, 187, 187);
+                    filter: brightness(80%);
                 }
             }
         }
@@ -207,16 +232,16 @@ header {
     @include box(80vw, 100%);
     
     max-width: 100vw;
-    max-height: 960px;
+    max-height: 937px;
     position: absolute;
 
-    img{
+    img {
         @include box(100%, 100%);
         opacity: 0;
         position: absolute;
         object-fit: cover;
         transition: opacity 900ms;
-        filter: brightness(80%);
+        filter: brightness(60%);
     }
 }
 

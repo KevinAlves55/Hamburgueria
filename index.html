@@ -9,18 +9,13 @@
     <meta name="description" content="Site para uma hamburgueria do tipo E-commerce.">
     <meta name="author" content="Kevin Alves">
 
-    <!-- Link para CSS/SASS -->
-    <link rel="stylesheet" href="assets/sass/estilo.css">
-
-    <!-- Links para arquivos de JavaScript -->
-    <script src="assets/js/jquery.js" defer></script>
-    <script src="assets/js/slide.js" defer></script>
-    <script src="assets/js/header.js" defer></script>
-    <script src="assets/js/modal.js" defer></script>
-    <script src="assets/js/carrousel.js" defer></script>
-
     <!-- Link para definição do favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
+
+    <!-- Links para icons -->
+    <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <!-- Links para fontes de letra -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,6 +25,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 
+    <!-- Links para arquivos de JavaScript -->
+    <script src="assets/js/jquery.js" defer></script>
+    <script src="assets/js/slide.js" defer></script>
+    <script src="assets/js/header.js" defer></script>
+    <script src="assets/js/modal.js" defer></script>
+    <script src="assets/js/carrousel.js" defer></script>
+
+    <!-- Link para CSS/SASS -->
+    <link rel="stylesheet" href="assets/sass/estilo.css">
+    
     <!-- Título da página -->
     <title>BurguerGods</title>
 </head>
@@ -40,24 +45,26 @@
         <div id="container-midia">
             <div id="contatos">
                 <div id="telefone">
-                    <img src="assets/img/icon-telefone.png" alt="Telefone">
+                    <ion-icon name="call-outline" class="midia"></ion-icon>
+                    <!-- <img src="assets/img/icon-telefone.png" alt="Telefone"> -->
                     <span>+55 11 3333-3333</span>
                 </div>
                 <div id="hora">
-                    <img src="assets/img/icon-relogio.png" alt="Relógio">
+                    <ion-icon name="time-outline" class="midia"></ion-icon>
+                    <!-- <img src="assets/img/icon-relogio.png" alt="Relógio"> -->
                     <span>Seg à Sex Das 09h às 18h</span>
                 </div>
             </div>
             <div id="redes-sociais">
-                <img src="assets/img/facebook.png" alt="facebook">
-                <img src="assets/img/insta.png" alt="Instagram">
-                <img src="assets/img/youtube.png" alt="Youtube">
+                <box-icon name='facebook' type='logo' color='#ffffff' class="img"></box-icon>
+                <box-icon name='instagram' type='logo' color='#ffffff' class="img"></box-icon>
+                <box-icon name='whatsapp' type='logo' color='#ffffff' class="img"></box-icon>
             </div>
         </div>
 
         <div class="container">
             <div id="logo">
-                <img src="assets/img/logo.png" alt="Logo">
+                <img src="assets/img/logo.jpg" alt="Logo">
                 <h1>Burguer<span id="destaque">Gods</span></h1>
             </div>
             <nav id="navigation">
@@ -72,13 +79,27 @@
         </div>
     </header>
 
-    <div id="slider">
+    <figure id="slider">
         <img class="selected" src="assets/img/banner1.jpg" alt="Banner-1">
         <img src="assets/img/banner2.jpg" alt="Banner-2">
         <img src="assets/img/banner3.jpg" alt="Banner-3">
         <img src="assets/img/banner4.jpg" alt="Banner-4">
         <img src="assets/img/banner5.jpg" alt="Banner-5">
-    </div>
+    </figure>
+
+    <main>
+        <section id="filtragem">
+            <div class="container">
+
+            </div>
+        </section>
+        
+        <section id="produtos">
+            <div class="container">
+
+            </div>
+        </section>
+    </main>
 
 </body>
 
