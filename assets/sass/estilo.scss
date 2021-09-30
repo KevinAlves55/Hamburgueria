@@ -1,127 +1,37 @@
-// Paleta de cores
-$alaranjado: #C7491E;
-$amarelado: #e6bb1f;
-$neutra: #FFF;
-$escura: #161616;
-
-// Tamanho da letra
-$size: (
-    
-    "titulo": 2.4rem,
-    "subTitulo": 1.9rem,
-    "textos": 1.045rem,
-    "rodape": 1.5rem,
-    "span": 0.9rem
-
-);
-
-// Densidade da letra
-$densidade: (
-    
-    "regular": 300,
-    "medium": 400,
-    "bold": 500,
-    "extraBold": bold,
-);
-
-// Box Shadow
-$box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
-
-// Mixin de display flex padrão
-@mixin display-flex($direction, $justify, $align) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
-}
-
-// Mixin de height e width
-@mixin box($altura, $largura) {
-    height: $altura;
-    width: $largura;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    outline: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: normal;
-}
-
-p {
-    line-height: 1.5;
-}
-
-input:focus {
-    border: 0.125rem solid $alaranjado;
-}
-
-body {
-    width: 100vw;
-    @include display-flex(column, flex-start, flex-start);
-
-    font-family: 'Roboto', sans-serif;
-}
-
-body::-webkit-scrollbar {
-    width: 0.65vw;
-}
-  
-body::-webkit-scrollbar-track {
-    background: $escura;
-}
-  
-body::-webkit-scrollbar-thumb {
-    background-color: $alaranjado;
-    border-radius: 1.25rem;
-    border: 0.188rem solid $alaranjado;
-}
+@import '../sass/variables';
+@import '../sass/mixin';
+@import '../sass/resert';
+@import '../sass/bodyDefault';
+@import '../sass/slide';
 
 header {
-    @include box(20.25vh, 100vw);
-
+    @include box(170px, 100vw);
     @include display-flex(column, space-between, center);
-    
-    z-index: 1;
+    z-index: 2;
     position: fixed;
 }
 
 #container-midia {
-    @include box(4.77vh, 1440px);
-
+    @include box(40px, 88vw);
     @include display-flex(row, space-between, center);
 }
 
 #contatos {
     @include box(inherit, 400px);
-
-
     @include display-flex(row, space-between, flex-start);
-    
+
     .midia {
         @include box(1.25rem, 1.25rem);
-            
         color: $alaranjado;
     }
 
     #telefone {
-        @include box(inherit, 151px);
 
+        @include box(inherit, 151px);
         @include display-flex(row, space-between, center);
 
         span {
-            font-size: map-get($size, span);
+            font-size: map-get($size, grau5);
             color: $neutra;
             font-weight: map-get($densidade, extraBold);
             cursor: pointer;
@@ -134,11 +44,10 @@ header {
 
     #hora {
         @include box(inherit, 199px);
-
         @include display-flex(row, space-between, center);
 
         span {
-            font-size: map-get($size, span);
+            font-size: map-get($size, grau5);
             color: $neutra;
             font-weight: map-get($densidade, extraBold);
             cursor: default;
@@ -152,12 +61,12 @@ header {
 
 #redes-sociais {
     @include box(inherit, 133px);
-
     @include display-flex(row, space-between, center);
 
-    .img {
-        @include box(1.75rem, 1.75rem);
+    img {
+        @include box(1.8rem, 1.8rem);
         cursor: pointer;
+        color: $neutra;
 
         &:hover {
             filter: brightness(80%);
@@ -166,8 +75,12 @@ header {
 }
 
 .container {
-    @include box(inherit, 85vw);
+    width: 85vw;
+    padding: 0;
+}
 
+.itens-header {
+    height: 130px;
     @include display-flex(row, space-between, center);
 }
 
@@ -176,16 +89,15 @@ header {
     min-width: 50px;
     width: auto;
     height: auto;
-
     @include display-flex(row, flex-start, center);
 
     img {
         @include box(6.875rem, 7.188rem);
-        
         border-radius: 50%;
         transition: 0.5s;
         box-shadow: $box-shadow;
         cursor: pointer;
+        filter: brightness(110%);
 
         &:hover {
             transform: scale(1.1);
@@ -203,18 +115,17 @@ header {
 }
 
 #navigation {
-    @include box(130px, 580px);
-
+    @include box(130px, 550px);
     @include display-flex(row, flex-start, flex-start);
 
     ul {
         @include box(inherit, inherit);
-        
+
         @include display-flex(row, space-between, center);
 
         li {
             @include display-flex(row, space-between, center);
-            font-size: map-get($size, textos);
+            font-size: map-get($size, grau3);
             text-transform: uppercase;
 
             a {
@@ -228,23 +139,68 @@ header {
     }
 }
 
-#slider {
-    @include box(80vw, 100%);
-    
-    max-width: 100vw;
-    max-height: 937px;
-    position: absolute;
-
-    img {
-        @include box(100%, 100%);
-        opacity: 0;
-        position: absolute;
-        object-fit: cover;
-        transition: opacity 900ms;
-        filter: brightness(60%);
-    }
+main {
+    @include box(1000px, 100%);
+    @include display-flex(column, flex-start, center);
+    background-color: #161616;
 }
 
-#slider img.selected { 
-    opacity: 1;
+.itens-main {
+    height: inherit;
+    @include display-flex(column, space-between, flex-start);
+}
+
+#filtragem {
+    @include box(100px, inherit);
+    @include display-flex(row, space-between, center);
+    background-color: #161616;
+
+    img {
+        @include box(3.2rem, 3.2rem);
+        cursor: pointer;
+    }
+
+    #busca {
+        @include box(inherit, 400px);
+        @include display-flex(row, space-between, center);
+        margin-right: 15px;
+
+        #pesquisa {
+            @include box(inherit, 285px);
+            @include display-flex(row, space-between, center);
+
+            label {
+                color: $neutra;
+                font-weight: map-get($densidade, medium);
+                font-size: map-get($size, grau5);
+                margin-right: 1rem;
+            }
+
+            #serarch {
+                @include box(30px, 250px);
+                padding: 8px;
+                border-radius: 3px;
+                border: 1px solid $alaranjado;
+                color: $escura;
+                font-size: map-get($size, span);
+            }
+        }
+
+        #submit {
+            @include box(40px, 110px);
+            @include display-flex(row, center, center);
+            text-transform: uppercase;
+            color: white;
+            background-color: $alaranjado;
+            border-radius: 4px;
+            border: 1px solid $alaranjado;
+            box-shadow: $box-shadow;
+            cursor: pointer;
+
+            &:hover {
+                filter: brightness(110%);
+                transition: .5s;
+            }
+        }
+    }
 }

@@ -1,0 +1,30 @@
+// Paleta de cores
+$alaranjado: #C7491E;
+$amarelado: #e6bb1f;
+$neutra: #FFF;
+$escura: #161616;
+
+// Tamanho da letra
+$size: (
+    
+    "titulo": 2.4rem,
+    "subTitulo": 1.9rem,
+    "grau3": 1.045rem,
+    "grau4": 1.5rem,
+    "grau5": 0.9rem,
+    "grau6": 1.1rem
+
+);
+
+// Densidade da letra
+$densidade: (
+    
+    "regular": 300,
+    "medium": 400,
+    "bold": 500,
+    "extraBold": bold,
+
+);
+
+// Box Shadow
+$box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.1);

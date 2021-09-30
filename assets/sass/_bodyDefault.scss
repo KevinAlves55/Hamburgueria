@@ -1,0 +1,19 @@
+body::-webkit-scrollbar {
+    width: 0.45vw;
+}
+  
+body::-webkit-scrollbar-track {
+    background: $escura;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: $alaranjado;
+    border-radius: 1.25rem;
+    border: 0.188rem solid $alaranjado;
+}
+
+body {
+    @include display-flex(column, flex-start, flex-start);
+
+    font-family: 'Roboto', sans-serif;
+}

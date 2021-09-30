@@ -12,11 +12,6 @@
     <!-- Link para definição do favicon -->
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
 
-    <!-- Links para icons -->
-    <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
     <!-- Links para fontes de letra -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,9 +20,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 
+    <!-- Link para Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Scripts do Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
     <!-- Links para arquivos de JavaScript -->
     <script src="assets/js/jquery.js" defer></script>
-    <script src="assets/js/slide.js" defer></script>
     <script src="assets/js/header.js" defer></script>
     <script src="assets/js/modal.js" defer></script>
     <script src="assets/js/carrousel.js" defer></script>
@@ -46,23 +48,21 @@
             <div id="contatos">
                 <div id="telefone">
                     <ion-icon name="call-outline" class="midia"></ion-icon>
-                    <!-- <img src="assets/img/icon-telefone.png" alt="Telefone"> -->
                     <span>+55 11 3333-3333</span>
                 </div>
                 <div id="hora">
                     <ion-icon name="time-outline" class="midia"></ion-icon>
-                    <!-- <img src="assets/img/icon-relogio.png" alt="Relógio"> -->
                     <span>Seg à Sex Das 09h às 18h</span>
                 </div>
             </div>
             <div id="redes-sociais">
-                <box-icon name='facebook' type='logo' color='#ffffff' class="img"></box-icon>
-                <box-icon name='instagram' type='logo' color='#ffffff' class="img"></box-icon>
-                <box-icon name='whatsapp' type='logo' color='#ffffff' class="img"></box-icon>
+                <img src="assets/img/face.png" alt="Icon facebook">
+                <img src="assets/img/insta.png" alt="Icon facebook">
+                <img src="assets/img/zap.png" alt="Icon facebook">
             </div>
         </div>
 
-        <div class="container">
+        <div class="container itens-header">
             <div id="logo">
                 <img src="assets/img/logo.jpg" alt="Logo">
                 <h1>Burguer<span id="destaque">Gods</span></h1>
@@ -70,7 +70,7 @@
             <nav id="navigation">
                 <ul>
                     <li><a href="#">a empresa</a></li>
-                    <li><a href="#">lojas</a></li>
+                    <li><a href="#">produtos</a></li>
                     <li><a href="#">promoções</a></li>
                     <li><a href="#">destaques</a></li>
                     <li><a href="#">contatos</a></li>
@@ -79,27 +79,149 @@
         </div>
     </header>
 
-    <figure id="slider">
-        <img class="selected" src="assets/img/banner1.jpg" alt="Banner-1">
-        <img src="assets/img/banner2.jpg" alt="Banner-2">
-        <img src="assets/img/banner3.jpg" alt="Banner-3">
-        <img src="assets/img/banner4.jpg" alt="Banner-4">
-        <img src="assets/img/banner5.jpg" alt="Banner-5">
-    </figure>
+    <!-- Slide bootstrap -->
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false" data-touch="true">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            </ol>
+            <div class="tamanho carousel-inner">
+                <div class="carousel-item active" data-interval="4000">
+                    <img src="assets/img/banner1.jpg" class="densidade-img d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-interval="4000">
+                    <img src="assets/img/banner2.jpg" class="densidade-img d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-interval="4000">
+                    <img src="assets/img/banner3.jpg" class="densidade-img d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-interval="4000">
+                    <img src="assets/img/banner4.jpg" class="densidade-img d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-interval="4000">
+                    <img src="assets/img/banner5.jpg" class="densidade-img d-block w-100" alt="...">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    <!-- Slide bootstrap -->
 
     <main>
-        <section id="filtragem">
-            <div class="container">
+        <div class="container itens-main">
+            <section id="filtragem">
+                
+                <img src="assets/img/cardapio.png" alt="Cardápio">
+    
+                <div id="busca">
+                    <div id="pesquisa">
+                        <label>Pesquisar: </label>
+                        <input type="search" name="search" id="serarch" placeholder="Ex: Lanches de frango" maxlength="100">
+                    </div>
+    
+                    <input type="submit" value="buscar" name="btnBuscar" id="submit">
+                </div>
+            </section>
 
-            </div>
-        </section>
-        
-        <section id="produtos">
-            <div class="container">
+            <section id="produtos">
+                <div class="cards">
+                    <div class="card-produto">
+                        <img src="" alt="">
 
-            </div>
-        </section>
+                        <h3></h3>
+
+                        <p></p>
+
+                        <div class="valores">
+                            <button>saiba mais</button>
+                            
+                            <h3></h3>
+                        </div>
+                    </div>
+                    <div class="card-produto">
+                        <img src="" alt="">
+
+                        <h3></h3>
+
+                        <p></p>
+
+                        <div class="valores">
+                            <button>saiba mais</button>
+                            
+                            <h3></h3>
+                        </div>
+                    </div>
+                    <div class="card-produto">
+                        <img src="" alt="">
+
+                        <h3></h3>
+
+                        <p></p>
+
+                        <div class="valores">
+                            <button>saiba mais</button>
+                            
+                            <h3></h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cards">
+                    <div class="card-produto">
+                        <img src="" alt="">
+
+                        <h3></h3>
+
+                        <p></p>
+
+                        <div class="valores">
+                            <button>saiba mais</button>
+                            
+                            <h3></h3>
+                        </div>
+                    </div>
+                    <div class="card-produto">
+                        <img src="" alt="">
+
+                        <h3></h3>
+
+                        <p></p>
+
+                        <div class="valores">
+                            <button>saiba mais</button>
+                            
+                            <h3></h3>
+                        </div>
+                    </div>
+                    <div class="card-produto">
+                        <img src="" alt="">
+
+                        <h3></h3>
+
+                        <p></p>
+
+                        <div class="valores">
+                            <button>saiba mais</button>
+                            
+                            <h3></h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
+
+<script script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script script nomodule src="https: // unpkg .com / ionicons @ 5.5.2 / dist / ionicons / ionicons.js "></script>
 
 </body>
 
