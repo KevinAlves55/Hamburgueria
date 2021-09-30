@@ -5,14 +5,14 @@
 @import '../sass/slide';
 
 header {
-    @include box(170px, 100vw);
+    @include box(170px, 100%);
     @include display-flex(column, space-between, center);
     z-index: 2;
     position: fixed;
 }
 
-#container-midia {
-    @include box(40px, 88vw);
+#conteudo-midia {
+    @include box(40px, 1400px);
     @include display-flex(row, space-between, center);
 }
 
@@ -74,9 +74,8 @@ header {
     }
 }
 
-.container {
-    width: 85vw;
-    padding: 0;
+.conteudo {
+    width: 1300px;
 }
 
 .itens-header {
@@ -114,13 +113,12 @@ header {
     }
 }
 
-#navigation {
+#nav {
     @include box(130px, 550px);
     @include display-flex(row, flex-start, flex-start);
 
     ul {
         @include box(inherit, inherit);
-
         @include display-flex(row, space-between, center);
 
         li {
@@ -130,6 +128,7 @@ header {
 
             a {
                 color: $neutra;
+                text-decoration: none;
 
                 &:hover {
                     filter: brightness(80%);
@@ -143,63 +142,64 @@ main {
     @include box(1000px, 100%);
     @include display-flex(column, flex-start, center);
     background-color: #161616;
-}
 
-.itens-main {
-    height: inherit;
-    @include display-flex(column, space-between, flex-start);
-}
+    .itens-main {
+        height: inherit;
+        @include display-flex(column, space-between, flex-start);
 
-#filtragem {
-    @include box(100px, inherit);
-    @include display-flex(row, space-between, center);
-    background-color: #161616;
-
-    img {
-        @include box(3.2rem, 3.2rem);
-        cursor: pointer;
-    }
-
-    #busca {
-        @include box(inherit, 400px);
-        @include display-flex(row, space-between, center);
-        margin-right: 15px;
-
-        #pesquisa {
-            @include box(inherit, 285px);
+        #filtragem {
+            @include box(100px, 100%);
             @include display-flex(row, space-between, center);
-
-            label {
-                color: $neutra;
-                font-weight: map-get($densidade, medium);
-                font-size: map-get($size, grau5);
-                margin-right: 1rem;
+        
+            #cardapio {
+                @include box(inherit, auto);
+                min-width: 50px;
+                @include display-flex(row, space-between, center);
+        
+                img {
+                    @include box(2rem, 2rem);
+                    cursor: pointer;
+                }
             }
+        
+            #buscar {
+                @include box(inherit, auto);
+                min-width: 300px;
+                @include display-flex(row, space-between, center);
+        
+                #pesquisa {
+                    @include box(inherit, 380px);
+                    @include display-flex(row, space-between, center);
+                    position: relative;
+        
+                    #serarch {
+                        @include box(40px, 350px);
+                        padding: 8px;
+                        border-radius: 3px;
+                        border: 1px solid $alaranjado;
+                        color: $escura;
+                        font-size: map-get($size, span);
+                    }
 
-            #serarch {
-                @include box(30px, 250px);
-                padding: 8px;
-                border-radius: 3px;
-                border: 1px solid $alaranjado;
-                color: $escura;
-                font-size: map-get($size, span);
-            }
-        }
-
-        #submit {
-            @include box(40px, 110px);
-            @include display-flex(row, center, center);
-            text-transform: uppercase;
-            color: white;
-            background-color: $alaranjado;
-            border-radius: 4px;
-            border: 1px solid $alaranjado;
-            box-shadow: $box-shadow;
-            cursor: pointer;
-
-            &:hover {
-                filter: brightness(110%);
-                transition: .5s;
+                    #submit {
+                        @include box(40px, 120px);
+                        @include display-flex(row, center, center);
+                        text-transform: uppercase;
+                        color: white;
+                        background-color: $alaranjado;
+                        border-radius: 4px;
+                        border: 1px solid $alaranjado;
+                        box-shadow: $box-shadow;
+                        cursor: pointer;
+                        position: absolute;
+                        right: 0;
+            
+                        &:hover {
+                            filter: brightness(110%);
+                            transition: .5s;
+                        }
+                    }
+                }
             }
         }
     }

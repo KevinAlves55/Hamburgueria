@@ -14,6 +14,5 @@ body::-webkit-scrollbar-thumb {
 
 body {
     @include display-flex(column, flex-start, flex-start);
-
     font-family: 'Roboto', sans-serif;
 }

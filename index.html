@@ -44,7 +44,7 @@
 <body>
 
     <header>
-        <div id="container-midia">
+        <div id="conteudo-midia">
             <div id="contatos">
                 <div id="telefone">
                     <ion-icon name="call-outline" class="midia"></ion-icon>
@@ -62,12 +62,12 @@
             </div>
         </div>
 
-        <div class="container itens-header">
+        <div class="conteudo itens-header">
             <div id="logo">
                 <img src="assets/img/logo.jpg" alt="Logo">
                 <h1>Burguer<span id="destaque">Gods</span></h1>
             </div>
-            <nav id="navigation">
+            <nav id="nav">
                 <ul>
                     <li><a href="#">a empresa</a></li>
                     <li><a href="#">produtos</a></li>
@@ -117,18 +117,18 @@
     <!-- Slide bootstrap -->
 
     <main>
-        <div class="container itens-main">
+        <div class="conteudo itens-main">
             <section id="filtragem">
                 
-                <img src="assets/img/cardapio.png" alt="Cardápio">
+                <div id="cardapio">
+                    <img src="assets/img/cardapio.png" alt="Cardápio">
+                </div>
     
-                <div id="busca">
+                <div id="buscar">
                     <div id="pesquisa">
-                        <label>Pesquisar: </label>
-                        <input type="search" name="search" id="serarch" placeholder="Ex: Lanches de frango" maxlength="100">
+                        <input type="search" name="search" id="serarch" placeholder="Ex: Lanches de frango" maxlength="31">
+                        <input type="submit" value="buscar" name="btnBuscar" id="submit">
                     </div>
-    
-                    <input type="submit" value="buscar" name="btnBuscar" id="submit">
                 </div>
             </section>
 
