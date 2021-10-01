@@ -20,9 +20,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 
-    <!-- Link para Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
     <!-- Scripts do Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -87,9 +84,10 @@
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
             </ol>
             <div class="tamanho carousel-inner">
-                <div class="carousel-item active" data-interval="4000">
+                <div class="carousel-item active" data-interval="6000">
                     <img src="assets/img/banner1.jpg" class="densidade-img d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item" data-interval="4000">
@@ -103,6 +101,9 @@
                 </div>
                 <div class="carousel-item" data-interval="4000">
                     <img src="assets/img/banner5.jpg" class="densidade-img d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-interval="4000">
+                    <img src="assets/img/banner6.jpg" class="densidade-img d-block w-100" alt="...">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
@@ -121,18 +122,35 @@
             <section id="filtragem">
                 
                 <div id="cardapio">
-                    <img src="assets/img/cardapio.png" alt="Cardápio">
+                    <!-- Cardápio animado -->
+                    <input id="navbar" type="checkbox">
+                    <label for="navbar">
+                        <div class="menu">
+                            <span class="hamburger"></span>
+                        </div>
+                    </label>
+
+                    <span>olympus menu</span>
+
+                    <ul>
+                        <li><a href="">Clássicos</a></li>
+                        <li><a href="">Frango</a></li>
+                        <li><a href="">Naturais</a></li>
+                        <li><a href="">Especiais</a></li>
+                        <li><a href="">Vegetarianos</a></li>
+                        <li><a href="">Veganos</a></li>
+                    </ul>
                 </div>
     
                 <div id="buscar">
                     <div id="pesquisa">
-                        <input type="search" name="search" id="serarch" placeholder="Ex: Lanches de frango" maxlength="31">
+                        <input type="search" name="search" id="serarch" placeholder="Deixe sua fome escolher por você" maxlength="31">
                         <input type="submit" value="buscar" name="btnBuscar" id="submit">
                     </div>
                 </div>
             </section>
 
-            <section id="produtos">
+            <!-- <section id="produtos">
                 <div class="cards">
                     <div class="card-produto">
                         <img src="" alt="">
@@ -216,7 +234,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
         </div>
     </main>
 
