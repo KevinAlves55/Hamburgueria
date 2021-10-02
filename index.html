@@ -19,17 +19,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-
+    
     <!-- Scripts do Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-    <!-- Links para arquivos de JavaScript -->
-    <script src="assets/js/jquery.js" defer></script>
-    <script src="assets/js/header.js" defer></script>
-    <script src="assets/js/modal.js" defer></script>
-    <script src="assets/js/carrousel.js" defer></script>
+    <script src="assets/js/ancoraMenu.js"></script>
+    <script src="assets/js/menuEfeito.js"></script>
+    <script src="assets/js/modal.js"></script>
+    <script src="assets/js/carrousel.js"></script>
 
     <!-- Link para CSS/SASS -->
     <link rel="stylesheet" href="assets/sass/estilo.css">
@@ -87,7 +86,7 @@
                 <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
             </ol>
             <div class="tamanho carousel-inner">
-                <div class="carousel-item active" data-interval="6000">
+                <div class="carousel-item active" data-interval="7000">
                     <img src="assets/img/banner1.jpg" class="densidade-img d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item" data-interval="4000">
@@ -133,12 +132,14 @@
                     <span>olympus menu</span>
 
                     <ul>
+                        <img src="assets/img/tridente.png" alt="" id="tridente">
                         <li><a href="">Clássicos</a></li>
                         <li><a href="">Frango</a></li>
                         <li><a href="">Naturais</a></li>
                         <li><a href="">Especiais</a></li>
                         <li><a href="">Vegetarianos</a></li>
                         <li><a href="">Veganos</a></li>
+                        <img src="assets/img/raio.png" alt="" id="raio">
                     </ul>
                 </div>
     
@@ -150,91 +151,143 @@
                 </div>
             </section>
 
-            <!-- <section id="produtos">
+            <section id="produtos">
                 <div class="cards">
-                    <div class="card-produto">
-                        <img src="" alt="">
-
-                        <h3></h3>
-
-                        <p></p>
-
-                        <div class="valores">
-                            <button>saiba mais</button>
-                            
-                            <h3></h3>
-                        </div>
+                    <div class="card-foto">
+                        <img src="assets/img/banner4.jpg" alt="">
                     </div>
-                    <div class="card-produto">
-                        <img src="" alt="">
-
-                        <h3></h3>
-
-                        <p></p>
-
-                        <div class="valores">
-                            <button>saiba mais</button>
-                            
-                            <h3></h3>
-                        </div>
+                    <div class="card-nome">
+                        <h3>Fúria de kronos</h3>
                     </div>
-                    <div class="card-produto">
-                        <img src="" alt="">
-
-                        <h3></h3>
-
-                        <p></p>
-
-                        <div class="valores">
-                            <button>saiba mais</button>
-                            
-                            <h3></h3>
-                        </div>
+                    <div class="card-descricao">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita saepe suscipitet Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="informacoes">
+                        <button id="informacoes">saiba mais</button>
+                        <span>R$ 150,00</span>
                     </div>
                 </div>
-                
                 <div class="cards">
-                    <div class="card-produto">
-                        <img src="" alt="">
-
-                        <h3></h3>
-
-                        <p></p>
-
-                        <div class="valores">
-                            <button>saiba mais</button>
-                            
-                            <h3></h3>
-                        </div>
+                    <div class="card-foto">
+                        <img src="assets/img/produto1.jpg" alt="">
                     </div>
-                    <div class="card-produto">
-                        <img src="" alt="">
-
-                        <h3></h3>
-
-                        <p></p>
-
-                        <div class="valores">
-                            <button>saiba mais</button>
-                            
-                            <h3></h3>
-                        </div>
+                    <div class="card-nome">
+                        <h3>Fúria de kronos</h3>
                     </div>
-                    <div class="card-produto">
-                        <img src="" alt="">
-
-                        <h3></h3>
-
-                        <p></p>
-
-                        <div class="valores">
-                            <button>saiba mais</button>
-                            
-                            <h3></h3>
-                        </div>
+                    <div class="card-descricao">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita saepe suscipitet Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="informacoes">
+                        <button id="informacoes">saiba mais</button>
+                        <span>R$ 150,00</span>
                     </div>
                 </div>
-            </section> -->
+                <div class="cards">
+                    <div class="card-foto">
+                        <img src="assets/img/produto1.jpg" alt="">
+                    </div>
+                    <div class="card-nome">
+                        <h3>Fúria de kronos</h3>
+                    </div>
+                    <div class="card-descricao">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita saepe suscipitet Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="informacoes">
+                        <button id="informacoes">saiba mais</button>
+                        <span>R$ 150,00</span>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card-foto">
+                        <img src="assets/img/produto1.jpg" alt="">
+                    </div>
+                    <div class="card-nome">
+                        <h3>Fúria de kronos</h3>
+                    </div>
+                    <div class="card-descricao">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita saepe suscipitet Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="informacoes">
+                        <button id="informacoes">saiba mais</button>
+                        <span>R$ 150,00</span>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card-foto">
+                        <img src="assets/img/produto1.jpg" alt="">
+                    </div>
+                    <div class="card-nome">
+                        <h3>Fúria de kronos</h3>
+                    </div>
+                    <div class="card-descricao">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita saepe suscipitet Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="informacoes">
+                        <button id="informacoes">saiba mais</button>
+                        <span>R$ 150,00</span>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card-foto">
+                        <img src="assets/img/produto1.jpg" alt="">
+                    </div>
+                    <div class="card-nome">
+                        <h3>Fúria de kronos</h3>
+                    </div>
+                    <div class="card-descricao">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita saepe suscipitet Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="informacoes">
+                        <button id="informacoes">saiba mais</button>
+                        <span>R$ 150,00</span>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card-foto">
+                        <img src="assets/img/produto1.jpg" alt="">
+                    </div>
+                    <div class="card-nome">
+                        <h3>Fúria de kronos</h3>
+                    </div>
+                    <div class="card-descricao">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita saepe suscipitet Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="informacoes">
+                        <button id="informacoes">saiba mais</button>
+                        <span>R$ 150,00</span>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card-foto">
+                        <img src="assets/img/produto1.jpg" alt="">
+                    </div>
+                    <div class="card-nome">
+                        <h3>Fúria de kronos</h3>
+                    </div>
+                    <div class="card-descricao">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita saepe suscipitet Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="informacoes">
+                        <button id="informacoes">saiba mais</button>
+                        <span>R$ 150,00</span>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card-foto">
+                        <img src="assets/img/banner4.jpg" alt="">
+                    </div>
+                    <div class="card-nome">
+                        <h3>Fúria de kronos</h3>
+                    </div>
+                    <div class="card-descricao">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita saepe suscipitet Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="informacoes">
+                        <button id="informacoes">saiba mais</button>
+                        <span>R$ 150,00</span>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
 
