@@ -19,13 +19,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-    
+
     <!-- Scripts do Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-    <script src="assets/js/ancoraMenu.js"></script>
+    
+    <!-- Arquivos Js -->
+    <script src="assets/js/scroll.js" defer></script>
     <script src="assets/js/menuEfeito.js"></script>
     <script src="assets/js/modal.js"></script>
     <script src="assets/js/carrousel.js"></script>
@@ -38,7 +39,6 @@
 </head>
 
 <body>
-
     <header>
         <div id="conteudo-midia">
             <div id="contatos">
@@ -65,9 +65,9 @@
             </div>
             <nav id="nav">
                 <ul>
-                    <li><a href="#">a empresa</a></li>
-                    <li><a href="#">produtos</a></li>
-                    <li><a href="#">promoções</a></li>
+                    <li><a href="#barra-empresa">a empresa</a></li>
+                    <li><a href="#main">produtos</a></li>
+                    <li><a href="#barra-promocoes">promoções</a></li>
                     <li><a href="#">destaques</a></li>
                     <li><a href="#">contatos</a></li>
                 </ul>
@@ -116,7 +116,7 @@
         </div>
     <!-- Slide bootstrap -->
 
-    <main>
+    <main id="main">
         <div class="conteudo itens-main">
             <section id="filtragem">
                 
@@ -290,6 +290,82 @@
             </section>
         </div>
     </main>
+    
+    <div id="barra-empresa" class="barra">
+        <h2>Nossa Empresa</h2>
+
+        <span>Um dia, transformarei ela em um Monte Olímpio...</span>
+        <img src="assets/img/raio-faixa.png" alt="">
+    </div>
+    
+    <section id="empresa">
+        <div class="conteudo itens-empresa">
+            <video src="assets/video/empresa.mp4" height="330px" width="600px" poster="assets/img/banner-video.JPG" controls loop></video>
+            <div id="informacoes-empresa">
+                <h2>Prezamos o foco na qualidade de nossos produtos</h2>
+
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet neque tenetur dolorum? Similique quae quas ipsa, nam illo facere facilis repellendus aperiam ut est eos sed dignissimos qui autem praesentium. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo at commodi veniam totam laboriosam dolore exercitationem nulla perspiciatis obcaecati culpa neque dolorum eum doloremque mollitia, delectus perferendis animi. Voluptas, praesentium? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed ullam quod voluptate rerum? Nemo alias quo necessitatibus eaque sint non quibusdam omnis. voluptate rerum? Nemo alias quo necessitatibus eaque sint non quibusdam omnis. voluptate rerum? Nemo alias quo necessitatibus eaque sint non.
+            </div>
+        </div>
+    </section>
+
+    <div id="barra-promocoes" class="barra">
+        <h2>nossas promoções</h2>
+
+        <span>Os deuses estão generosos hoje, olhe nossas promoções</span>
+        <img src="assets/img/hermes.png" alt="">
+    </div>
+
+    <section id="promocoes">
+        <div class="conteudo itens-promocoes">
+            <div class="cards">
+                <div class="card-foto">
+                    <img src="assets/img/produto1.jpg" alt="">
+                </div>
+                <div class="card-nome">
+                    <h3>Fúria de kronos</h3>
+                </div>
+                <div class="card-descricao">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita saepe suscipitet Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="informacoes">
+                    <button id="informacoes">saiba mais</button>
+                    <span>R$ 150,00</span>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card-foto">
+                    <img src="assets/img/produto1.jpg" alt="">
+                </div>
+                <div class="card-nome">
+                    <h3>Fúria de kronos</h3>
+                </div>
+                <div class="card-descricao">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita saepe suscipitet Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="informacoes">
+                    <button id="informacoes">saiba mais</button>
+                    <span>R$ 150,00</span>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card-foto">
+                    <img src="assets/img/banner4.jpg" alt="">
+                </div>
+                <div class="card-nome">
+                    <h3>Fúria de kronos</h3>
+                </div>
+                <div class="card-descricao">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita saepe suscipitet Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="informacoes">
+                    <button id="informacoes">saiba mais</button>
+                    <span>R$ 150,00</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
 <script script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script script nomodule src="https: // unpkg .com / ionicons @ 5.5.2 / dist / ionicons / ionicons.js "></script>

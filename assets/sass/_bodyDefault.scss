@@ -17,24 +17,16 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-/* width */
 ::-webkit-scrollbar {
     width: 0.45vw;
 }
   
-/* Track */
 ::-webkit-scrollbar-track {
     background: $alaranjado;
     border-radius: 10px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
     background: $neutra;
     border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: $neutra;
 }

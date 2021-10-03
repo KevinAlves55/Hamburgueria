@@ -51,26 +51,18 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-/* width */
 ::-webkit-scrollbar {
   width: 0.45vw;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: #C7491E;
   border-radius: 10px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #FFF;
   border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #FFF;
 }
 
 .tamanho {
@@ -352,14 +344,14 @@ header {
           align-items: center;
   z-index: 3;
   position: fixed;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
 }
 
 .headerGradientt {
   background-color: #1f1f1f;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
 }
 
 #conteudo-midia {
@@ -628,7 +620,7 @@ header {
 }
 
 main {
-  height: 1740px;
+  height: 1800px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -815,14 +807,14 @@ main .itens-main #filtragem #cardapio ul img {
 
 main .itens-main #filtragem #cardapio ul #tridente {
   position: absolute;
-  top: -75px;
+  top: -80px;
   right: -75px;
 }
 
 main .itens-main #filtragem #cardapio ul #raio {
   position: absolute;
   bottom: -70px;
-  left: -130px;
+  left: -150px;
 }
 
 main .itens-main #filtragem #cardapio a {
@@ -957,7 +949,7 @@ main .itens-main #produtos {
   gap: 20px;
 }
 
-main .itens-main #produtos .cards {
+.cards {
   height: 520px;
   width: 420px;
   display: -webkit-box;
@@ -978,7 +970,7 @@ main .itens-main #produtos .cards {
   border-radius: 6px;
 }
 
-main .itens-main #produtos .cards .card-foto {
+.cards .card-foto {
   width: 100%;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -986,13 +978,13 @@ main .itens-main #produtos .cards .card-foto {
   margin-bottom: 10px;
 }
 
-main .itens-main #produtos .cards .card-foto img {
+.cards .card-foto img {
   height: 100%;
   width: 100%;
   border-radius: 5px;
 }
 
-main .itens-main #produtos .cards .card-nome {
+.cards .card-nome {
   height: 45px;
   width: 100%;
   display: -webkit-box;
@@ -1010,13 +1002,13 @@ main .itens-main #produtos .cards .card-nome {
           align-items: center;
 }
 
-main .itens-main #produtos .cards .card-nome h3 {
+.cards .card-nome h3 {
   color: #C7491E;
   font-size: 1.5rem;
   font-weight: 500;
 }
 
-main .itens-main #produtos .cards .card-descricao {
+.cards .card-descricao {
   height: 100px;
   width: 100%;
   display: -webkit-box;
@@ -1034,13 +1026,13 @@ main .itens-main #produtos .cards .card-descricao {
           align-items: center;
 }
 
-main .itens-main #produtos .cards .card-descricao p {
+.cards .card-descricao p {
   color: #FFF;
   font-size: 1.1rem;
   font-weight: 300;
 }
 
-main .itens-main #produtos .cards .informacoes {
+.cards .informacoes {
   height: 50px;
   width: 100%;
   display: -webkit-box;
@@ -1058,7 +1050,7 @@ main .itens-main #produtos .cards .informacoes {
           align-items: center;
 }
 
-main .itens-main #produtos .cards .informacoes button {
+.cards .informacoes button {
   height: 40px;
   width: 140px;
   font-size: 0.9rem;
@@ -1072,7 +1064,7 @@ main .itens-main #produtos .cards .informacoes button {
   cursor: pointer;
 }
 
-main .itens-main #produtos .cards .informacoes button:hover {
+.cards .informacoes button:hover {
   -webkit-filter: brightness(110%);
           filter: brightness(110%);
   -webkit-transition: .5s;
@@ -1081,8 +1073,156 @@ main .itens-main #produtos .cards .informacoes button:hover {
           transform: scale(1.1);
 }
 
-main .itens-main #produtos .cards .informacoes span {
+.cards .informacoes span {
   color: #C7491E;
   font-size: 1.3rem;
+}
+
+#empresa {
+  height: 500px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-color: #1f1f1f;
+}
+
+#empresa .itens-empresa {
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4px;
+  padding-left: 20px;
+}
+
+#empresa .itens-empresa #informacoes-empresa {
+  height: 330px;
+  width: 675px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#empresa .itens-empresa #informacoes-empresa h2 {
+  font-size: 1.9rem;
+  font-weight: 400;
+  color: #C7491E;
+  margin-bottom: 20px;
+}
+
+#empresa .itens-empresa #informacoes-empresa p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #FFF;
+}
+
+.barra {
+  height: 400px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #C7491E, #e6bb1f);
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  position: relative;
+}
+
+.barra h2 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.barra span {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.barra img {
+  height: 4.6rem;
+  width: 4.6rem;
+  position: absolute;
+  top: 100px;
+  left: 930px;
+}
+
+#promocoes {
+  height: 600px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background: linear-gradient(135deg, #C7491E, #e6bb1f);
+}
+
+#promocoes .itens-promocoes {
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=estilo.css.map */
