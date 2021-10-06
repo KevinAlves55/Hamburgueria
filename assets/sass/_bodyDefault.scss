@@ -22,11 +22,11 @@ body {
 }
   
 ::-webkit-scrollbar-track {
-    background: $alaranjado;
-    border-radius: 10px;
+    background: $escura;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: $neutra;
-    border-radius: 10px;
+    background-color: $alaranjado;
+    border-radius: 1.25rem;
+    border: 0.188rem solid $alaranjado;
 }

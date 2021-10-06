@@ -2,7 +2,7 @@
 
 jQuery(function () {
     jQuery(window).scroll(function () {
-      if (jQuery(this).scrollTop() > 600) {
+      if (jQuery(this).scrollTop() > 200) {
        $("header").addClass("headerGradientt"); 
       } else {
        $("header").removeClass("headerGradientt");

@@ -56,13 +56,13 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #C7491E;
-  border-radius: 10px;
+  background: #1f1f1f;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #FFF;
-  border-radius: 10px;
+  background-color: #C7491E;
+  border-radius: 1.25rem;
+  border: 0.188rem solid #C7491E;
 }
 
 .tamanho {
@@ -70,8 +70,8 @@ body {
 }
 
 .densidade-img {
-  -webkit-filter: brightness(70%);
-          filter: brightness(70%);
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
 }
 
 .carousel {
@@ -254,17 +254,18 @@ body {
   -ms-flex: 0 1 auto;
   -webkit-box-flex: 0;
           flex: 0 1 auto;
-  width: 15px;
-  height: 15px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  margin-right: 5px;
-  margin-left: 5px;
+  margin-right: 6px;
+  margin-left: 6px;
   text-indent: -999px;
-  background-color: #fff;
+  background-color: #FFF;
   background-clip: padding-box;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
   opacity: .5;
+  cursor: pointer;
   -webkit-transition: opacity .6s ease;
   transition: opacity .6s ease;
 }
@@ -326,6 +327,14 @@ body {
   width: 100% !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+:target {
+  scroll-margin-top: 170px;
+}
+
 header {
   height: 170px;
   width: 100%;
@@ -342,7 +351,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 3;
+  z-index: 999;
   position: fixed;
   -webkit-transition: 0.5s linear;
   transition: 0.5s linear;
@@ -826,12 +835,12 @@ main .itens-main #filtragem #cardapio a {
 }
 
 main .itens-main #filtragem #cardapio a:hover {
-  -webkit-filter: brightness(130%);
-          filter: brightness(130%);
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-filter: brightness(140%);
+          filter: brightness(140%);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
 main .itens-main #filtragem #cardapio span {
@@ -966,8 +975,8 @@ main .itens-main #produtos {
       -ms-flex-align: center;
           align-items: center;
   background-color: #1f1f1f;
-  padding: 10px 10px 10px 10px;
-  border-radius: 6px;
+  padding: 15px;
+  border-radius: 5px;
 }
 
 .cards .card-foto {
@@ -1048,6 +1057,7 @@ main .itens-main #produtos {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .cards .informacoes button {
@@ -1071,6 +1081,32 @@ main .itens-main #produtos {
   transition: .5s;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.cards .informacoes i {
+  height: 15px;
+  width: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 0;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  color: #e6bb1f;
+  font-size: 0.9rem;
+  text-decoration: line-through;
+  top: -6px;
 }
 
 .cards .informacoes span {
@@ -1167,6 +1203,26 @@ main .itens-main #produtos {
   background: linear-gradient(135deg, #C7491E, #e6bb1f);
   margin-top: 5rem;
   margin-bottom: 5rem;
+}
+
+.barra .itens-barra {
+  height: auto;
+  width: auto;
+  min-height: 200px;
+  min-width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 
@@ -1186,8 +1242,8 @@ main .itens-main #produtos {
   height: 4.6rem;
   width: 4.6rem;
   position: absolute;
-  top: 100px;
-  left: 930px;
+  top: 0;
+  right: 0;
 }
 
 #promocoes {
@@ -1224,5 +1280,64 @@ main .itens-main #produtos {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#destaques {
+  height: 360px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: linear-gradient(135deg, #C7491E, #e6bb1f);
+}
+
+#destaques .itens-destaque {
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#destaques .itens-destaque img {
+  height: 310px;
+  width: 310px;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: .5s linear;
+  transition: .5s linear;
+}
+
+#destaques .itens-destaque img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: .5s linear;
+  transition: .5s linear;
+}
+
+footer {
+  height: 510px;
+  width: 100%;
+  margin-top: 5rem;
+  background: linear-gradient(135deg, #C7491E, #e6bb1f);
 }
 /*# sourceMappingURL=estilo.css.map */

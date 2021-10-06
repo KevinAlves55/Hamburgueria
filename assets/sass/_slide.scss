@@ -3,7 +3,7 @@
 }
 
 .densidade-img {
-    filter: brightness(70%);
+    filter: brightness(80%);
 }
 
 .carousel {
@@ -174,17 +174,18 @@
     box-sizing: content-box;
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;
-    width: 15px;
-    height: 15px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
-    margin-right: 5px;
-    margin-left: 5px;
+    margin-right: 6px;
+    margin-left: 6px;
     text-indent: -999px;
-    background-color: #fff;
+    background-color: $neutra;
     background-clip: padding-box;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     opacity: .5;
+    cursor: pointer;
     transition: opacity .6s ease
 }
 
