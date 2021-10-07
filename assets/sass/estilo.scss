@@ -3,6 +3,7 @@
 @import '../sass/resert';
 @import '../sass/bodyDefault';
 @import '../sass/slide';
+@import '../sass/scrollAnimation';
 
 html {
     scroll-behavior: smooth;
@@ -430,7 +431,7 @@ main {
 }
 
 #empresa {
-    @include box(500px, 100%);
+    @include box(534px, 100%);
     @include display-flex(row, center, flex-start);
     background-color: $escura;
 
@@ -438,17 +439,15 @@ main {
         height: inherit;
         @include display-flex(row, space-between, center);
         border-radius: 4px;
-        padding-left: 20px;
 
         #informacoes-empresa {
             @include box(330px, 675px);
-            @include display-flex(column, space-between, center);
+            @include display-flex(column, space-between, flex-start);
 
             h2 {
                 font-size: map-get($size, subTitulo);
                 font-weight: map-get($densidade, medium);
                 color: $alaranjado;
-                margin-bottom: 20px;
             }
 
             p {
@@ -479,7 +478,7 @@ main {
     h2 {
         font-size: map-get($size, titulo);
         font-weight: map-get($densidade, bold);
-        letter-spacing: 1px;
+
         text-transform: capitalize;
     }
 
@@ -508,23 +507,39 @@ main {
 }
 
 #destaques {
-    @include box(360px, 100%);
-    @include display-flex(row, center, center);
+    @include box(450px, 100%);
+    @include display-flex(row, center, flex-start);
     background: linear-gradient(135deg, #C7491E, #e6bb1f);
 
     .itens-destaque {
         height: inherit;
-        @include display-flex(row, space-between, center);
+        @include display-flex(column, space-between, center);
 
-        img {
-            @include box(310px, 310px);
-            border-radius: 50%;
-            cursor: pointer;
-            transition: .5s linear;
+        h2 {
+            height: 50px;
+            color: $escura;
+            font-size: map-get($size, subTitulo);
+            font-weight: map-get($densidade, medium);
+            border-bottom: 4px solid $neutra;
+            margin-top: 20px;
+        }
 
-            &:hover {
-                transform: scale(1.1);
+        #destaques-img {
+            @include display-flex(row, space-between, center);
+            width: 100%;
+            flex-grow: 1;
+
+            img {
+                @include box(320px, 320px);
+                border-radius: 50%;
+                cursor: pointer;
                 transition: .5s linear;
+                border: 7px solid $neutra;
+    
+                &:hover {
+                    transform: translate3d(0, -25px, 0);
+                    transition: .5s linear;
+                }
             }
         }
     }
@@ -533,5 +548,5 @@ main {
 footer {
     @include box(510px, 100%);
     margin-top: 5rem;
-    background: linear-gradient(135deg, #C7491E, #e6bb1f);
+    background-color: $escura;
 }

@@ -327,6 +327,28 @@ body {
   width: 100% !important;
 }
 
+[data-anime] {
+  opacity: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+[data-anime="left"] {
+  -webkit-transform: translate3d(-500px, 0, 0);
+          transform: translate3d(-500px, 0, 0);
+}
+
+[data-anime="right"] {
+  -webkit-transform: translate3d(41px, 0, 0);
+          transform: translate3d(41px, 0, 0);
+}
+
+[data-anime].animate {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -1115,7 +1137,7 @@ main .itens-main #produtos {
 }
 
 #empresa {
-  height: 500px;
+  height: 534px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1149,7 +1171,6 @@ main .itens-main #produtos {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 4px;
-  padding-left: 20px;
 }
 
 #empresa .itens-empresa #informacoes-empresa {
@@ -1165,16 +1186,15 @@ main .itens-main #produtos {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 #empresa .itens-empresa #informacoes-empresa h2 {
   font-size: 1.9rem;
   font-weight: 400;
   color: #C7491E;
-  margin-bottom: 20px;
 }
 
 #empresa .itens-empresa #informacoes-empresa p {
@@ -1229,7 +1249,6 @@ main .itens-main #produtos {
 .barra h2 {
   font-size: 2.4rem;
   font-weight: 500;
-  letter-spacing: 1px;
   text-transform: capitalize;
 }
 
@@ -1283,7 +1302,7 @@ main .itens-main #produtos {
 }
 
 #destaques {
-  height: 360px;
+  height: 450px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1295,14 +1314,39 @@ main .itens-main #produtos {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   background: linear-gradient(135deg, #C7491E, #e6bb1f);
 }
 
 #destaques .itens-destaque {
   height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#destaques .itens-destaque h2 {
+  height: 50px;
+  color: #1f1f1f;
+  font-size: 1.9rem;
+  font-weight: 400;
+  border-bottom: 4px solid #FFF;
+  margin-top: 20px;
+}
+
+#destaques .itens-destaque #destaques-img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1316,20 +1360,25 @@ main .itens-main #produtos {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
-#destaques .itens-destaque img {
-  height: 310px;
-  width: 310px;
+#destaques .itens-destaque #destaques-img img {
+  height: 320px;
+  width: 320px;
   border-radius: 50%;
   cursor: pointer;
   -webkit-transition: .5s linear;
   transition: .5s linear;
+  border: 7px solid #FFF;
 }
 
-#destaques .itens-destaque img:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+#destaques .itens-destaque #destaques-img img:hover {
+  -webkit-transform: translate3d(0, -25px, 0);
+          transform: translate3d(0, -25px, 0);
   -webkit-transition: .5s linear;
   transition: .5s linear;
 }
@@ -1338,6 +1387,6 @@ footer {
   height: 510px;
   width: 100%;
   margin-top: 5rem;
-  background: linear-gradient(135deg, #C7491E, #e6bb1f);
+  background-color: #1f1f1f;
 }
 /*# sourceMappingURL=estilo.css.map */
