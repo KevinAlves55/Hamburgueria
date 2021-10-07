@@ -339,8 +339,8 @@ body {
 }
 
 [data-anime="right"] {
-  -webkit-transform: translate3d(41px, 0, 0);
-          transform: translate3d(41px, 0, 0);
+  -webkit-transform: translate3d(42px, 0, 0);
+          transform: translate3d(42px, 0, 0);
 }
 
 [data-anime].animate {
@@ -1381,12 +1381,373 @@ main .itens-main #produtos {
           transform: translate3d(0, -25px, 0);
   -webkit-transition: .5s linear;
   transition: .5s linear;
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
 }
 
 footer {
-  height: 510px;
+  height: 450px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin-top: 5rem;
   background-color: #1f1f1f;
+}
+
+footer .itens-footer {
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+footer .itens-footer #informacoes-footer {
+  height: 390px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+footer .itens-footer #informacoes-footer #logo-footer {
+  height: inherit;
+  width: 436px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .itens-footer #informacoes-footer #logo-footer img {
+  height: 13rem;
+  width: 13rem;
+  border-radius: 50%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+}
+
+footer .itens-footer #informacoes-footer #logo-footer img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+footer .itens-footer #informacoes-footer .titulo-footer {
+  color: #FFF;
+  font-size: 1.9rem;
+  font-weight: 500;
+  margin-top: 30px;
+  text-transform: capitalize;
+}
+
+footer .itens-footer #informacoes-footer #lojas-footer {
+  height: inherit;
+  width: 436px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 20px;
+}
+
+footer .itens-footer #informacoes-footer #lojas-footer .unidade {
+  height: auto;
+  width: auto;
+  min-height: 50px;
+  min-width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-left: 20px;
+  gap: 10px;
+}
+
+footer .itens-footer #informacoes-footer #lojas-footer .unidade span {
+  color: #C7491E;
+  font-size: 1.1rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+footer .itens-footer #informacoes-footer #lojas-footer .unidade span:hover {
+  text-decoration: underline;
+}
+
+footer .itens-footer #informacoes-footer #lojas-footer .unidade .descricao {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+footer .itens-footer #informacoes-footer #lojas-footer .unidade img {
+  height: 6rem;
+  width: 6rem;
+  margin-right: 10px;
+  -webkit-transition: .5s linear;
+  transition: .5s linear;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+footer .itens-footer #informacoes-footer #lojas-footer .unidade img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: .5s linear;
+  transition: .5s linear;
+}
+
+footer .itens-footer #informacoes-footer #lojas-footer .unidade p {
+  color: #FFF;
+  font-size: 0.9rem;
+}
+
+footer .itens-footer #informacoes-footer #contatos-footer {
+  height: inherit;
+  width: 436px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+footer .itens-footer #informacoes-footer #contatos-footer form {
+  height: 210px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+footer .itens-footer #informacoes-footer #contatos-footer form .caixa {
+  height: 50px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+footer .itens-footer #informacoes-footer #contatos-footer form .caixa label {
+  color: #FFF;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+footer .itens-footer #informacoes-footer #contatos-footer form .caixa .icon-input-footer {
+  position: absolute;
+  left: 140px;
+}
+
+footer .itens-footer #informacoes-footer #contatos-footer form .caixa input {
+  width: 55%;
+  height: 40px;
+  border-radius: 8px;
+  outline: none;
+  border: 2px solid #c4c4c4;
+  padding: 0 30px;
+  -webkit-box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+}
+
+footer .itens-footer #informacoes-footer #contatos-footer form .caixa input:focus {
+  border: 2px solid #C7491E;
+}
+
+footer .itens-footer #informacoes-footer #contatos-footer form #button-footer {
+  height: 60px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .itens-footer #informacoes-footer #contatos-footer form #button-footer input {
+  width: 35%;
+  height: 45px;
+  background-color: #C7491E;
+  border: 2px solid #C7491E;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  margin-top: 25px;
+}
+
+footer .itens-footer #informacoes-footer #contatos-footer form #button-footer input:hover {
+  opacity: 0.8;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+footer .itens-footer #informacoes-footer #contatos-footer #galeria-contatos-footer {
+  height: 60px;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 90px;
+}
+
+footer .itens-footer #informacoes-footer #contatos-footer #galeria-contatos-footer img {
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+}
+
+footer .itens-footer #informacoes-footer #contatos-footer #galeria-contatos-footer img:hover {
+  -webkit-filter: brightness(130%);
+          filter: brightness(130%);
+}
+
+footer #criador-footer {
+  height: 60px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #000;
+}
+
+footer #criador-footer span {
+  color: #FFF;
 }
 /*# sourceMappingURL=estilo.css.map */

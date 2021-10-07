@@ -539,6 +539,7 @@ main {
                 &:hover {
                     transform: translate3d(0, -25px, 0);
                     transition: .5s linear;
+                    filter: brightness(120%);
                 }
             }
         }
@@ -546,7 +547,186 @@ main {
 }
 
 footer {
-    @include box(510px, 100%);
+    @include box(450px, 100%);
+    @include display-flex(column, center, flex-start);
     margin-top: 5rem;
     background-color: $escura;
+
+    .itens-footer {
+        height: inherit;
+        @include display-flex(column, space-between, flex-start);
+
+        #informacoes-footer {
+            height: 390px;
+            width: 100%;
+            @include display-flex(row, space-between, flex-start);
+
+            #logo-footer {
+                @include box(inherit, 436px);
+                @include display-flex(row, center, center);
+
+                img {
+                    @include box(13rem, 13rem);
+                    border-radius: 50%;
+                    transition: 0.5s;
+                    box-shadow: $box-shadow;
+                    cursor: pointer;
+                    filter: brightness(110%);
+
+                    &:hover {
+                        transform: scale(1.1);
+                        transition: 0.5s;
+                    }
+                }
+            }
+
+            .titulo-footer {
+                color: $neutra;
+                font-size: map-get($size, subTitulo);
+                font-weight: map-get($densidade, bold);
+                margin-top: 30px;
+                text-transform: capitalize;
+            }
+
+            #lojas-footer {
+                @include box(inherit, 436px);
+                @include display-flex(column, flex-start, flex-start);
+                gap: 20px;
+
+                .unidade {
+                    @include box(auto, auto);
+                    min-height: 50px;
+                    min-width: 100px;
+                    @include display-flex(column, space-between, flex-start);
+                    padding-left: 20px;
+                    gap: 10px;
+
+                    span {
+                        color: $alaranjado;
+                        font-size: map-get($size, grau6);
+                        font-weight: map-get($densidade, medium);
+                        cursor: pointer;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .descricao {
+                        @include display-flex(row, space-between, flex-start);
+                    }
+
+                    img {
+                        @include box(6rem, 6rem);
+                        margin-right: 10px;
+                        transition: .5s linear;
+                        cursor: pointer;
+                        border-radius: 6px;
+
+                        &:hover {
+                            transform: scale(1.1);
+                            transition: .5s linear;
+                        }
+                    }
+
+                    p {
+                        color: $neutra;
+                        font-size: map-get($size, grau5);
+                    }
+                }
+            }
+
+            #contatos-footer {
+                @include box(inherit, 436px);
+                @include display-flex(column, space-between, flex-start);
+
+                form {
+                    @include box(210px, 100%);
+                    @include display-flex(column, flex-start, flex-start);
+
+                    .caixa {
+                        @include box(50px, 100%);
+                        @include display-flex(row, center, center);
+                        gap: 15px;
+                        position: relative;
+
+                        label {
+                            color: $neutra;
+                            font-weight: map-get($densidade, medium);
+                            font-size: map-get($size, grau6);
+                        }
+
+                        .icon-input-footer {
+                            position: absolute;
+                            left: 140px;
+                        }
+
+                        input {
+                            width: 55%;
+                            height: 40px;
+                            border-radius: 8px;
+                            outline: none;
+                            border: 2px solid #c4c4c4;
+                            padding: 0 30px;
+                            box-shadow: $box-shadow;
+                            font-size: map-get($size, grau5);
+                        }
+
+                        input:focus {
+                            border: 2px solid $alaranjado;
+                        }
+                    }
+
+                    #button-footer {
+                        @include box(60px, 100%);
+                        @include display-flex(row, center, center);
+
+                        input {
+                            width: 35%;
+                            height: 45px;
+                            background-color: $alaranjado;
+                            border: 2px solid $alaranjado;
+                            border-radius: 8px;
+                            color: #fff;
+                            font-size: 20px;
+                            cursor: pointer;
+                            box-shadow: $box-shadow;
+                            transition: all 0.1s ease;
+                            margin-top: 25px;
+
+                            &:hover {
+                                opacity: 0.8;
+                                transition: all 0.1s ease;
+                            }
+                        }
+                    }
+                }
+
+                #galeria-contatos-footer {
+                    @include box(60px, 60%);
+                    @include display-flex(row, space-around, center);
+                    margin-left: 90px;
+
+                    img {
+                        @include box(2rem, 2rem);
+                        cursor: pointer;
+
+                        &:hover {
+                            filter: brightness(130%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #criador-footer {
+        @include box(60px, 100%);
+        @include display-flex(row, center, center);
+        background-color: #000;
+
+        span {
+            color: $neutra;
+        }
+    }
 }
