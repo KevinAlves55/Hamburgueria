@@ -27,9 +27,9 @@
     
     <!-- Arquivos Js -->
     <script src="assets/js/srollAnimation.js" defer></script>
+    <script src="assets/js/mascara.js"></script>
     <script src="assets/js/menuEfeito.js"></script>
     <script src="assets/js/modal.js"></script>
-    <script src="assets/js/carrousel.js"></script>
 
     <!-- Link para CSS/SASS -->
     <link rel="stylesheet" href="assets/sass/estilo.css">
@@ -401,12 +401,12 @@
         <div class="conteudo itens-footer">
             <div id="informacoes-footer">
                 <div id="logo-footer">
-                    <img src="assets/img/logo.jpg" alt="Logo-Footer">
+                    <img src="assets/img/logo.jpg" data-anime="left" alt="Logo-Footer">
                 </div>
                 <div id="lojas-footer">
                     <h2 class="titulo-footer">nossas lojas</h2>
                     
-                    <div class="unidade">   
+                    <div class="unidade" data-anime="top">   
                         <span>Unidade Jandira</span>
                         <div class="descricao">
                             <img src="assets/img/loja-footer.jpg" alt="Imagem hamburgueria">
@@ -414,7 +414,7 @@
                         </div>
                     </div>
 
-                    <div class="unidade">
+                    <div class="unidade" data-anime="top">
                         <span>Unidade Barueri</span>
                         <div class="descricao">
                             <img src="assets/img/loja-footer2.jpg" alt="Imagem hamburgueria">
@@ -427,22 +427,22 @@
                     <h2 class="titulo-footer">entre em contato</h2>
 
                     <form method="post" name="frmPost">
-                        <div class="caixa">
+                        <div class="caixa" data-anime="right-form">
                            <label>Nome: </label>
                            <ion-icon name="person-outline" class="icon-input-footer"></ion-icon>
-                           <input type="text" name="nome" value="" placeholder="Informe seu nome" maxlength="100">
+                           <input type="text" id="nome" name="nome" value="" autofocus onkeyup="caracteresInvalidos(this)" required placeholder="Informe seu nome" maxlength="100">
                         </div>
-                        <div class="caixa">
+                        <div class="caixa" data-anime="right-form">
                             <label>Email: </label>
                             <ion-icon name="mail-outline" class="icon-input-footer"></ion-icon>
-                            <input type="email" name="email" value="" placeholder="Digite seu Email" maxlength="100">
+                            <input type="email" id="email" name="email" value="" required placeholder="Digite seu Email" autocomplete="on" maxlength="100">
                         </div>
-                        <div class="caixa">
+                        <div class="caixa" data-anime="right-form">
                             <label>Celular: </label>
                             <ion-icon name="call-outline" class="icon-input-footer"></ion-icon>
-                            <input type="text" name="celular" value="" placeholder="Informe seu celular" maxlength="15">
+                            <input type="tel" id="telefone" name="celular" value="" required onkeyup="mascaraCelular(this)" placeholder="Informe seu celular" maxlength="15">
                         </div>
-                        <div id="button-footer">
+                        <div id="button-footer" data-anime="right-form">
                             <input type="submit" name="btnEnviar" value="Enviar">
                         </div>
                     </form>

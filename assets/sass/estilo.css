@@ -343,6 +343,16 @@ body {
           transform: translate3d(42px, 0, 0);
 }
 
+[data-anime="right-form"] {
+  -webkit-transform: translate3d(83px, 0, 0);
+          transform: translate3d(83px, 0, 0);
+}
+
+[data-anime="top"] {
+  -webkit-transform: translate3d(0, -55px, 0);
+          transform: translate3d(0, -55px, 0);
+}
+
 [data-anime].animate {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
@@ -1718,8 +1728,8 @@ footer .itens-footer #informacoes-footer #contatos-footer #galeria-contatos-foot
 }
 
 footer .itens-footer #informacoes-footer #contatos-footer #galeria-contatos-footer img {
-  height: 2rem;
-  width: 2rem;
+  height: 1.7rem;
+  width: 1.7rem;
   cursor: pointer;
 }
 

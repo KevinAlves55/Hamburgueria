@@ -708,7 +708,7 @@ footer {
                     margin-left: 90px;
 
                     img {
-                        @include box(2rem, 2rem);
+                        @include box(1.7rem, 1.7rem);
                         cursor: pointer;
 
                         &:hover {
