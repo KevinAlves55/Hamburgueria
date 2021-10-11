@@ -1419,18 +1419,6 @@ main .itens-main #produtos {
           align-items: center;
 }
 
-#promocoes .efeito {
-  -webkit-transition: .6s;
-  transition: .6s;
-}
-
-#promocoes .efeito:hover {
-  -webkit-transition: .6s;
-  transition: .6s;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
 #destaques {
   height: 430px;
   width: 100%;

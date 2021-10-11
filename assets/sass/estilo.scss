@@ -498,16 +498,6 @@ main {
         height: inherit;
         @include display-flex(row, space-between, center);
     }
-
-    .efeito {
-        
-        transition: .6s;
-
-        &:hover {
-            transition: .6s;
-            transform: scale(1.1);
-        }
-    }
 }
 
 #destaques {
@@ -527,26 +517,6 @@ main {
             border-bottom: 4px solid $neutra;
             margin-top: 20px;
         }
-        
-        // #destaques-img {
-        //     @include display-flex(row, space-between, center);
-        //     width: 100%;
-        //     flex-grow: 1;
-
-        //     img {
-        //         @include box(320px, 320px);
-        //         border-radius: 50%;
-        //         cursor: pointer;
-        //         transition: .5s linear;
-        //         border: 7px solid $neutra;
-    
-        //         &:hover {
-        //             transform: translate3d(0, -25px, 0);
-        //             transition: .5s linear;
-        //             filter: brightness(120%);
-        //         }
-        //     }
-        // }
     }
 }
 
