@@ -1,3 +1,7 @@
+// Efeito de Scroll Animado
+
+"use strict"
+
 const debounce = function(func, wait, immediate) {
     let timeout
     return function(...args) {

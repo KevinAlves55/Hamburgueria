@@ -4,14 +4,7 @@
 @import '../sass/bodyDefault';
 @import '../sass/slide';
 @import '../sass/scrollAnimation';
-
-html {
-    scroll-behavior: smooth;
-}
-  
-:target {
-    scroll-margin-top: 170px;
-}
+@import '../sass/owlCarrousel';
 
 header {
     @include box(170px, 100%);
@@ -171,6 +164,7 @@ main {
             #cardapio {
                 @include box(inherit, 215px);
                 @include display-flex(row, space-between, center);
+                
                 input {
                     display: none;
                 }
@@ -504,10 +498,20 @@ main {
         height: inherit;
         @include display-flex(row, space-between, center);
     }
+
+    .efeito {
+        
+        transition: .6s;
+
+        &:hover {
+            transition: .6s;
+            transform: scale(1.1);
+        }
+    }
 }
 
 #destaques {
-    @include box(450px, 100%);
+    @include box(430px, 100%);
     @include display-flex(row, center, flex-start);
     background: linear-gradient(135deg, #C7491E, #e6bb1f);
 
@@ -523,32 +527,32 @@ main {
             border-bottom: 4px solid $neutra;
             margin-top: 20px;
         }
+        
+        // #destaques-img {
+        //     @include display-flex(row, space-between, center);
+        //     width: 100%;
+        //     flex-grow: 1;
 
-        #destaques-img {
-            @include display-flex(row, space-between, center);
-            width: 100%;
-            flex-grow: 1;
-
-            img {
-                @include box(320px, 320px);
-                border-radius: 50%;
-                cursor: pointer;
-                transition: .5s linear;
-                border: 7px solid $neutra;
+        //     img {
+        //         @include box(320px, 320px);
+        //         border-radius: 50%;
+        //         cursor: pointer;
+        //         transition: .5s linear;
+        //         border: 7px solid $neutra;
     
-                &:hover {
-                    transform: translate3d(0, -25px, 0);
-                    transition: .5s linear;
-                    filter: brightness(120%);
-                }
-            }
-        }
+        //         &:hover {
+        //             transform: translate3d(0, -25px, 0);
+        //             transition: .5s linear;
+        //             filter: brightness(120%);
+        //         }
+        //     }
+        // }
     }
 }
 
 footer {
     @include box(450px, 100%);
-    @include display-flex(column, center, flex-start);
+    @include display-flex(column, center, center);
     margin-top: 5rem;
     background-color: $escura;
 
@@ -637,18 +641,20 @@ footer {
             }
 
             #contatos-footer {
-                @include box(inherit, 436px);
+                @include box(inherit, 380px);
                 @include display-flex(column, space-between, flex-start);
 
                 form {
-                    @include box(210px, 100%);
-                    @include display-flex(column, flex-start, flex-start);
+                    @include box(235px, 100%);
+                    @include display-flex(column, flex-start, flex-end);
+                    margin-top: 20px;
 
                     .caixa {
                         @include box(50px, 100%);
-                        @include display-flex(row, center, center);
+                        @include display-flex(row, flex-end, center);
                         gap: 15px;
                         position: relative;
+                        padding-right: 10px;
 
                         label {
                             color: $neutra;
@@ -658,7 +664,7 @@ footer {
 
                         .icon-input-footer {
                             position: absolute;
-                            left: 140px;
+                            left: 177px;
                         }
 
                         input {
@@ -678,8 +684,9 @@ footer {
                     }
 
                     #button-footer {
-                        @include box(60px, 100%);
-                        @include display-flex(row, center, center);
+                        @include box(85px, 100%);
+                        @include display-flex(row, flex-end, center);
+                        padding-right: 10px;
 
                         input {
                             width: 35%;
@@ -691,21 +698,22 @@ footer {
                             font-size: 20px;
                             cursor: pointer;
                             box-shadow: $box-shadow;
-                            transition: all 0.1s ease;
-                            margin-top: 25px;
+                            transition: 0.5s;
 
                             &:hover {
-                                opacity: 0.8;
-                                transition: all 0.1s ease;
+                                filter: brightness(110%);
+                                transition: .5s;
+                                transform: scale(1.1); 
                             }
                         }
                     }
                 }
 
                 #galeria-contatos-footer {
-                    @include box(60px, 60%);
+                    flex-grow: 1;
+                    width: 280px;
                     @include display-flex(row, space-around, center);
-                    margin-left: 90px;
+                    margin: auto;
 
                     img {
                         @include box(1.7rem, 1.7rem);

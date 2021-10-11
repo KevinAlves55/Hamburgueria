@@ -106,10 +106,14 @@
     -ms-flex-pack: center;
     justify-content: center;
     width: 15%;
-    color: #fff;
+    color: $neutra;
     text-align: center;
     opacity: .5;
-    transition: opacity .15s ease
+    transition: opacity .15s ease;
+    cursor: pointer;
+    font-size: 2.6rem;
+    user-select: none;
+    font-weight: bold;
 }
 
 @media (prefers-reduced-motion:reduce) {
