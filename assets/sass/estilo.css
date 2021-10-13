@@ -388,7 +388,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: calc(330px * 8);
+  width: calc(330px * 17);
   -webkit-animation: scroll 25s linear infinite;
           animation: scroll 25s linear infinite;
 }
@@ -404,8 +404,8 @@ body {
             transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(calc(-330px * 4));
-            transform: translateX(calc(-330px * 4));
+    -webkit-transform: translateX(calc(-330px * 8));
+            transform: translateX(calc(-330px * 8));
   }
 }
 
@@ -415,8 +415,8 @@ body {
             transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(calc(-330px * 4));
-            transform: translateX(calc(-330px * 4));
+    -webkit-transform: translateX(calc(-330px * 8));
+            transform: translateX(calc(-330px * 8));
   }
 }
 
@@ -1440,6 +1440,7 @@ main .itens-main #produtos {
 
 #destaques .itens-destaque {
   height: inherit;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

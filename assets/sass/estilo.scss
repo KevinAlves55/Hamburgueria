@@ -506,7 +506,7 @@ main {
     background: linear-gradient(135deg, #C7491E, #e6bb1f);
 
     .itens-destaque {
-        height: inherit;
+        @include box(inherit, 100%);
         @include display-flex(column, space-between, center);
 
         h2 {
