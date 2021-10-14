@@ -1,0 +1,191 @@
+// Paleta de cores
+$alaranjado: #C7491E;
+$amarelado: #e6bb1f;
+$neutra: #FFF;
+$escura: #1f1f1f;
+
+// Tamanho da letra
+$size: (
+    
+    "titulo": 2.4rem,
+    "subTitulo": 1.9rem,
+    "grau3": 1.045rem,
+    "grau4": 1.5rem,
+    "grau5": 0.9rem,
+    "grau6": 1.1rem,
+    "grau7": 1.3rem,
+);
+
+// Densidade da letra
+$densidade: (
+    
+    "regular": 300,
+    "medium": 400,
+    "bold": 500,
+    "extraBold": bold,
+
+);
+
+// Mixin de display flex padrão
+@mixin display-flex($direction, $justify, $align) {
+    
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+
+}
+
+// Mixin de height e width
+@mixin box($altura, $largura) {
+    
+    height: $altura;
+    width: $largura;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+p {
+    line-height: 1.5;
+}
+
+input:focus {
+    border: 0.125rem solid $alaranjado;
+}
+
+body {
+    @include box(100vh, 100vw);
+    @include display-flex(row, center, center);
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #C7491E, #e6bb1f);
+}
+
+body::-webkit-scrollbar {
+    width: 0.45vw;
+}
+  
+body::-webkit-scrollbar-track {
+    background: $escura;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: $alaranjado;
+    border-radius: 1.25rem;
+    border: 0.188rem solid $alaranjado;
+}
+
+#caixa {
+    @include box(450px, 650px);
+    @include display-flex(column, flex-start, center);
+    background-color: $escura;
+    border-radius: 9px;
+    box-shadow: 0 0 30px black;
+    
+    #titulo-login {
+        @include box(100px, 100%);
+        @include display-flex(column, center, center);
+        gap: 8px;
+        margin-top: 15px;
+
+        h1 {
+            color: $neutra;
+            font-size: map-get($size, titulo);
+            font-weight: map-get($densidade, bold);
+        }
+
+        h2 { 
+            font-size: map-get($size, subTitulo);
+            font-weight: map-get($densidade, regular);
+            color: $alaranjado;
+            font-family: 'Righteous', cursive;
+        }
+    }
+
+    form {
+        flex-grow: 1;
+        width: 100%;
+        @include display-flex(column, center, center);
+        gap: 10px;
+
+        .caixa-form {
+            @include box(50px, 340px);
+            @include display-flex(row, space-between, center);
+            gap: 15px;
+            position: relative;
+
+            label {
+                color: $neutra;
+                font-weight: map-get($densidade, medium);
+                font-size: map-get($size, grau4);          
+            }
+
+            .icon-input-footer {
+                position: absolute;
+                left: 100px;
+            }  
+
+            .input-caixa-login {
+                width: 250px;
+                height: 40px;
+                border-radius: 8px;
+                border: 2px solid #c4c4c4;
+                padding: 0 30px;
+                font-size: map-get($size, grau5);
+
+                
+            }
+            input:focus {
+                    border: 2px solid $alaranjado;
+            }
+        }
+
+        #button {
+            @include box(85px, 80%);
+            @include display-flex(row, flex-end, center);
+            padding-right: 10px;
+        
+            input {
+                width: 35%;
+                height: 45px;
+                background-color: $alaranjado;
+                border: 2px solid $alaranjado;
+                border-radius: 4px;
+                color: #fff;
+                font-size: 20px;
+                cursor: pointer;
+                transition: 0.5s;
+        
+                &:hover {
+                    filter: brightness(110%);
+                    transition: .5s;
+                    transform: scale(1.1); 
+                }
+            }
+        }
+    }
+}
+// .caixa {
+//     
+
+//     label {
+//         color: $neutra;
+//         font-weight: map-get($densidade, medium);
+//         font-size: map-get($size, grau6);
+//     }
+
+//     
+
+    
+// }

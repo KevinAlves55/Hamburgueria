@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+p {
+  line-height: 1.5;
+}
+
+input:focus {
+  border: 0.125rem solid #C7491E;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #C7491E, #e6bb1f);
+}
+
+body::-webkit-scrollbar {
+  width: 0.45vw;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1f1f1f;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #C7491E;
+  border-radius: 1.25rem;
+  border: 0.188rem solid #C7491E;
+}
+
+#caixa {
+  height: 450px;
+  width: 650px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1f1f1f;
+  border-radius: 9px;
+  -webkit-box-shadow: 0 0 30px black;
+          box-shadow: 0 0 30px black;
+}
+
+#caixa #titulo-login {
+  height: 100px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+#caixa #titulo-login h1 {
+  color: #FFF;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+#caixa #titulo-login h2 {
+  font-size: 1.9rem;
+  font-weight: 300;
+  color: #C7491E;
+  font-family: 'Righteous', cursive;
+}
+
+#caixa form {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+#caixa form .caixa-form {
+  height: 50px;
+  width: 340px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+#caixa form .caixa-form label {
+  color: #FFF;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+#caixa form .caixa-form .icon-input-footer {
+  position: absolute;
+  left: 100px;
+}
+
+#caixa form .caixa-form .input-caixa-login {
+  width: 250px;
+  height: 40px;
+  border-radius: 8px;
+  border: 2px solid #c4c4c4;
+  padding: 0 30px;
+  font-size: 0.9rem;
+}
+
+#caixa form .caixa-form input:focus {
+  border: 2px solid #C7491E;
+}
+
+#caixa form #button {
+  height: 85px;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 10px;
+}
+
+#caixa form #button input {
+  width: 35%;
+  height: 45px;
+  background-color: #C7491E;
+  border: 2px solid #C7491E;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#caixa form #button input:hover {
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+/*# sourceMappingURL=login.css.map */
