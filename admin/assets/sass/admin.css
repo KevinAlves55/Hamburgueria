@@ -188,7 +188,7 @@ header {
 
 #area-controle #nav-controles {
   height: inherit;
-  width: 535px;
+  width: 780px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -287,7 +287,7 @@ main {
 }
 
 main h2 {
-  margin-top: 35px;
+  margin-top: 45px;
   font-size: 1.9rem;
   text-transform: uppercase;
   border-bottom: 4px solid #C7491E;
