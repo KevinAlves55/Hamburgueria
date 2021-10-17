@@ -1,7 +1,6 @@
 body {
     @include display-flex(column, space-between, flex-start);
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #C7491E, #e6bb1f);
 }
 
 body::-webkit-scrollbar {

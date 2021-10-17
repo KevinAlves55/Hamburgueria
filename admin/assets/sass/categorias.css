@@ -1,6 +1,207 @@
+main {
+  height: auto;
+  width: 100%;
+  min-height: 770px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 form {
-  height: 300px;
-  width: 300px;
-  background-color: red;
+  height: 350px;
+  width: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1f1f1f;
+  margin-top: 40px;
+  border-radius: 6px;
+  position: relative;
+  -webkit-box-shadow: 10px 10px 10px #cccccc;
+          box-shadow: 10px 10px 10px #cccccc;
+}
+
+form img {
+  height: 40px;
+  width: 40px;
+}
+
+form #img1 {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
+
+form #img2 {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+}
+
+form #caixa {
+  height: 50px;
+  width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 125px;
+  gap: 15px;
+}
+
+form #caixa label {
+  color: #FFF;
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+form #caixa .input-caixa-login {
+  width: 250px;
+  height: 40px;
+  border-radius: 8px;
+  border: 2px solid #c4c4c4;
+  padding: 0 10px;
+  font-size: 0.9rem;
+}
+
+form #caixa input:focus {
+  border: 2px solid #C7491E;
+}
+
+form #button {
+  height: 85px;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 10px;
+}
+
+form #button input {
+  width: 35%;
+  height: 45px;
+  background-color: #C7491E;
+  border: 2px solid #C7491E;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+form #button input:hover {
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#consultaDeDados {
+  height: auto;
+  width: 700px;
+  min-height: 200px;
+  background-color: #1f1f1f;
+  margin-top: 45px;
+  -webkit-box-shadow: 10px 10px 10px #cccccc;
+          box-shadow: 10px 10px 10px #cccccc;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+#tblConsulta {
+  width: 100%;
+  min-height: 30px;
+  height: auto;
+}
+
+#tblTitulo {
+  height: 60px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 1.9rem;
+  border-radius: 6px;
+  font-weight: 300;
+}
+
+.tblLinhas {
+  width: 100%;
+  height: 50px;
+}
+
+.tblColunas {
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  background-color: #C7491E;
+  border-radius: 6px;
+  border: solid 1px #1f1f1f;
+  color: #FFF;
+  font-size: 1.3rem;
+}
+
+.tblColunas img {
+  height: 28px;
+  width: 28px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-filter: brightness(130%);
+          filter: brightness(130%);
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.tblColunas img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.destaque {
+  font-weight: 400;
 }
 /*# sourceMappingURL=categorias.css.map */

@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <script src="assets/js/validacao.js" defer></script>
 </head>
 
 <body>
@@ -35,7 +36,25 @@
             Categorias
         </h2>
 
-        <form name="frmCategorias" method="post"></form>
+        <form name="frmCategorias" method="post">
+            <img src="assets/img/tridente.png" alt="Tridente" id="img1">
+            <img src="assets/img/raio.png" alt="Raio" id="img2">
+            
+            <div id="caixa">
+                <label>nome da categoria: </label>
+                <input type="text" name="categoria" value="" placeholder="Insira o nome da categoria" class="input-caixa-login" onkeyup="caracteresInvalidos(this)" required maxlength="50">
+            </div>
+            
+            <div id="button">
+                <input type="submit" value="Salvar">
+            </div>
+        </form>
+
+        <div id="consultaDeDados">
+           <?php
+                require_once('sectionConsulta.php');
+           ?> 
+        </div>
     </main>
 
     <footer>

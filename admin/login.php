@@ -27,12 +27,12 @@
             <div class="caixa-form">
                 <label>Login: </label>
                 <ion-icon name="mail-outline" class="icon-input-footer"></ion-icon>
-                <input class="input-caixa-login" type="email" name="email" value="" placeholder="Insira seu E-mail" maxlength="100" autofocus>
+                <input class="input-caixa-login" type="email" name="email" value="" placeholder="Insira seu E-mail" maxlength="100" autofocus required>
             </div>
             <div class="caixa-form">
                 <label>Senha: </label>
                 <ion-icon name="lock-closed-outline" class="icon-input-footer"></ion-icon>
-                <input class="input-caixa-login" type="password" name="senha" value="" placeholder="Insira sua senha" maxlength="50">
+                <input class="input-caixa-login" type="password" name="senha" value="" placeholder="Insira sua senha" maxlength="50" required>
             </div>
             <div id="button">
                 <input type="submit" value="Login" name="btnLogin">

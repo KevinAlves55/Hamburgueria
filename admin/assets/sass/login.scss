@@ -91,7 +91,7 @@ body::-webkit-scrollbar-thumb {
     @include display-flex(column, flex-start, center);
     background-color: $escura;
     border-radius: 9px;
-    box-shadow: 0 0 30px black;
+    box-shadow: 10px 10px 10px black;
     
     #titulo-login {
         @include box(100px, 100%);

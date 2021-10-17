@@ -35,7 +35,6 @@ body {
       -ms-flex-align: start;
           align-items: flex-start;
   font-family: 'Roboto', sans-serif;
-  background: linear-gradient(135deg, #C7491E, #e6bb1f);
 }
 
 body::-webkit-scrollbar {
@@ -184,6 +183,7 @@ header {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  background: linear-gradient(135deg, #C7491E, #e6bb1f);
 }
 
 #area-controle #nav-controles {
@@ -268,7 +268,7 @@ header {
 }
 
 main {
-  height: 900px;
+  height: 600px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -277,9 +277,9 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -287,7 +287,7 @@ main {
 }
 
 main h2 {
-  margin-top: 45px;
+  margin-top: 40px;
   font-size: 1.9rem;
   text-transform: uppercase;
   border-bottom: 4px solid #C7491E;

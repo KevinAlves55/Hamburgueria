@@ -72,8 +72,8 @@ body::-webkit-scrollbar-thumb {
           align-items: center;
   background-color: #1f1f1f;
   border-radius: 9px;
-  -webkit-box-shadow: 0 0 30px black;
-          box-shadow: 0 0 30px black;
+  -webkit-box-shadow: 10px 10px 10px black;
+          box-shadow: 10px 10px 10px black;
 }
 
 #caixa #titulo-login {

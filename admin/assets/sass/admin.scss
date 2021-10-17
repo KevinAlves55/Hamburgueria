@@ -67,6 +67,7 @@ header {
 #area-controle {
     @include box(100px, 100%);
     @include display-flex(row, center, flex-start);
+    background: linear-gradient(135deg, #C7491E, #e6bb1f);
 
     #nav-controles {
         @include box(inherit, 780px);
@@ -114,12 +115,12 @@ header {
 }
 
 main {
-   @include box(900px, 100%);
-   @include display-flex(column, flex-start, center);
-   background-color: $neutra;
+    @include box(600px, 100%);
+    @include display-flex(column, center, center);
+    background-color: $neutra;
 
    h2 {
-       margin-top: 45px;
+       margin-top: 40px;
        font-size: map-get($size, subTitulo);
        text-transform: uppercase;
        border-bottom: 4px solid $alaranjado;
