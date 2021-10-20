@@ -83,10 +83,17 @@ form {
             }
         }
     }
+
+    span {
+        color: $vermelho;
+        font-size: map-get($size, grau7);
+        font-weight: map-get($densidade, medium);
+        text-align: center;
+    }
 }
 
 #consultaDeDados {
-    @include box(auto, 700px);
+    @include box(auto, 580px);
     min-height: 200px;
     background-color: $escura;
     margin-top: 45px;

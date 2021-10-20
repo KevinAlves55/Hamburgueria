@@ -1,3 +1,11 @@
+    <?php
+
+    require_once('dataBase/conexaoSql.php');
+    require_once('constantes/constantes.php');
+    require_once('controles/exibiCategorias.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -36,24 +44,60 @@
             Categorias
         </h2>
 
-        <form name="frmCategorias" method="post">
+        <form action="controles/recebeCategorias.php" name="frmCategorias" method="post">
             <img src="assets/img/tridente.png" alt="Tridente" id="img1">
             <img src="assets/img/raio.png" alt="Raio" id="img2">
-            
+
             <div id="caixa">
                 <label>nome da categoria: </label>
-                <input type="text" name="categoria" value="" placeholder="Insira o nome da categoria" class="input-caixa-login" onkeyup="caracteresInvalidos(this)" required maxlength="50">
+                <input type="text" name="txtCategoria" value="" placeholder="Insira o nome da categoria" class="input-caixa-login" onkeyup="caracteresInvalidos(this)" required maxlength="50">
             </div>
-            
+
             <div id="button">
                 <input type="submit" value="Salvar">
             </div>
         </form>
 
         <div id="consultaDeDados">
-           <?php
-                require_once('sectionConsulta.php');
-           ?> 
+            <table id="tblConsulta">
+                <tr>
+                    <td id="tblTitulo" colspan="6">
+                        <h3>Manipulação De Dados.</h3>
+                    </td>
+                </tr>
+                <tr class="tblLinhas">
+                    <td class="tblColunas destaque">Nome</td>
+                    <td class="tblColunas destaque">Opções</td>
+                </tr>
+
+                <?php
+
+                    $dadosCategorias = exibirCategorias();
+
+                    while ($rsCategorias = mysqli_fetch_assoc($dadosCategorias)) {
+
+                ?>
+
+                <tr class="tblLinhas">
+                    <td class="tblColunas">
+                        <?=$rsCategorias['nome']?>
+                    </td>
+
+                    <td class="tblColunas">
+                        <a href="">
+                            <img src="assets/img/editar.png" alt="Editar" title="Editar" class="editar">
+                        </a>
+
+                        <a href="">
+                            <img src="assets/img/x.png" alt="Excluir" title="Excluir" class="excluir">
+                        </a>
+                    </td>
+                </tr>
+
+                <?php
+                    }
+                ?>
+            </table>
         </div>
     </main>
 

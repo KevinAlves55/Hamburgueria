@@ -309,6 +309,7 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   background-color: #1f1f1f;
+  margin-top: 45px;
 }
 
 footer #rodape-informacoes {

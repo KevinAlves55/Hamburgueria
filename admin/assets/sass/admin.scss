@@ -131,6 +131,7 @@ footer {
     @include box(70px, 100%);
     @include display-flex(row, space-around, center);
     background-color: $escura;
+    margin-top: 45px;
 
     #rodape-informacoes {
         @include box(inherit, auto);
