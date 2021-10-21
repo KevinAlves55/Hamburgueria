@@ -18,8 +18,12 @@
     const BD_DATABASE = 'db_burguergods';
 
     // Mensagens do sistema
-    const ERRO_CONEXAO_BD = 'Não foi possível realizar a conexão com o Banco De Dados. Entrar em contato com o administrador do sistema';
+    const ERRO_CONEXAO_BD = 'Não foi possível realizar a conexão com o Banco De Dados. Entrar em contato com o admin do sistema';
     const BD_MSG_INSERIR = 'Registro salvo com sucesso';
     const BD_MSG_ERRO = 'Algo deu errado, tente novamente';
+    const BD_MSG_EXCLUI = 'Dado excluído com sucesso';
+    const BD_MSG_ERRO_EXCLUI = 'Não foi possivel apagar o dado, tente novamente ou contate o admin';
+    const BD_MSG_ATUALIZADO = 'Dados atualizado com sucesso';
+    const BD_MSG_EDITAR_ERRO = 'Não foi possivel atualizar os dados, tente novamente ou contate o admin';
 
 ?>

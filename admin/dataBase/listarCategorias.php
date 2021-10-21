@@ -21,4 +21,17 @@
 
     }
 
+    // Função para retorna um registro, com base no id
+    function buscar($idCategorias) {
+
+        $sql = "select * from tblcategorias where idcategorias = ".$idCategorias;
+
+        $conexao = conexaoSql();
+
+        $select = mysqli_query($conexao, $sql);
+
+        return $select;
+
+    }
+
 ?>

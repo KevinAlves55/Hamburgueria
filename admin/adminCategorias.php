@@ -1,8 +1,27 @@
-    <?php
+<?php
 
-    require_once('dataBase/conexaoSql.php');
     require_once('constantes/constantes.php');
+    require_once('dataBase/conexaoSql.php');
     require_once('controles/exibiCategorias.php');
+
+    session_start();
+
+    $nome = (string) null;
+    $id = (int) 0;
+
+    // Essa variavel será utilizada para definir o modo de manipulação com o BD(Se ela for salvar será feito o insert, se ela tiver atualizar, será feito o update do dado)
+
+    $modo = (string) "Salvar";
+
+    if (isset($_SESSION['categorias'])) {
+
+        $nome = $_SESSION['categorias']['nome'];
+        $id = $_SESSION['categorias']['idcategorias'];
+        $modo = "Atualizar";
+
+        // Elimina um objeto, varivel da memória
+        unset($_SESSION['categorias']);
+    }
 
 ?>
 
@@ -44,17 +63,17 @@
             Categorias
         </h2>
 
-        <form action="controles/recebeCategorias.php" name="frmCategorias" method="post">
+        <form action="controles/recebeCategorias.php?modo=<?=$modo?>&id=<?=$id?>" name="frmCategorias" method="post">
             <img src="assets/img/tridente.png" alt="Tridente" id="img1">
             <img src="assets/img/raio.png" alt="Raio" id="img2">
 
             <div id="caixa">
                 <label>nome da categoria: </label>
-                <input type="text" name="txtCategoria" value="" placeholder="Insira o nome da categoria" class="input-caixa-login" onkeyup="caracteresInvalidos(this)" required maxlength="50">
+                <input type="text" name="txtCategoria" value="<?=$nome?>" placeholder="Insira o nome da categoria" class="input-caixa-login" onkeyup="caracteresInvalidos(this)" required maxlength="50">
             </div>
 
             <div id="button">
-                <input type="submit" value="Salvar">
+                <input type="submit" value="<?=$modo?>">
             </div>
         </form>
 
@@ -84,11 +103,11 @@
                     </td>
 
                     <td class="tblColunas">
-                        <a href="">
+                        <a href="controles/editaCategorias.php?id=<?=$rsCategorias['idcategorias']?>">
                             <img src="assets/img/editar.png" alt="Editar" title="Editar" class="editar">
                         </a>
 
-                        <a href="">
+                        <a onclick="return confirm('Tem certeza que deseja excluir o dado?');" href="controles/excluiCategorias.php?id=<?=$rsCategorias['idcategorias']?>">
                             <img src="assets/img/x.png" alt="Excluir" title="Excluir" class="excluir">
                         </a>
                     </td>
