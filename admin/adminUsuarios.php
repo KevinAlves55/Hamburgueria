@@ -7,12 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CMS - local privado</title>
     <link rel="stylesheet" href="assets/sass/admin.css">
+    <link rel="stylesheet" href="assets/sass/usuario.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <script src="assets/js/validacao.js" defer></script>
 </head>
 
 <body>
@@ -31,8 +33,62 @@
 
     <main>
         <h2>
-            Usúarios
+            Categorias
         </h2>
+
+        <form action="" name="frmCategorias" method="post">
+            <img src="assets/img/tridente.png" alt="Tridente" id="img1">
+            <img src="assets/img/raio.png" alt="Raio" id="img2">
+
+            <div id="caixa">
+                <label>nome do usúario: </label>
+                <input type="text" name="txtCategoria" value="" placeholder="Insira o nome do usúario" class="input-caixa-login" onkeyup="caracteresInvalidos(this)" required maxlength="100">
+            </div>
+            <div id="caixa">
+                <label class="centro">usúario: </label>
+                <input type="email" name="txtCategoria" value="" placeholder="Insira o usúario" class="input-caixa-login" required maxlength="100">
+            </div>
+            <div id="caixa">
+                <label class="centro">senha: </label>
+                <input type="password" name="txtCategoria" value="" placeholder="Insira a senha" class="input-caixa-login" required maxlength="100">
+            </div>
+
+            <div id="button">
+                <input type="submit" value="Salvar">
+            </div>
+        </form>
+
+        <div id="consultaDeDados">
+            <table id="tblConsulta">
+                <tr>
+                    <td id="tblTitulo" colspan="6">
+                        <h3>Manipulação De Dados.</h3>
+                    </td>
+                </tr>
+                <tr class="tblLinhas">
+                    <td class="tblColunas destaque">Nome</td>
+                    <td class="tblColunas destaque">Usuario</td>
+                    <td class="tblColunas destaque">Senha</td>
+                    <td class="tblColunas destaque">Opções</td>
+                </tr>
+
+                <tr class="tblLinhas">
+                    <td class="tblColunas"></td>
+                    <td class="tblColunas"></td>
+                    <td class="tblColunas"></td>
+
+                    <td class="tblColunas">
+                        <a href="">
+                            <img src="assets/img/editar.png" alt="Editar" title="Editar" class="editar">
+                        </a>
+
+                        <a href="">
+                            <img src="assets/img/x.png" alt="Excluir" title="Excluir" class="excluir">
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </main>
 
     <footer>
