@@ -34,8 +34,6 @@
             "categorias" => $categorias
 
         );
-
-        // Chamada da função inserir() do arquivo arquivo inseririCliente.php
         
         if (strtoupper($_GET['modo']) == 'SALVAR') {
 

@@ -1,16 +1,16 @@
 <?php
 
-/*
+/* 
 
     Objetivo: Buscar/Listar os dados de categorias
     Data: 19/10/2021
     Autor: Kevin
-    
+
 */
 
-    require_once(SRC.'dataBase/listarCategorias.php');
+    require_once(SRC.'dataBase/listarUsuarios.php');
 
-    function exibirCategorias() {
+    function exibirUsuarios() {
 
         $dados = listar();
 

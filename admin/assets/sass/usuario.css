@@ -18,22 +18,21 @@ main {
 }
 
 form {
-  height: 400px;
+  height: 350px;
   width: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
   background-color: #1f1f1f;
   margin-top: 40px;
   border-radius: 6px;
@@ -57,6 +56,26 @@ form #img2 {
   position: absolute;
   left: 12px;
   bottom: 12px;
+}
+
+form #container-form {
+  height: 170px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 14px;
+  margin-top: 25px;
 }
 
 form #caixa {
@@ -117,6 +136,7 @@ form #button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 15px;
   padding-right: 10px;
 }
 

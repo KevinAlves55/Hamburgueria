@@ -11,14 +11,13 @@
     require_once('../constantes/constantes.php');
     require_once(SRC.'dataBase/excluirCategorias.php');
 
-    $idCliente = $_GET['id'];
+    $id = $_GET['id'];
 
-    if(excluir($idCliente)) {
+    if (excluir($id)) {
         
         echo("<script> alert('". BD_MSG_EXCLUI ."'); window.location.href = '../adminCategorias.php'; </script>");
     
-    }
-    else {
+    } else {
 
         echo("<script> alert('". BD_MSG_ERRO_EXCLUI ."'); window.history.back(); </script>");
 

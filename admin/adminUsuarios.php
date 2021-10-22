@@ -1,3 +1,31 @@
+<?php
+
+    require_once('constantes/constantes.php');
+    require_once('dataBase/conexaoSql.php');
+    require_once('controles/exibiUsuarios.php');
+
+    session_start();
+
+    $nome = (string) null;
+    $usuario = (string) null;
+    $senha = (string) null;
+    $id = (int) 0;
+    $modo = (string) "Salvar";
+
+    if (isset($_SESSION['usuarios'])) {
+
+        $nome = $_SESSION['usuarios']['nome'];
+        $usuario = $_SESSION['usuarios']['usuario'];
+        $senha = $_SESSION['usuarios']['senha'];
+        $id = $_SESSION['usuarios']['idusuarios'];
+        $modo = "Atualizar";
+
+        unset($_SESSION['usuarios']);
+
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -36,25 +64,27 @@
             Categorias
         </h2>
 
-        <form action="" name="frmCategorias" method="post">
+        <form action="controles/recebeUsuarios.php?modo=<?=$modo?>&id=<?=$id?>" name="frmCategorias" method="post">
             <img src="assets/img/tridente.png" alt="Tridente" id="img1">
             <img src="assets/img/raio.png" alt="Raio" id="img2">
 
-            <div id="caixa">
-                <label>nome do usúario: </label>
-                <input type="text" name="txtCategoria" value="" placeholder="Insira o nome do usúario" class="input-caixa-login" onkeyup="caracteresInvalidos(this)" required maxlength="100">
-            </div>
-            <div id="caixa">
-                <label class="centro">usúario: </label>
-                <input type="email" name="txtCategoria" value="" placeholder="Insira o usúario" class="input-caixa-login" required maxlength="100">
-            </div>
-            <div id="caixa">
-                <label class="centro">senha: </label>
-                <input type="password" name="txtCategoria" value="" placeholder="Insira a senha" class="input-caixa-login" required maxlength="100">
-            </div>
+            <div id="container-form">
+                <div id="caixa">
+                    <label>nome do usúario: </label>
+                    <input type="text" name="txtNome" value="<?=$nome?>" placeholder="Insira o nome do usúario" class="input-caixa-login" onkeyup="caracteresInvalidos(this)" required maxlength="100">
+                </div>
+                <div id="caixa">
+                    <label class="centro">usúario: </label>
+                    <input type="text" name="txtUsuario" value="<?=$usuario?>" placeholder="Insira o usúario" class="input-caixa-login" required maxlength="100">
+                </div>
+                <div id="caixa">
+                    <label class="centro">senha: </label>
+                    <input type="password" name="txtSenha" value="<?=$senha?>" placeholder="Insira a senha" class="input-caixa-login" required maxlength="100">
+                </div>
 
-            <div id="button">
-                <input type="submit" value="Salvar">
+                <div id="button">
+                    <input type="submit" value="<?=$modo?>">
+                </div>
             </div>
         </form>
 
@@ -72,21 +102,39 @@
                     <td class="tblColunas destaque">Opções</td>
                 </tr>
 
+                <?php
+
+                    $dadosUsuarios = exibirUsuarios();                    
+
+                    while($rsUsuarios = mysqli_fetch_assoc($dadosUsuarios)) {
+
+                ?>
+
                 <tr class="tblLinhas">
-                    <td class="tblColunas"></td>
-                    <td class="tblColunas"></td>
-                    <td class="tblColunas"></td>
+                    <td class="tblColunas"><?=$rsUsuarios['nome']?></td>
+                    <td class="tblColunas"><?=$rsUsuarios['usuario']?></td>
+                    <td class="tblColunas"><?=$rsUsuarios['senha']?></td>
 
                     <td class="tblColunas">
-                        <a href="">
+                        <a href="controles/editaUsuarios.php?id=<?=$rsUsuarios['idusuarios']?>">
                             <img src="assets/img/editar.png" alt="Editar" title="Editar" class="editar">
                         </a>
 
-                        <a href="">
+                        <a onclick="return confirm('Tem certeza que deseja excluir esse dado?')" href="controles/excluiUsuarios.php?id=<?=$rsUsuarios['idusuarios']?>">
                             <img src="assets/img/x.png" alt="Excluir" title="Excluir" class="excluir">
+                        </a>
+                        
+                        <a href="">
+                            <img src="assets/img/search.png" alt="Visualizar" title="Visualizar" class="Visualizar">
                         </a>
                     </td>
                 </tr>
+
+                <?php
+                
+                    }
+
+                ?>
             </table>
         </div>
     </main>
