@@ -61,7 +61,7 @@
 
     <main>
         <h2>
-            Categorias
+            Usúarios
         </h2>
 
         <form action="controles/recebeUsuarios.php?modo=<?=$modo?>&id=<?=$id?>" name="frmCategorias" method="post">
@@ -122,10 +122,6 @@
 
                         <a onclick="return confirm('Tem certeza que deseja excluir esse dado?')" href="controles/excluiUsuarios.php?id=<?=$rsUsuarios['idusuarios']?>">
                             <img src="assets/img/x.png" alt="Excluir" title="Excluir" class="excluir">
-                        </a>
-                        
-                        <a href="">
-                            <img src="assets/img/search.png" alt="Visualizar" title="Visualizar" class="Visualizar">
                         </a>
                     </td>
                 </tr>
