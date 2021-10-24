@@ -521,7 +521,7 @@ main {
 }
 
 footer {
-    @include box(450px, 100%);
+    @include box(475px, 100%);
     @include display-flex(column, center, center);
     margin-top: 5rem;
     background-color: $escura;
@@ -588,24 +588,25 @@ footer {
 
                     .descricao {
                         @include display-flex(row, space-between, flex-start);
-                    }
+                        gap: 8px;
 
-                    img {
-                        @include box(6rem, 6rem);
-                        margin-right: 10px;
-                        transition: .5s linear;
-                        cursor: pointer;
-                        border-radius: 6px;
-
-                        &:hover {
-                            transform: scale(1.1);
+                        img {
+                            @include box(7rem, 7.2rem);
+                            margin-right: 10px;
                             transition: .5s linear;
+                            cursor: pointer;
+                            border-radius: 6px;
+    
+                            &:hover {
+                                transform: scale(1.1);
+                                transition: .5s linear;
+                            }
                         }
-                    }
-
-                    p {
-                        color: $neutra;
-                        font-size: map-get($size, grau5);
+    
+                        p {
+                            color: $neutra;
+                            
+                        }
                     }
                 }
             }
@@ -701,7 +702,8 @@ footer {
     #criador-footer {
         @include box(60px, 100%);
         @include display-flex(row, center, center);
-        background-color: #000;
+        margin-top: 25px;
+        background-color: $escura;
 
         span {
             color: $neutra;

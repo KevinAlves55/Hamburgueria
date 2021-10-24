@@ -14,11 +14,17 @@
     $usuario = (string) null;
     $senha = (string) null;
 
-    if (isset($_GET['id']))
-    $id = (int) $_GET['id'];
-    else
-    $id = (int) 0;
+    if (isset($_GET['id'])) {
 
+        $id = (int) $_GET['id'];
+        echo($id);
+
+    }
+    else {
+
+        $id = (int) 0;
+
+    }
     
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -28,12 +34,14 @@
 
         $usuarios = array(
 
-            "id" => $id,
             "nome" => $nome,
             "usuario" => $usuario,
-            "senha" => $senha
+            "senha" => $senha,
+            "id" => $id
 
         );
+
+        var_dump($usuarios);
 
         if (strtoupper($_GET['modo']) == 'SALVAR') {
 

@@ -24,15 +24,15 @@
         </div>
         
         <form method="post" name="frmLogin">
-            <div class="caixa-form">
-                <label>Login: </label>
+            <div class="label-float">
                 <ion-icon name="mail-outline" class="icon-input-footer"></ion-icon>
-                <input class="input-caixa-login" type="email" name="email" value="" placeholder="Insira seu E-mail" maxlength="100" autofocus required>
+                <input class="input-caixa-login" type="text" name="txtUser" value="" placeholder=" " maxlength="100" required="" autocomplete="off">
+                <label>Nome de Usuário</label>
             </div>
-            <div class="caixa-form">
-                <label>Senha: </label>
+            <div class="label-float">
                 <ion-icon name="lock-closed-outline" class="icon-input-footer"></ion-icon>
-                <input class="input-caixa-login" type="password" name="senha" value="" placeholder="Insira sua senha" maxlength="50" required>
+                <input class="input-caixa-login" type="password" name="txtSenha" value="" placeholder=" " maxlength="50" required="">
+                <label>Senha</label>
             </div>
             <div id="button">
                 <input type="submit" value="Login" name="btnLogin">

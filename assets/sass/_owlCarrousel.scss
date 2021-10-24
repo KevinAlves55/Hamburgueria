@@ -1,5 +1,5 @@
 .owl {
-    height: 350px;
+    height: 400px;
     position: relative;
     width: 100%;
     display: grid;
@@ -23,7 +23,7 @@
     }
 
     100% {
-        transform: translateX(calc(-330px * 8));
+        transform: translateX(calc(-330px * 9.80));
     }
 }
 
@@ -55,7 +55,7 @@
     content: "";
     height: 100%;
     position: absolute;
-    width: 15%;
+    width: 10%;
     z-index: 2;
     border-radius: 6px;
 }

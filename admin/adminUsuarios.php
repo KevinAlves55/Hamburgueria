@@ -61,7 +61,7 @@
 
     <main>
         <h2>
-            Usúarios
+            Usuários
         </h2>
 
         <form action="controles/recebeUsuarios.php?modo=<?=$modo?>&id=<?=$id?>" name="frmCategorias" method="post">
@@ -70,7 +70,7 @@
 
             <div id="container-form">
                 <div id="caixa">
-                    <label>nome do usúario: </label>
+                    <label>nome do usuário: </label>
                     <input type="text" name="txtNome" value="<?=$nome?>" placeholder="Insira o nome do usúario" class="input-caixa-login" onkeyup="caracteresInvalidos(this)" required maxlength="100">
                 </div>
                 <div id="caixa">

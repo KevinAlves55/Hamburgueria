@@ -13,10 +13,9 @@
     function editar($arrayUsuarios) {
 
         $sql = "update tblusuarios set
-
             nome = '".$arrayUsuarios['nome']."',
             usuario = '".$arrayUsuarios['usuario']."',
-            senha = '".$arrayUsuarios['senha']."',
+            senha = '".$arrayUsuarios['senha']."'
 
         where idusuarios = ".$arrayUsuarios['id'];
 

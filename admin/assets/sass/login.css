@@ -40,20 +40,6 @@ body {
   background: linear-gradient(135deg, #C7491E, #e6bb1f);
 }
 
-body::-webkit-scrollbar {
-  width: 0.45vw;
-}
-
-body::-webkit-scrollbar-track {
-  background: #1f1f1f;
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: #C7491E;
-  border-radius: 1.25rem;
-  border: 0.188rem solid #C7491E;
-}
-
 #caixa {
   height: 450px;
   width: 650px;
@@ -70,10 +56,10 @@ body::-webkit-scrollbar-thumb {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #1f1f1f;
+  background-color: #FFF;
   border-radius: 9px;
-  -webkit-box-shadow: 10px 10px 10px black;
-          box-shadow: 10px 10px 10px black;
+  -webkit-box-shadow: 10px 10px 10px #1f1f1f;
+          box-shadow: 10px 10px 10px #1f1f1f;
 }
 
 #caixa #titulo-login {
@@ -97,7 +83,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #caixa #titulo-login h1 {
-  color: #FFF;
+  color: #1f1f1f;
   font-size: 2.4rem;
   font-weight: 500;
 }
@@ -130,48 +116,84 @@ body::-webkit-scrollbar-thumb {
   gap: 10px;
 }
 
-#caixa form .caixa-form {
-  height: 50px;
-  width: 340px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 15px;
+#caixa form .label-float {
   position: relative;
+  padding-top: 13px;
+  width: 300px;
 }
 
-#caixa form .caixa-form label {
-  color: #FFF;
-  font-weight: 400;
-  font-size: 1.5rem;
-}
-
-#caixa form .caixa-form .icon-input-footer {
+#caixa form .icon-input-footer {
   position: absolute;
-  left: 100px;
+  top: 35px;
+  left: 10px;
+  font-size: 1.2rem;
 }
 
-#caixa form .caixa-form .input-caixa-login {
-  width: 250px;
-  height: 40px;
+#caixa form .label-float input {
+  border: 2px solid #1f1f1f;
   border-radius: 8px;
-  border: 2px solid #c4c4c4;
-  padding: 0 30px;
-  font-size: 0.9rem;
+  outline: none;
+  width: inherit;
+  padding: 15px 35px;
+  font-size: 1.5rem;
+  transition: all .1s linear;
+  -webkit-transition: all .1s linear;
+  -moz-transition: all .1s linear;
+  -webkit-appearance: none;
 }
 
-#caixa form .caixa-form input:focus {
-  border: 2px solid #C7491E;
+#caixa form .label-float input:focus {
+  border: 2px solid #3951b2;
+}
+
+#caixa form .label-float input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+#caixa form .label-float input:-ms-input-placeholder {
+  color: transparent;
+}
+
+#caixa form .label-float input::-ms-input-placeholder {
+  color: transparent;
+}
+
+#caixa form .label-float input::placeholder {
+  color: transparent;
+}
+
+#caixa form .label-float label {
+  pointer-events: none;
+  position: absolute;
+  top: calc(50% - 8px);
+  left: 35px;
+  transition: all .1s linear;
+  -webkit-transition: all .1s linear;
+  -moz-transition: all .1s linear;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #fff;
+}
+
+#caixa form .label-float input:required:invalid + label {
+  color: red;
+}
+
+#caixa form .label-float input:focus:required:invalid {
+  border: 2px solid red;
+}
+
+#caixa form .label-float input:required:invalid + label:before {
+  content: '*';
+  margin-right: 3px;
+}
+
+#caixa form .label-float input:focus + label,
+#caixa form .label-float input:not(:placeholder-shown) + label {
+  font-size: 13px;
+  top: 0;
+  color: #3951b2;
 }
 
 #caixa form #button {
@@ -199,7 +221,7 @@ body::-webkit-scrollbar-thumb {
   background-color: #C7491E;
   border: 2px solid #C7491E;
   border-radius: 4px;
-  color: #fff;
+  color: #FFF;
   font-size: 20px;
   cursor: pointer;
   -webkit-transition: 0.5s;
@@ -207,8 +229,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 #caixa form #button input:hover {
-  -webkit-filter: brightness(110%);
-          filter: brightness(110%);
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
   -webkit-transition: .5s;
   transition: .5s;
   -webkit-transform: scale(1.1);

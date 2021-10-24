@@ -8,8 +8,13 @@
 
 */
 
-    // Variável para ajudar nos require_once
-    define ('SRC' , $_SERVER['DOCUMENT_ROOT'] . '/ds2t20212/Kevin/PROJETO_BACK-END/admin/');
+    // Variáveis para ajudar nos require_once
+    
+    # Local
+    define ('SRC' , $_SERVER['DOCUMENT_ROOT'] . '/PROJETO_BACK-END/admin/');
+    
+    #Senai
+    // define ('SRC' , $_SERVER['DOCUMENT_ROOT'] . '/ds2t20212/Kevin/PROJETO_BACK-END/admin/');
 
     // Variáveis para conexão com o BD
     const BD_SERVER = 'localhost';
