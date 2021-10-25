@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <script src="assets/js/olho.js" defer></script>
 </head>
 
 <body>
@@ -31,7 +33,8 @@
             </div>
             <div class="label-float">
                 <ion-icon name="lock-closed-outline" class="icon-input-footer"></ion-icon>
-                <input class="input-caixa-login" type="password" name="txtSenha" value="" placeholder=" " maxlength="50" required="">
+                <span class="lnr lnr-eye"></span>
+                <input id="password" type="password" class="input-caixa-login"  name="password" value="" placeholder=" " maxlength="50" required="">
                 <label>Senha</label>
             </div>
             <div id="button">
