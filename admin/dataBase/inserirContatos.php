@@ -18,7 +18,6 @@
             email,
             celular
             
-        
         )values(
 
             '".$arrayContatos['nome']."',

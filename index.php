@@ -55,7 +55,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-
     
     <!-- Arquivos Js -->
     <script src="assets/js/jquery.js" defer></script>
@@ -63,6 +62,7 @@
     <script src="assets/js/slide.js" defer></script>
     <script src="assets/js/srollAnimation.js" defer></script>
     <script src="assets/js/menuEfeito.js" defer></script>
+    <script src="assets/js/carrousel.js" defer></script>
     <script src="assets/js/mascara.js" defer></script>
 
     <!-- Link para CSS/SASS -->
@@ -354,7 +354,7 @@
     </div>
 
     <section id="promocoes">
-        <div class="conteudo itens-promocoes">
+        <div class="conteudo itens-promocoes">       
             <div class="cards" data-anime="left">
                 <div class="card-foto">
                     <img src="assets/img/produto10.jpg" alt="Hamburguer dos deuses">
@@ -475,7 +475,7 @@
         <div class="conteudo itens-footer">
             <div id="informacoes-footer">
                 <div id="logo-footer">
-                    <img src="assets/img/logo.jpg" data-anime="left" alt="Logo-Footer">
+                    <img src="assets/img/logo.jpg" id="logo-footer" data-anime="left" alt="Logo-Footer">
                 </div>
                 
                 <div id="lojas-footer">
@@ -541,7 +541,6 @@
 
     <!-- Scripts para icons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 
