@@ -31,4 +31,7 @@
     const BD_MSG_ATUALIZADO = 'Dado atualizado com sucesso';
     const BD_MSG_EDITAR_ERRO = 'Não foi possivel atualizar os dados, tente novamente ou contate o admin';
 
+    // Mensagens para a index
+    const APERTOU_BOTAO = 'Agradecemos seu feedback, retornaremos em breve';
+
 ?>

@@ -16,7 +16,7 @@
             usuario,
             senha
 
-        ) Values(
+        )Values(
 
             '".$arrayUsuarios['nome']."',
             '".$arrayUsuarios['usuario']."',

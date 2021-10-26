@@ -1,3 +1,39 @@
+<?php
+
+    require_once('admin/constantes/constantes.php');
+    require_once('admin/dataBase/inserirContatos.php');
+
+    $nome = (string) null;
+    $email = (string) null;
+    $celular = (string) null;
+
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+        $nome = $_POST['txtNome'];
+        $email = $_POST['txtEmail'];
+        $celular = $_POST['txtCelular'];
+
+        $contatos = array(
+            
+            "nome" => $nome,
+            "email" => $email,
+            "celular" => $celular
+        
+        );
+
+        if(inserirContatos($contatos)) {
+
+            echo("<script> alert('".APERTOU_BOTAO."'); window.location.href = 'index.php'; </script>");
+
+        } else {
+
+            echo("<script> alert('Algo deu errado, volte mais tarde e tente novamente); </script>");
+
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -60,7 +96,7 @@
         <div class="conteudo itens-header">
             <div id="logo">
                 <img src="assets/img/logo.jpg" alt="Logo">
-                <a href="index.html"><h1>Burguer<span id="destaque">Gods</span></h1></a>
+                <a href="index.php"><h1>Burguer<span id="destaque">Gods</span></h1></a>
             </div>
             <nav id="nav">
                 <ul>
@@ -471,17 +507,17 @@
                         <div class="caixa">
                            <label>Nome: </label>
                            <ion-icon name="person-outline" class="icon-input-footer"></ion-icon>
-                           <input type="text" id="nome" name="nome" value="" onkeyup="caracteresInvalidos(this)" required placeholder="Informe seu nome" maxlength="100">
+                           <input type="text" id="nome" name="txtNome" value="" onkeyup="caracteresInvalidos(this)" required placeholder="Informe seu nome" maxlength="100">
                         </div>
                         <div class="caixa">
                             <label>Email: </label>
                             <ion-icon name="mail-outline" class="icon-input-footer"></ion-icon>
-                            <input type="email" id="email" name="email" value="" required placeholder="Digite seu Email" autocomplete="on" maxlength="100">
+                            <input type="email" id="email" name="txtEmail" value="" required placeholder="Digite seu Email" autocomplete="on" maxlength="100">
                         </div>
                         <div class="caixa">
                             <label>Celular: </label>
                             <ion-icon name="call-outline" class="icon-input-footer"></ion-icon>
-                            <input type="tel" id="telefone" name="celular" value="" required onkeyup="mascaraCelular(this)" placeholder="Informe seu celular" maxlength="15">
+                            <input type="tel" id="telefone" name="txtCelular" value="" required onkeyup="mascaraCelular(this)" placeholder="Informe seu celular" maxlength="15">
                         </div>
                         <div id="button-footer">
                             <input type="submit" name="btnEnviar" value="Enviar">

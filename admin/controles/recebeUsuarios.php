@@ -41,8 +41,6 @@
 
         );
 
-        var_dump($usuarios);
-
         if (strtoupper($_GET['modo']) == 'SALVAR') {
 
             if (inserirUsuarios($usuarios)) {

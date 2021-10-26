@@ -1,9 +1,11 @@
 <?php
 
 /*
+
     Objetivo: Arquivo responsável por inserir categorias no BD
     Data: 19/10/2021
     Autor: Kevin
+
 */
 
     require_once('../dataBase/conexaoSql.php');
