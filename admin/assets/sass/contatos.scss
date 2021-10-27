@@ -3,7 +3,7 @@
 
 main {
     @include box(auto, 100%);
-    min-height: 450px;
+    min-height: 572px;
     @include display-flex(column, center, center);
 }
 

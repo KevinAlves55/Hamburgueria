@@ -1,3 +1,11 @@
+<?php
+
+    require_once('constantes/constantes.php');
+    require_once('dataBase/conexaoSql.php');
+    require_once('controles/exibiContatos.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -48,17 +56,28 @@
                     <td class="tblColunas destaque">Celular</td>
                 </tr>
 
-                <tr class="tblLinhas">
-                    <td class="tblColunas">
+                <?php
+                
+                    $dadosContatos = exibirContatos();
 
-                    </td>
-                    <td class="tblColunas">
+                    while ($rsContatos = mysqli_fetch_assoc($dadosContatos)) {
+                
+                ?>
 
-                    </td>
-                    <td class="tblColunas">
-
-                    </td>
-                </tr>
+                    <tr class="tblLinhas">
+                        <td class="tblColunas">
+                            <?=$rsContatos['nome']?>
+                        </td>
+                        <td class="tblColunas">
+                            <?=$rsContatos['email']?>
+                        </td>
+                        <td class="tblColunas">
+                            <?=$rsContatos['celular']?>
+                        </td>
+                    </tr>
+                <?php
+                    }
+                ?>
             </table>
         </div>
     </main>

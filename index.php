@@ -24,7 +24,7 @@
 
         if(inserirContatos($contatos)) {
 
-            echo("<script> alert('".APERTOU_BOTAO."'); window.location.href = 'index.php'; </script>");
+            echo("<script> alert('". APERTOU_BOTAO ."'); window.location.href = 'index.php'; </script>");
 
         } else {
 
