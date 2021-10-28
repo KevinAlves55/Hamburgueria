@@ -79,7 +79,7 @@
                 </div>
                 <div id="caixa">
                     <label class="centro">senha: </label>
-                    <input type="password" name="txtSenha" value="<?=$senha?>" placeholder="Insira a senha" class="input-caixa-login" required maxlength="100">
+                    <input type="password" name="txtSenha" value="" placeholder="Insira a senha" class="input-caixa-login" required maxlength="100">
                 </div>
 
                 <div id="button">
@@ -113,7 +113,7 @@
                 <tr class="tblLinhas">
                     <td class="tblColunas"><?=$rsUsuarios['nome']?></td>
                     <td class="tblColunas"><?=$rsUsuarios['usuario']?></td>
-                    <td class="tblColunas"><?=$rsUsuarios['senha']?></td>
+                    <td class="tblColunas"></td>
 
                     <td class="tblColunas">
                         <a href="controles/editaUsuarios.php?id=<?=$rsUsuarios['idusuarios']?>">

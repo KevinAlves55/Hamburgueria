@@ -17,7 +17,6 @@
     if (isset($_GET['id'])) {
 
         $id = (int) $_GET['id'];
-        echo($id);
 
     }
     else {

@@ -193,6 +193,7 @@ form #container-form #caixa-textarea textarea {
   padding: 8px;
   margin-left: 40px;
   border: 2px solid #c4c4c4;
+  text-transform: none;
 }
 
 form #container-form #caixa-textarea textarea:focus {

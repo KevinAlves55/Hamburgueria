@@ -46,7 +46,7 @@
         <div id="consultaDeDados">
             <table id="tblConsulta">
                 <tr>
-                    <td id="tblTitulo" colspan="6">
+                    <td id="tblTitulo" colspan="3">
                         <h3>Consulta De Dados.</h3>
                     </td>
                 </tr>

@@ -17,11 +17,3 @@ $(document).on('keydown', 'input[pattern]', function(e){
       }
     }, 90);
 });
-
-$(document).on("input", "#descricao", function () {
-    var limite = 250;
-    var caracteresDigitados = $(this).val().length;
-    var caracteresRestantes = limite - caracteresDigitados;
-  
-    $(".caracteres").text(caracteresRestantes);
-});

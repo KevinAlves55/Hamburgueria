@@ -9,7 +9,7 @@
 
 .owl-track {
     display: flex;
-    width: calc(330px * 17);
+    width: calc(330px * 14);
     animation: scroll 25s linear infinite;
 
     &:hover {
@@ -23,7 +23,7 @@
     }
 
     100% {
-        transform: translateX(calc(-330px * 9.80));
+        transform: translateX(calc(-330px * 8.25));
     }
 }
 

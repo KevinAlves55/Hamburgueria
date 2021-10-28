@@ -393,7 +393,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: calc(330px * 17);
+  width: calc(330px * 14);
   -webkit-animation: scroll 25s linear infinite;
           animation: scroll 25s linear infinite;
 }
@@ -409,8 +409,8 @@ body {
             transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(calc(-330px * 9.80));
-            transform: translateX(calc(-330px * 9.80));
+    -webkit-transform: translateX(calc(-330px * 8.25));
+            transform: translateX(calc(-330px * 8.25));
   }
 }
 
@@ -420,8 +420,8 @@ body {
             transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(calc(-330px * 9.80));
-            transform: translateX(calc(-330px * 9.80));
+    -webkit-transform: translateX(calc(-330px * 8.25));
+            transform: translateX(calc(-330px * 8.25));
   }
 }
 

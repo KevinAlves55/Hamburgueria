@@ -1,3 +1,38 @@
+<?php
+
+    require_once('constantes/constantes.php');
+    require_once('dataBase/conexaoSql.php');
+    require_once('controles/exibiProdutos.php');
+
+    session_start();
+
+    $nome = (string) null;
+    $descricao = (string) null;
+    $imagem = (string) null;
+    $preco = (float) null;
+    $desconto = (float) null;
+    $destaque = (boolean) null;
+    $id = (int) 0;
+    $modo = (string) "Salvar";
+    $slt = (string) "Selecione um item";
+
+    if (isset($_SESSION['produtos'])) {
+
+        $nome = $_SESSION['produtos']['nome'];
+        $descricao = $_SESSION['produtos']['descricao'];
+        $imagem = $_SESSION['produtos']['imagem'];
+        $preco = $_SESSION['produtos']['preco'];
+        $desconto = $_SESSION['produtos']['desconto'];
+        $destaque = $_SESSION['produtos']['destaque'];
+        $id = $_SESSION['produtos']['idprodutos'];
+        $modo = 'Atualizar';
+
+        unset($_SESSION['produtos']);
+
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -38,44 +73,45 @@
             Produtos
         </h2>
 
-        <form action="" name="frmCategorias" method="post">
+        <form action="controles/recebeProdutos.php?modo=<?=$modo?>&id=<?=$id?>" name="frmProdutos" method="post">
             <img src="assets/img/tridente.png" alt="Tridente" id="img1">
             <img src="assets/img/raio.png" alt="Raio" id="img2">
 
             <div id="container-form">
                 <div class="caixa">
-                    <input type="file" name="arquivo" id="arquivo" class="arquivo">
-                    <input type="text" name="file" id="file" class="file" placeholder="Selecione uma imagem" readonly="readonly">
+                    <input type="file" accept="image/png, image/jpeg" name="txtArquivo" id="arquivo" class="arquivo">
+                    <input type="text" name="file" id="file" class="file" placeholder="Selecione a imagem do produto * " readonly="readonly">
                     <input type="button" class="btn" value="SELECIONAR">
                 </div>
                 <div class="caixa">
                     <label class="centro">nome: </label>
-                    <input type="text" name="txtNome" value="" placeholder="Insira o nome do produto" class="input-caixa-login" onkeyup="caracteresInvalidos(this)" required maxlength="80">
+                    <input type="text" name="txtNome" value="<?=$nome?>" placeholder="Insira o nome do produto" class="input-caixa-login" onkeyup="caracteresInvalidos(this)" required maxlength="80">
                 </div>
                 <div id="caixa-textarea">
                     <label class="centro">descrição: </label>
-                    <span class="caracteres">250</span><i>250/</i>
-                    <textarea name="txtDescricao" required maxlength="250" id="descricao"></textarea>
+                    <div>
+                        <textarea name="txtDescricao" required maxlength="250"><?=$descricao?></textarea>
+                    </div>
                 </div>
                 <div class="caixa">
                     <label class="centro">preço: </label>
-                    <input type="text" name="txtPreco" value="" placeholder="Insira o preço" class="input-caixa-login" pattern="^\d*(\.\d{0,2})?$" required maxlength="6">
+                    <input type="text" name="txtPreco" value="<?=$preco?>" placeholder="Insira o preço" class="input-caixa-login" pattern="^\d*(\.\d{0,2})?$" required maxlength="6">
                 </div>
                 <div class="caixa">
                     <label class="centro">desconto: </label>
-                    <input type="text" name="txtDesconto" value="" placeholder="Insira um desconto" class="input-caixa-login" pattern="^\d*(\.\d{0,2})?$" required maxlength="6">
+                    <input type="text" name="txtDesconto" value="<?=$desconto?>" placeholder="Insira um desconto" class="input-caixa-login" pattern="^\d*(\.\d{0,2})?$" required maxlength="6">
                 </div>
                 <div id="caixa-select">
                     <label class="centro">destaque: </label>
                     <select name="sltDestaque" required>
-                        <option value="">Selecione uma opção</option>
-                        <option value="">Sim</option>
-                        <option value="">Não</option>
+                        <option value="">Selecione um produto</option>
+                        <option value="1">Sim</option>
+                        <option value="0">Não</option>
                     </select>
                 </div>
 
                 <div id="button">
-                    <input type="submit" value="Salvar">
+                    <input type="submit" value="<?=$modo?>">
                 </div>
             </div>
         </form>
@@ -97,20 +133,28 @@
                     <td class="tblColunas destaque">Opções</td>
                 </tr>
 
+                <?php
+                
+                    $dadosProdutos = exibirProdutos();
+
+                    while($rsProdutos = mysqli_fetch_assoc($dadosProdutos)) {
+
+                ?>
+                
                 <tr class="tblLinhas">
-                    <td class="tblColunas"></td>
-                    <td class="tblColunas"></td>
-                    <td class="tblColunas"></td>
-                    <td class="tblColunas"></td>
-                    <td class="tblColunas"></td>
-                    <td class="tblColunas"></td>
+                    <td class="tblColunas"><?=$rsProdutos['nome']?></td>
+                    <td class="tblColunas"><?=$rsProdutos['descricao']?></td>
+                    <td class="tblColunas"><?=$rsProdutos['imagem']?></td>
+                    <td class="tblColunas"><?=$rsProdutos['preco']?></td>
+                    <td class="tblColunas"><?=$rsProdutos['desconto']?></td>
+                    <td class="tblColunas"><?=$rsProdutos['destaque']?></td>
 
                     <td class="tblColunas">
-                        <a href="">
+                        <a href="controles/editaProdutos.php?id=<?=$rsProdutos['idprodutos']?>">
                             <img src="assets/img/editar.png" alt="Editar" title="Editar" class="editar">
                         </a>
 
-                        <a href="">
+                        <a onclick="return confirm('Tem certeza que deseja excluir o dado')" href="controles/excluiProdutos.php?id=<?=$rsProdutos['idprodutos']?>">
                             <img src="assets/img/x.png" alt="Excluir" title="Excluir" class="excluir">
                         </a>
 
@@ -119,6 +163,10 @@
                         </a>
                     </td>
                 </tr>
+
+                <?php
+                    }
+                ?>
             </table>
         </div>
     </main>
