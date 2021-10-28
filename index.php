@@ -507,7 +507,7 @@
                         <div class="caixa">
                            <label>Nome: </label>
                            <ion-icon name="person-outline" class="icon-input-footer"></ion-icon>
-                           <input type="text" id="nome" name="txtNome" value="" onkeyup="caracteresInvalidos(this)" required placeholder="Informe seu nome" maxlength="100">
+                           <input class="maiusculo" type="text" id="nome" name="txtNome" value="" onkeyup="caracteresInvalidos(this)" required placeholder="Informe seu nome" maxlength="100">
                         </div>
                         <div class="caixa">
                             <label>Email: </label>

@@ -8,7 +8,7 @@ main {
 }
 
 #consultaDeDados {
-    @include box(auto, 580px);
+    @include box(auto, 1000px);
     min-height: 200px;
     background-color: $escura;
     margin-top: 70px;

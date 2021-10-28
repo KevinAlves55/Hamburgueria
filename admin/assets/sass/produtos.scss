@@ -1,0 +1,254 @@
+@import '../sass/variables';
+@import '../sass/mixin';
+
+main {
+    @include box(auto, 100%);
+    min-height: 770px;
+    @include display-flex(column, flex-start, center);
+}
+
+form {
+    @include box(650px, 600px);
+    @include display-flex(row, center, center);
+    background-color: $escura;
+    margin-top: 40px;
+    border-radius: 6px;
+    position: relative;
+    box-shadow: 10px 10px 10px #cccccc;
+
+    img {
+        @include box(40px, 40px);
+    }
+
+    #img1 {
+        position: absolute;
+        right: 12px;
+        top: 12px;
+    }
+
+    #img2 {
+        position: absolute;
+        left: 12px;
+        bottom: 12px;
+    }
+
+    #container-form {
+        @include box(520px, 100%);
+        @include display-flex(column, center, center);
+        gap: 28px;
+        margin-top: 25px;
+
+        .caixa {
+            @include box(50px, 365px);
+            @include display-flex(row, space-between, center);
+
+            .arquivo {
+                display: none;
+            }
+    
+            .file {
+                line-height: 30px;
+                height: 40px;
+                padding: 5px;
+                font-size: 0.9rem;
+                vertical-align: middle;
+                width: 300px;
+                border-radius: 8px;
+                border: 2px solid #c4c4c4;
+            }
+            
+            .btn {
+                border: none;
+                box-sizing: border-box;
+                padding: 2px 10px;
+                background-color: $alaranjado;
+                color: #FFF;
+                height: 40px;
+                font-size: 15px;
+                vertical-align: middle;
+                border-radius: 4px;
+                margin-left: 10px;
+                cursor: pointer;
+                transition: .5s;
+    
+                &:hover {
+                    filter: brightness(110%);
+                    transition: .5s;
+                    transform: scale(1.1);
+                }
+            }
+    
+            label {
+                color: $neutra;
+                font-weight: map-get($densidade, medium);
+                font-size: map-get($size, grau4);     
+                text-transform: capitalize;     
+            } 
+    
+            .centro {
+                margin: auto;
+            }
+    
+            .input-caixa-login {
+                width: 210px;
+                height: 40px;
+                border-radius: 8px;
+                border: 2px solid #c4c4c4;
+                padding: 0 10px;
+                font-size: map-get($size, grau5);
+
+                &:focus {
+                    border: 2px solid $alaranjado; 
+                }
+            }
+        }
+
+        #caixa-textarea {
+            @include box(50px, 400px);
+            @include display-flex(row, space-between, center);
+            position: relative;
+            margin-top: 25px;
+            margin-bottom: 25px;
+
+            textarea {
+                height: 100px;
+                width: 250px;
+                border-radius: 8px;
+                font-weight: map-get($densidade, medium);
+                font-size: map-get($size, grau5);     
+                text-transform: capitalize;
+                resize: none;
+                padding: 8px;
+                margin-left: 40px;
+                border: 2px solid #c4c4c4;
+
+                &:focus {
+                    border: 2px solid $alaranjado; 
+                }
+            }
+
+            span {
+                position: absolute;
+                bottom: -20px;
+                right: 20px;
+                color: red;
+                font-weight: bold;
+            }
+
+            i {
+                position: absolute;
+                bottom: -20px;
+                right: 50px;
+                color: $escura;  
+                font-weight: bold; 
+            }
+    
+            label {
+                color: $neutra;
+                font-weight: map-get($densidade, medium);
+                font-size: map-get($size, grau4);     
+                text-transform: capitalize;     
+            }
+        }
+    
+        #caixa-select {
+            @include box(50px, 300px);
+            @include display-flex(row, space-between, center);
+    
+            label {
+                color: $neutra;
+                font-weight: map-get($densidade, medium);
+                font-size: map-get($size, grau4);     
+                text-transform: capitalize;     
+            }
+    
+            select {
+                @include box(35px, 160px);
+                border-radius: 2px solid #c4c4c4;
+            }
+        }
+    
+        #button {
+            @include box(85px, 80%);
+            @include display-flex(row, center, center);
+            margin-top: 15px;
+            padding-right: 10px;
+        
+            input {
+                width: 35%;
+                height: 45px;
+                background-color: $alaranjado;
+                border: 2px solid $alaranjado;
+                border-radius: 4px;
+                color: #fff;
+                font-size: 20px;
+                cursor: pointer;
+                transition: 0.5s;
+        
+                &:hover {
+                    filter: brightness(110%);
+                    transition: .5s;
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+#consultaDeDados {
+    @include box(auto, 1250px);
+    min-height: 200px;
+    background-color: $escura;
+    margin-top: 70px;
+    box-shadow: 10px 10px 10px #cccccc;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+#tblConsulta {
+    width: 100%;
+    min-height: 30px;
+    height: auto;
+}
+
+#tblTitulo {
+    @include box(60px, 100%);
+    text-align: center;
+    color: white;
+    font-size: map-get($size, subTitulo);
+    border-radius: 6px;
+    font-weight: map-get($densidade, regular);
+}
+
+.tblLinhas {
+    width: 100%;
+    height: 50px;
+}
+
+.tblColunas {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    background-color: $alaranjado;
+    border-radius: 6px;
+    border: solid 1px $escura;
+    color: $neutra;
+    font-size: map-get($size, grau7);
+
+    img {
+        @include box(28px, 28px);
+        transition: .5s;
+        filter: brightness(130%);
+        margin-left: 8px;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.3);
+            transition: .5s;
+        }
+    }
+}
+
+.destaque {
+    font-weight: map-get($densidade, medium);
+}

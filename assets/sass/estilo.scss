@@ -627,6 +627,10 @@ footer {
                         position: relative;
                         padding-right: 10px;
 
+                        .maiusculo {
+                            text-transform: capitalize;
+                        }
+
                         label {
                             color: $neutra;
                             font-weight: map-get($densidade, medium);

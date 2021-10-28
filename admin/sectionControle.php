@@ -18,11 +18,11 @@
         </div>
         <div class="opcoes-nav-controles">
             <img src="assets/img/contatos.png" alt="Contatos">
-            <span><a href="adminContatos.php">contatos</a></span>
+            <span><a href="adminContatos.php">Contatos</a></span>
         </div>
         <div class="opcoes-nav-controles">
             <img src="assets/img/usuarios.png" alt="Usúarios">
-            <span><a href="adminUsuarios.php">usuários</a></span>
+            <span><a href="adminUsuarios.php">Usuários</a></span>
         </div>
     </div>
     <div id="logout">

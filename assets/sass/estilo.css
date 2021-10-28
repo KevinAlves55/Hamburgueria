@@ -1719,6 +1719,10 @@ footer .itens-footer #informacoes-footer #contatos-footer form .caixa {
   padding-right: 10px;
 }
 
+footer .itens-footer #informacoes-footer #contatos-footer form .caixa .maiusculo {
+  text-transform: capitalize;
+}
+
 footer .itens-footer #informacoes-footer #contatos-footer form .caixa label {
   color: #FFF;
   font-weight: 400;
