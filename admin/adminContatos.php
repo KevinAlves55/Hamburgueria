@@ -54,6 +54,7 @@
                     <td class="tblColunas destaque">Nome</td>
                     <td class="tblColunas destaque">E-mail</td>
                     <td class="tblColunas destaque">Celular</td>
+                    <td class="tblColunas destaque">Opção</td>
                 </tr>
 
                 <?php
@@ -73,6 +74,13 @@
                         </td>
                         <td class="tblColunas">
                             <?=$rsContatos['celular']?>
+                        </td>
+                        
+                        <td class="tblColunas">
+                            <a onclick="return confirm('Tem certeza que deseja excluir o dado')" 
+                            href="controles/excluiContatos.php?id=<?=$rsContatos['idcontatos']?>">
+                                <img src="assets/img/x.png" alt="Excluir" title="Excluir" class="excluir">
+                            </a>
                         </td>
                     </tr>
                 <?php

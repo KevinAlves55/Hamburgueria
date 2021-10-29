@@ -95,15 +95,17 @@
                 </div>
                 <div class="caixa">
                     <label class="centro">preço: </label>
-                    <input type="text" name="txtPreco" value="<?=$preco?>" placeholder="Insira o preço" class="input-caixa-login" pattern="^\d*(\.\d{0,2})?$" required maxlength="6">
+                    <input type="text" name="txtPreco" value="<?=$preco?>" placeholder="Insira o preço" class="input-caixa-login" 
+                    pattern="^\d*(\.\d{0,2})?$" required maxlength="6">
                 </div>
                 <div class="caixa">
                     <label class="centro">desconto: </label>
-                    <input type="text" name="txtDesconto" value="<?=$desconto?>" placeholder="Insira um desconto" class="input-caixa-login" pattern="^\d*(\.\d{0,2})?$" required maxlength="6">
+                    <input type="text" name="txtDesconto" value="<?=$desconto?>" placeholder="Insira um desconto" class="input-caixa-login" 
+                    pattern="^\d*(\.\d{0,2})?$" required maxlength="6">
                 </div>
                 <div id="caixa-select">
                     <label class="centro">destaque: </label>
-                    <select name="sltDestaque" required>
+                    <select name="sltDestaque" required selected>
                         <option value="">Selecione um produto</option>
                         <option value="1">Sim</option>
                         <option value="0">Não</option>
