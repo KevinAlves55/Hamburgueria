@@ -14,7 +14,8 @@
     $destaque = (boolean) null;
     $id = (int) 0;
     $modo = (string) "Salvar";
-    $slt = (string) "Selecione um item";
+    $destaqueNao = (boolean) null;
+    $destaqueSim = (boolean) null;
 
     if (isset($_SESSION['produtos'])) {
 
@@ -26,6 +27,8 @@
         $destaque = $_SESSION['produtos']['destaque'];
         $id = $_SESSION['produtos']['idprodutos'];
         $modo = 'Atualizar';
+        $destaqueNao = (boolean) 0;
+        $destaqueSim = (boolean) 1;
 
         unset($_SESSION['produtos']);
 
@@ -96,7 +99,7 @@
                 <div class="caixa">
                     <label class="centro">preço: </label>
                     <input type="text" name="txtPreco" value="<?=$preco?>" placeholder="Insira o preço" class="input-caixa-login" 
-                    pattern="^\d*(\.\d{0,2})?$" required maxlength="6">
+                    pattern="^\d*(\.\d{0,2})?$" required maxlength="6" selected>
                 </div>
                 <div class="caixa">
                     <label class="centro">desconto: </label>
@@ -105,10 +108,10 @@
                 </div>
                 <div id="caixa-select">
                     <label class="centro">destaque: </label>
-                    <select name="sltDestaque" required selected>
-                        <option value="">Selecione um produto</option>
-                        <option value="1">Sim</option>
-                        <option value="0">Não</option>
+                    <select name="sltDestaque" required>
+                        <option value="">Selecione uma opção</option>
+                        <option value="<?=$destaqueSim?>"<?=$destaqueSim == $destaque? 'selected' : ''?>>Sim</option>
+                        <option value="<?=$destaqueNao?>"<?=$destaqueNao == $destaque? 'selected' : ''?>>Não</option>
                     </select>
                 </div>
 
