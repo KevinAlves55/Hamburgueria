@@ -9,13 +9,13 @@
     $nome = (string) null;
     $descricao = (string) null;
     $imagem = (string) null;
-    $preco = (float) null;
-    $desconto = (float) null;
+    $preco = (string) null;
+    $desconto = (string) null;
     $destaque = (boolean) null;
     $id = (int) 0;
     $modo = (string) "Salvar";
-    $destaqueNao = (boolean) null;
-    $destaqueSim = (boolean) null;
+    $destaqueNao = (boolean) "Não";
+    $destaqueSim = (boolean) "Sim";
 
     if (isset($_SESSION['produtos'])) {
 
@@ -27,8 +27,8 @@
         $destaque = $_SESSION['produtos']['destaque'];
         $id = $_SESSION['produtos']['idprodutos'];
         $modo = 'Atualizar';
-        $destaqueNao = (boolean) 0;
-        $destaqueSim = (boolean) 1;
+        $destaqueNao = 0;
+        $destaqueSim = 1;
 
         unset($_SESSION['produtos']);
 
