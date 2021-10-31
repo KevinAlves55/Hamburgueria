@@ -361,4 +361,90 @@ form #container-form #button input:hover {
 .destaque {
   font-weight: 400;
 }
+
+#container-modal {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #0005;
+  -webkit-backdrop-filter: saturate(180%) blur(3px);
+          backdrop-filter: saturate(180%) blur(3px);
+  position: fixed;
+  z-index: 999;
+}
+
+#container-modal .modal {
+  width: 1000px;
+  height: 600px;
+  background-color: #FFF;
+  border-radius: 5px;
+  display: none;
+}
+
+#container-modal img {
+  height: 35px;
+  width: 35px;
+  background-color: red;
+  border: 2px solid #1f1f1f;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+  position: relative;
+  top: -265px;
+  left: 965px;
+}
+
+#container-modal img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#container {
+  height: 600px;
+  width: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.linhas {
+  width: 400px;
+}
+
+.colunas {
+  width: 400px;
+  height: 60px;
+  text-align: center;
+  background-color: #C7491E;
+  border-radius: 6px;
+  border: solid 1px #1f1f1f;
+  color: #1f1f1f;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
 /*# sourceMappingURL=produtos.css.map */

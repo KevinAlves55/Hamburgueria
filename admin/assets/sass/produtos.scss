@@ -253,3 +253,58 @@ form {
 .destaque {
     font-weight: map-get($densidade, medium);
 }
+
+#container-modal {
+    @include box(100%, 100%);
+    @include display-flex(row, center, center);
+    background-color: #0005;
+    backdrop-filter: saturate(180%) blur(3px);
+    position: fixed;
+    z-index: 999;
+    
+    .modal{
+        width: 1000px;
+        height: 600px;
+        background-color: $neutra;
+        border-radius: 5px;
+        display: none;
+    }
+
+    img {
+        @include box(35px, 35px);
+        background-color: red;
+        border: 2px solid $escura;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: .5s;
+        position: relative;
+        top: -265px;
+        left: 965px;
+
+        &:hover {
+            transform: scale(1.1);
+            transition: .5s;
+        }
+    }
+}
+
+#container {
+    @include box(600px, 1000px);
+    @include display-flex(row, center, center);
+}
+
+.linhas {
+    width: 400px;
+}
+
+.colunas {
+    width: 400px;
+    height: 60px;
+    text-align: center;
+    background-color: $alaranjado;
+    border-radius: 6px;
+    border: solid 1px $escura;
+    color: $escura;
+    font-weight: map-get($densidade, extraBold);
+    font-size: map-get($size, grau7);
+}

@@ -55,9 +55,65 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="assets/js/file.js" defer></script>
     <script src="assets/js/validacao.js" defer></script>
+    <script src="assets/js/modal.js" defer></script>
+
+    <script>
+            $(document).ready(function(){
+                $("#container-modal").css('display', 'none');
+                $("#fechar").css('display', 'none');
+
+                // Abre Modal
+                $(".pesquisar").click(function(){
+                     
+                    // recebendo id do html- trabalhamos com this para referenciar elemento clicado
+                    let idProdutos = $(this).data('id');
+                        
+                    //Realiza uma requisição para consumir dados de otra pagina
+                    $.ajax({
+                        
+                        type: "GET", //Tipo de requisição (GET, POST,PUT, etc)
+                        url: "visualizarDados.php", //URL dapágina que sera consumida
+                        data: {id: idProdutos},
+
+                        //se a requisição der certo, recebemos conteúdo na variavel dados
+                        success: function(dados){ 
+                            
+                            $(".modal").html(dados)//exibe dentro da div modal
+                        
+                        }
+                    
+                    });
+
+                    $("#container-modal").fadeIn(400).ready(function(){
+                        
+                        $(".modal").slideToggle(700);
+                        $("#fechar").slideToggle(700); 
+                       
+                    });
+                });
+                
+                // Fecha Modal
+                $("#fechar").click(function(){
+                    
+                    $('.modal').fadeOut(400);
+                    $("#container-modal").fadeOut(400);
+                    $("#fechar").fadeOut(400); 
+                
+                });
+            });
+    </script>
 </head>
 
 <body>
+
+    <div id="container-modal">
+        <span id="fechar">
+            <img src="assets/img/x-preto.png" alt="Fechar modal" title="Fechar">
+        </span>
+        <div class="modal">
+            
+        </div>
+    </div>
 
     <header>
         <?php
@@ -163,9 +219,7 @@
                             <img src="assets/img/x.png" alt="Excluir" title="Excluir" class="excluir">
                         </a>
 
-                        <a href="">
-                            <img src="assets/img/search.png" alt="Visualizar" title="Visualizar" class="Visualizar">
-                        </a>
+                        <img src="assets/img/search.png" data-id="<?=$rsProdutos['idprodutos']?>" alt="Visualizar" title="Visualizar" class="pesquisar">
                     </td>
                 </tr>
 
