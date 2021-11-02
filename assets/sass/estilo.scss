@@ -147,7 +147,9 @@ header {
 }
 
 main {
-    @include box(1800px, 100%);
+    // @include box(1800px, 100%);
+    width: 100%;
+    min-height: 1800px;
     @include display-flex(column, flex-start, center);
     background: linear-gradient(135deg, #C7491E, #e6bb1f);
 
@@ -337,6 +339,7 @@ main {
             min-height: 1600px;
             overflow: auto;
             margin-top: 20px;
+            margin-bottom: 20px;
             gap: 20px;
         }
     }

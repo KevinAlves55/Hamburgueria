@@ -774,8 +774,8 @@ header {
 }
 
 main {
-  height: 1800px;
   width: 100%;
+  min-height: 1800px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1100,6 +1100,7 @@ main .itens-main #produtos {
   min-height: 1600px;
   overflow: auto;
   margin-top: 20px;
+  margin-bottom: 20px;
   gap: 20px;
 }
 
