@@ -11,7 +11,7 @@
     // Variáveis para ajudar nos require_once
     
     # Local
-    define ('SRC' , $_SERVER['DOCUMENT_ROOT'] . '/PROJETO_BACK-END/admin/');
+    define ('SRC' , $_SERVER['DOCUMENT_ROOT'] . '/BurgerGods/admin/');
     
     # Senai
     // define ('SRC' , $_SERVER['DOCUMENT_ROOT'] . '/ds2t20212/Kevin/PROJETO_BACK-END/admin/');

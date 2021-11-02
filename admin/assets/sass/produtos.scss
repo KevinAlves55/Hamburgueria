@@ -104,15 +104,12 @@ form {
         }
 
         #caixa-textarea {
-            @include box(50px, 400px);
-            @include display-flex(row, space-between, center);
-            position: relative;
-            margin-top: 25px;
-            margin-bottom: 25px;
+            @include box(100px, 408px);
+            @include display-flex(row, flex-start, center);
 
             textarea {
                 height: 100px;
-                width: 250px;
+                width: 265px;
                 border-radius: 8px;
                 font-weight: map-get($densidade, medium);
                 font-size: map-get($size, grau5);     
@@ -122,26 +119,10 @@ form {
                 margin-left: 40px;
                 border: 2px solid #c4c4c4;
                 text-transform: none;
-
+                
                 &:focus {
                     border: 2px solid $alaranjado; 
                 }
-            }
-
-            span {
-                position: absolute;
-                bottom: -20px;
-                right: 20px;
-                color: red;
-                font-weight: bold;
-            }
-
-            i {
-                position: absolute;
-                bottom: -20px;
-                right: 50px;
-                color: $escura;  
-                font-weight: bold; 
             }
     
             label {
@@ -164,8 +145,10 @@ form {
             }
     
             select {
-                @include box(35px, 160px);
-                border-radius: 2px solid #c4c4c4;
+                @include box(40px, 165px);
+                border: none;
+                border-radius: 3px;
+                font-size: map-get($size, grau5);
             }
         }
     

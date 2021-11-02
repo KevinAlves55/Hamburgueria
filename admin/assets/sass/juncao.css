@@ -18,7 +18,7 @@ main {
 }
 
 form {
-  height: 650px;
+  height: 400px;
   width: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -59,7 +59,7 @@ form #img2 {
 }
 
 form #container-form {
-  height: 520px;
+  height: 180px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -78,135 +78,9 @@ form #container-form {
   margin-top: 25px;
 }
 
-form #container-form .caixa {
-  height: 50px;
-  width: 365px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-form #container-form .caixa .arquivo {
-  display: none;
-}
-
-form #container-form .caixa .file {
-  line-height: 30px;
-  height: 40px;
-  padding: 5px;
-  font-size: 0.9rem;
-  vertical-align: middle;
-  width: 300px;
-  border-radius: 8px;
-  border: 2px solid #c4c4c4;
-}
-
-form #container-form .caixa .btn {
-  border: none;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 2px 10px;
-  background-color: #C7491E;
-  color: #FFF;
-  height: 40px;
-  font-size: 15px;
-  vertical-align: middle;
-  border-radius: 4px;
-  margin-left: 10px;
-  cursor: pointer;
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-form #container-form .caixa .btn:hover {
-  -webkit-filter: brightness(110%);
-          filter: brightness(110%);
-  -webkit-transition: .5s;
-  transition: .5s;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-form #container-form .caixa label {
-  color: #FFF;
-  font-weight: 400;
-  font-size: 1.5rem;
-  text-transform: capitalize;
-}
-
-form #container-form .caixa .centro {
-  margin: auto;
-}
-
-form #container-form .caixa .input-caixa-login {
-  width: 210px;
-  height: 40px;
-  border-radius: 8px;
-  border: 2px solid #c4c4c4;
-  padding: 0 10px;
-  font-size: 0.9rem;
-}
-
-form #container-form .caixa .input-caixa-login:focus {
-  border: 2px solid #C7491E;
-}
-
-form #container-form #caixa-textarea {
-  height: 100px;
-  width: 408px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-form #container-form #caixa-textarea textarea {
-  height: 100px;
-  width: 265px;
-  border-radius: 8px;
-  font-weight: 400;
-  font-size: 0.9rem;
-  text-transform: capitalize;
-  resize: none;
-  padding: 8px;
-  margin-left: 40px;
-  border: 2px solid #c4c4c4;
-  text-transform: none;
-}
-
-form #container-form #caixa-textarea textarea:focus {
-  border: 2px solid #C7491E;
-}
-
-form #container-form #caixa-textarea label {
-  color: #FFF;
-  font-weight: 400;
-  font-size: 1.5rem;
-  text-transform: capitalize;
-}
-
 form #container-form #caixa-select {
-  height: 50px;
-  width: 300px;
+  height: 80px;
+  width: 480px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -220,24 +94,25 @@ form #container-form #caixa-select {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-form #container-form #caixa-select label {
-  color: #FFF;
-  font-weight: 400;
-  font-size: 1.5rem;
-  text-transform: capitalize;
+  gap: 20px;
 }
 
 form #container-form #caixa-select select {
-  height: 40px;
-  width: 165px;
+  height: 50px;
+  width: 225px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background-color: #C7491E;
+  color: #FFF;
   border: none;
   border-radius: 3px;
-  font-size: 0.9rem;
 }
 
-form #container-form #button {
+form #container-form #caixa-select option {
+  text-align: center;
+}
+
+form #button {
   height: 85px;
   width: 80%;
   display: -webkit-box;
@@ -257,7 +132,7 @@ form #container-form #button {
   padding-right: 10px;
 }
 
-form #container-form #button input {
+form #button input {
   width: 35%;
   height: 45px;
   background-color: #C7491E;
@@ -270,7 +145,7 @@ form #container-form #button input {
   transition: 0.5s;
 }
 
-form #container-form #button input:hover {
+form #button input:hover {
   -webkit-filter: brightness(110%);
           filter: brightness(110%);
   -webkit-transition: .5s;
@@ -428,6 +303,6 @@ form #container-form #button input:hover {
   border: solid 1px #1f1f1f;
   color: #1f1f1f;
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
-/*# sourceMappingURL=produtos.css.map */
+/*# sourceMappingURL=juncao.css.map */
