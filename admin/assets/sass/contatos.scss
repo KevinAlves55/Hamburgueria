@@ -2,8 +2,8 @@
 @import '../sass/mixin';
 
 main {
-    @include box(auto, 100%);
-    min-height: 572px;
+    flex-grow: 1;
+    width: 100%;
     @include display-flex(column, center, center);
 }
 

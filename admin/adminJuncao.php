@@ -1,3 +1,11 @@
+<?php
+
+    require_once('constantes/constantes.php');
+    require_once(SRC.'controles/listarJuncaoProdutos.php');
+    require_once(SRC.'controles/listarJuncaoCategorias.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -35,20 +43,46 @@
             junção de categorias e produtos
         </h2>
 
-        <form name="frmProdutos" method="post">
+        <form name="frmJuncao" method="post">
             <img src="assets/img/tridente.png" alt="Tridente" id="img1">
             <img src="assets/img/raio.png" alt="Raio" id="img2">
 
             <div id="container-form">
                 <div id="caixa-select">
                     <select name="sltProdutos" required>
-                        <option value="">Selecione um produto</option>
-                        <option value="">Teste</option>
+                        <option selected value="">Selecione um produto</option>
+                        
+                        <?php
+
+                            $listarNome = exibirNomeProdutos();
+
+                            while($rsJuncaoProduto = mysqli_fetch_assoc($listarNome)) {
+
+                                ?>
+                                    <option value="<?$rsJuncaoProduto['idprodutos']?>"> <?=$rsJuncaoProduto['nome']?> </option>
+                                <?php
+
+                            }
+
+                        ?>
                     </select>
                     
-                    <select name="sltProdutos" required>
-                        <option value="">Selecione uma categoria</option>
-                        <option value="">Teste</option>
+                    <select name="sltCategorias" required>
+                        <option selected value="">Selecione uma categoria</option>
+                        
+                        <?php
+                        
+                            $listarNome = exibirNomeCategorias();
+
+                            while($rsJuncaoCategoria = mysqli_fetch_assoc($listarNome)) {
+
+                                ?>
+                                    <option value="<?$rsJuncaoCategoria['idcategorias']?>"> <?=$rsJuncaoCategoria['nome']?> </option>
+                                <?php
+
+                            }
+                        
+                        ?>
                     </select>
                 </div>
 

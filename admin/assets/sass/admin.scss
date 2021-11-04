@@ -115,7 +115,8 @@ header {
 }
 
 main {
-    @include box(572px, 100%);
+    flex-grow: 1;
+    width: 100%;
     @include display-flex(column, center, center);
     background-color: $neutra;
 
