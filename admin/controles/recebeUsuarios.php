@@ -30,12 +30,13 @@
         $nome = $_POST['txtNome'];
         $usuario = $_POST['txtUsuario'];
         $senha = $_POST['txtSenha'];
+        $senhaCript = md5($senha);
 
         $usuarios = array(
 
             "nome" => $nome,
             "usuario" => $usuario,
-            "senha" => $senha,
+            "senha" => $senhaCript,
             "id" => $id
 
         );
