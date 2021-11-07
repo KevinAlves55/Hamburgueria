@@ -11,6 +11,8 @@
     $senha = (string) null;
     $id = (int) 0;
     $modo = (string) "Salvar";
+    $modoSenha = (string) "senha: ";
+    $novoUsuario = (string) "usúario: ";
 
     if (isset($_SESSION['usuarios'])) {
 
@@ -18,7 +20,9 @@
         $usuario = $_SESSION['usuarios']['usuario'];
         $senha = $_SESSION['usuarios']['senha'];
         $id = $_SESSION['usuarios']['idusuarios'];
-        $modo = "Atualizar";
+        $modo = 'Atualizar';
+        $modoSenha = 'Nova senha: ';
+        $novoUsuario = 'Novo usuário: ';
 
         unset($_SESSION['usuarios']);
 
@@ -74,11 +78,11 @@
                     <input type="text" name="txtNome" value="<?=$nome?>" placeholder="Insira o nome do usúario" class="input-caixa-login" onkeyup="caracteresInvalidos(this)" required maxlength="100">
                 </div>
                 <div id="caixa">
-                    <label class="centro">usúario: </label>
+                    <label class="centro"><?=$novoUsuario?></label>
                     <input type="text" name="txtUsuario" value="<?=$usuario?>" placeholder="Insira o usúario" class="input-caixa-login" required maxlength="100">
                 </div>
                 <div id="caixa">
-                    <label class="centro">senha: </label>
+                    <label class="centro"><?=$modoSenha?></label>
                     <input type="password" name="txtSenha" value="" placeholder="Insira a senha" class="input-caixa-login" required maxlength="100">
                 </div>
 

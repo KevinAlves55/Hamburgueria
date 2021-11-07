@@ -34,6 +34,7 @@
     const BD_TIPO_UPLOAD = 'Tipo de arquivo inválido';
     const BD_SIZE_UPLOAD = 'Escolher imagem menor do que 5mb';
     const BD_UPLOAD_VAZIO = 'Campo de arquivo vazio';
+    const BD_MSG_JUNCAO = 'Junção registrada';
 
     // Mensagens para a index
     const APERTOU_BOTAO = 'Agradecemos seu feedback, retornaremos em breve';

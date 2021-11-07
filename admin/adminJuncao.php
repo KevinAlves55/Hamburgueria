@@ -43,7 +43,7 @@
             junção de categorias e produtos
         </h2>
 
-        <form name="frmJuncao" method="post">
+        <form action="controles/recebeJuncao.php" name="frmJuncao" method="post">
             <img src="assets/img/tridente.png" alt="Tridente" id="img1">
             <img src="assets/img/raio.png" alt="Raio" id="img2">
 
