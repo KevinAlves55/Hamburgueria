@@ -7,6 +7,7 @@
 */
 
     require_once('../constantes/constantes.php');
+    require_once('../constantes/upload.php');
     require_once('../dataBase/inserirProdutos.php');
     require_once('../dataBase/atualizarProdutos.php');
 
@@ -31,7 +32,7 @@
 
         $nome = $_POST['txtNome'];
         $descricao = $_POST['txtDescricao'];
-        $imagem = $_POST['txtArquivo'];
+        $imagem = uploadFile($_FILES['fleImagem']);
         $preco = $_POST['txtPreco'];
         $desconto = $_POST['txtDesconto'];
         $destaque = $_POST['sltDestaque'];

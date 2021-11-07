@@ -281,7 +281,7 @@ form #container-form #button input:hover {
 
 #consultaDeDados {
   height: auto;
-  width: 1250px;
+  width: 1400px;
   min-height: 200px;
   background-color: #1f1f1f;
   margin-top: 70px;
@@ -293,7 +293,7 @@ form #container-form #button input:hover {
 
 #tblConsulta {
   width: 100%;
-  min-height: 30px;
+  min-height: 50px;
   height: auto;
 }
 
@@ -323,7 +323,13 @@ form #container-form #button input:hover {
   font-size: 1.3rem;
 }
 
-.tblColunas img {
+.tblColunas #upload-imagem {
+  height: 250px;
+  width: 250px;
+  border-radius: 8px;
+}
+
+.ferramentas {
   height: 28px;
   width: 28px;
   -webkit-transition: .5s;
@@ -334,7 +340,7 @@ form #container-form #button input:hover {
   cursor: pointer;
 }
 
-.tblColunas img:hover {
+.ferramentas:hover {
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
   -webkit-transition: .5s;

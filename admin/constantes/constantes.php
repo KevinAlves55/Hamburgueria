@@ -11,10 +11,10 @@
     // Variáveis para ajudar nos require_once
     
     # Local
-    // define ('SRC' , $_SERVER['DOCUMENT_ROOT'] . '/BurgerGods/admin/');
+    define ('SRC' , $_SERVER['DOCUMENT_ROOT'] . '/BurgerGods/admin/');
     
     # Senai
-    define ('SRC' , $_SERVER['DOCUMENT_ROOT'] . '/ds2t20212/Kevin/BurguerGods/admin/');
+    // define ('SRC' , $_SERVER['DOCUMENT_ROOT'] . '/ds2t20212/Kevin/BurguerGods/admin/');
 
     // Variáveis para conexão com o BD
     const BD_SERVER = 'localhost';
@@ -30,8 +30,18 @@
     const BD_MSG_ERRO_EXCLUI = 'Não foi possivel apagar o dado, tente novamente ou contate o admin';
     const BD_MSG_ATUALIZADO = 'Dados atualizados com sucesso';
     const BD_MSG_EDITAR_ERRO = 'Não foi possivel atualizar os dados, tente novamente ou contate o admin';
+    const BD_ERRO_UPLOAD = 'Erro no upload de imagem';
+    const BD_TIPO_UPLOAD = 'Tipo de arquivo inválido';
+    const BD_SIZE_UPLOAD = 'Escolher imagem menor do que 5mb';
+    const BD_UPLOAD_VAZIO = 'Campo de arquivo vazio';
 
     // Mensagens para a index
     const APERTOU_BOTAO = 'Agradecemos seu feedback, retornaremos em breve';
+
+    // Constantes para a função de upload
+    define ('NOME_DIRETORIO_FILE', 'arquivos/');
+    $extencoesPermitidas = array('image/png', 'image/jpg', 'image/jpeg');
+    define ('EXTENCOES_PERMITIDAS', $extencoesPermitidas);
+    const TAMANHO_ARQUIVO = '5120';
 
 ?>

@@ -86,13 +86,13 @@
             Produtos
         </h2>
 
-        <form action="controles/recebeProdutos.php?modo=<?=$modo?>&id=<?=$id?>" name="frmProdutos" method="post">
+        <form enctype="multipart/form-data" action="controles/recebeProdutos.php?modo=<?=$modo?>&id=<?=$id?>" name="frmProdutos" method="post">
             <img src="assets/img/tridente.png" alt="Tridente" id="img1">
             <img src="assets/img/raio.png" alt="Raio" id="img2">
 
             <div id="container-form">
                 <div class="caixa">
-                    <input type="file" accept="image/png, image/jpeg" name="txtArquivo" id="arquivo" class="arquivo">
+                    <input type="file" accept="image/png, image/jpg, image/jpeg" name="fleImagem" id="arquivo" class="arquivo" required>
                     <input type="text" name="file" id="file" class="file" placeholder="Selecione a imagem do produto * " readonly="readonly">
                     <input type="button" class="btn" value="SELECIONAR">
                 </div>
@@ -107,7 +107,7 @@
                 <div class="caixa">
                     <label class="centro">preço: </label>
                     <input type="text" name="txtPreco" value="<?=$preco?>" placeholder="Insira o preço" class="input-caixa-login" 
-                    pattern="^\d*(\.\d{0,2})?$" required maxlength="6" selected>
+                    pattern="^\d*(\.\d{0,2})?$" required maxlength="6">
                 </div>
                 <div class="caixa">
                     <label class="centro">desconto: </label>
@@ -157,21 +157,23 @@
                 <tr class="tblLinhas">
                     <td class="tblColunas"><?=$rsProdutos['nome']?></td>
                     <td class="tblColunas"><?=$rsProdutos['descricao']?></td>
-                    <td class="tblColunas"><?=$rsProdutos['imagem']?></td>
+                    <td class="tblColunas">
+                        <img src="<?=NOME_DIRETORIO_FILE.$rsProdutos['imagem']?>" id="upload-imagem" alt="Imagem do produto">
+                     </td>
                     <td class="tblColunas"><?=$rsProdutos['preco']?></td>
                     <td class="tblColunas"><?=$rsProdutos['desconto']?></td>
                     <td class="tblColunas"><?=$rsProdutos['destaque']?></td>
 
                     <td class="tblColunas">
                         <a href="controles/editaProdutos.php?id=<?=$rsProdutos['idprodutos']?>">
-                            <img src="assets/img/editar.png" alt="Editar" title="Editar" class="editar">
+                            <img src="assets/img/editar.png" alt="Editar" title="Editar" class="editar ferramentas">
                         </a>
 
                         <a onclick="return confirm('Tem certeza que deseja excluir o dado')" href="controles/excluiProdutos.php?id=<?=$rsProdutos['idprodutos']?>">
-                            <img src="assets/img/x.png" alt="Excluir" title="Excluir" class="excluir">
+                            <img src="assets/img/x.png" alt="Excluir" title="Excluir" class="excluir ferramentas">
                         </a>
 
-                        <img src="assets/img/search.png" data-id="<?=$rsProdutos['idprodutos']?>" alt="Visualizar" title="Visualizar" class="pesquisar">
+                        <img src="assets/img/search.png" data-id="<?=$rsProdutos['idprodutos']?>" alt="Visualizar" title="Visualizar" class="pesquisar ferramentas">
                     </td>
                 </tr>
 
