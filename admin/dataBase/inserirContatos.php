@@ -8,7 +8,7 @@
 
 */
 
-    require_once(SRC.'dataBase/conexaoSql.php');
+    require_once('../dataBase/conexaoSql.php');
 
     function inserirContatos($arrayContatos) {
 
