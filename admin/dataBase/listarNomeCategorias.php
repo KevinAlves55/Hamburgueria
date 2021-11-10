@@ -11,7 +11,7 @@
         
     function listarNomeCategorias () {
 
-        $sql = "select nome from tblcategorias order by idcategorias";
+        $sql = "select * from tblcategorias order by idcategorias";
 
         $conexao = conexaoSql();
 

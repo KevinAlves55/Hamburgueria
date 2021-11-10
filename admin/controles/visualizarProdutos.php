@@ -7,8 +7,8 @@
     Autor: Kevin
 
 */   
-    require_once("constantes/constantes.php");
-    require_once(SRC."/dataBase/listarProdutos.php");
+    require_once('constantes/constantes.php');
+    require_once(SRC.'/dataBase/listarProdutos.php');
      
     function visualizarProdutos ($id) {
         

@@ -1,5 +1,6 @@
 <?php
 
+    require_once('constantes/constantes.php');
     require_once('controles/visualizarProdutos.php');
 
     $id = $_GET['id'];

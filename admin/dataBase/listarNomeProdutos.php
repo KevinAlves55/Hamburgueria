@@ -11,7 +11,7 @@
         
     function listarNomeProdutos () {
 
-        $sql = "select nome from tblprodutos order by idprodutos";
+        $sql = "select * from tblprodutos order by idprodutos";
 
         $conexao = conexaoSql();
 

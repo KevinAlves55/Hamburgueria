@@ -327,6 +327,7 @@ form #container-form #button input:hover {
   height: 250px;
   width: 250px;
   border-radius: 8px;
+  margin-top: 6px;
 }
 
 .ferramentas {

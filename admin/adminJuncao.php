@@ -22,6 +22,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.png">
 </head>
 
 <body>
@@ -59,7 +60,7 @@
                             while($rsJuncaoProduto = mysqli_fetch_assoc($listarNome)) {
 
                                 ?>
-                                    <option value="<?$rsJuncaoProduto['idprodutos']?>"> <?=$rsJuncaoProduto['nome']?> </option>
+                                    <option value="<?=$rsJuncaoProduto['idprodutos']?>"> <?=$rsJuncaoProduto['nome']?> </option>
                                 <?php
 
                             }
@@ -77,7 +78,7 @@
                             while($rsJuncaoCategoria = mysqli_fetch_assoc($listarNome)) {
 
                                 ?>
-                                    <option value="<?$rsJuncaoCategoria['idcategorias']?>"> <?=$rsJuncaoCategoria['nome']?> </option>
+                                    <option value="<?=$rsJuncaoCategoria['idcategorias']?>"> <?=$rsJuncaoCategoria['nome']?> </option>
                                 <?php
 
                             }
