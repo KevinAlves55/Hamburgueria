@@ -8,17 +8,6 @@
 
 ?>
 
-<!-- <html>
-
-    <body>
-        <div style="width: 100px; height: 100px; background-color: #000;">
-        Teste
-        <img src="assets/img/raio.png" alt="Fechar modal" title="Fechar">
-        </div>
-    </body>
-
-</html> -->
-
 
 <html>
     <head>
@@ -30,11 +19,11 @@
             <table class="tblPesquisar">
                 <tr class="linhas">
                     <td class="colunas">Nome:</td>
-                    <td class="colunas"><?=$dadosProdutos['nome']?></td>
+                    <td class="colunas destaque-modal"><?=$dadosProdutos['nome']?></td>
                 </tr>
                 <tr class="linhas">
                     <td class="colunas">Descrição:</td>
-                    <td class="colunas"><?=$dadosProdutos['descricao']?></td>
+                    <td class="colunas destaque-modal"><?=$dadosProdutos['descricao']?></td>
                 </tr>
                 <tr class="linhas">
                     <td class="colunas">Imagem:</td>
@@ -44,15 +33,15 @@
                 </tr>
                 <tr class="linhas">
                     <td class="colunas">Preço:</td>
-                    <td class="colunas"><?=$dadosProdutos['preco']?></td>
+                    <td class="colunas destaque-modal"><?=$dadosProdutos['preco']?></td>
                 </tr>
                 <tr class="linhas">
                     <td class="colunas">Desconto:</td>
-                    <td class="colunas"><?=$dadosProdutos['desconto']?></td>
+                    <td class="colunas destaque-modal"><?=$dadosProdutos['desconto']?></td>
                 </tr>
                 <tr class="linhas">
                     <td class="colunas">Destaque:</td>
-                    <td class="colunas"><?=$dadosProdutos['destaque']?></td>
+                    <td class="colunas destaque-modal"><?=$dadosProdutos['destaque']?></td>
                 </tr>
             </table>
         </div> 

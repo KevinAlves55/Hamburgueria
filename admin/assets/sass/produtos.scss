@@ -8,7 +8,7 @@ main {
 }
 
 form {
-    @include box(650px, 600px);
+    @include box(675px, 625px);
     @include display-flex(row, center, center);
     background-color: $escura;
     margin-top: 40px;
@@ -80,12 +80,13 @@ form {
 
             #visualizar-imagem {
                 position: relative;
-                left: 10px;
+                left: 15px;
                 top: -5px;
 
                 img {
                     @include box(95px, 95px);
                     border-radius: 4px;
+                    border: 2px solid $neutra;
                 }
             }
     
@@ -265,34 +266,23 @@ form {
     z-index: 999;
     
     .modal{
-        width: 1000px;
-        height: 600px;
+        width: 70vw;
+        height: 90vh;
         background-color: $neutra;
         border-radius: 5px;
         display: none;
     }
-
-    #fechar img {
-        @include box(35px, 35px);
-        background-color: red;
-        border-radius: 50%;
-        border: 2px solid $escura;
-        cursor: pointer;
-        transition: .5s;
-        position: relative;
-        top: -265px;
-        left: 965px;
-
-        &:hover {
-            transform: scale(1.1);
-            transition: .5s;
-        }
-    }
 }
 
 #container {
-    @include box(600px, 1000px);
+    @include box(600px, 800px);
     @include display-flex(row, center, center);
+    margin: auto;
+    margin-top: 55px;
+
+    table {
+        @include box(inherit, inherit);
+    }
 }
 
 .linhas {
@@ -301,18 +291,22 @@ form {
 
 .colunas {
     width: 400px;
-    height: 60px;
+    height: 50px;
     text-align: center;
     background-color: $alaranjado;
     border-radius: 6px;
     border: solid 1px $escura;
     color: $escura;
-    font-weight: map-get($densidade, extraBold);
     font-size: map-get($size, grau7);
+    font-weight: map-get($densidade, bold);
 
     #imagem-produto {
         @include box(200px, 200px);
         margin: 10px;
         border-radius: 4px;
     }
+}
+
+.destaque-modal {
+    font-weight: map-get($densidade, extraBold);
 }

@@ -33,11 +33,11 @@ $(document).ready(function(){
     });
     
     // Fecha Modal
-    $("#fechar").click(function(){
+    $("#container-modal").click(function(){
         
         $('.modal').fadeOut(400);
         $("#container-modal").fadeOut(400);
-        $("#fechar").fadeOut(400); 
+        $("#container-modal").fadeOut(400); 
     
     });
 });

@@ -62,10 +62,7 @@
 
 <body>
 
-    <div id="container-modal">
-        <span id="fechar">
-            <img src="assets/img/x-preto.png" id="fechar" alt="Fechar modal" title="Fechar">
-        </span>
+    <div id="container-modal" class="fechar">
         <div class="modal">
             
         </div>
