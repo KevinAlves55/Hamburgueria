@@ -77,6 +77,17 @@ form {
                     transform: scale(1.1);
                 }
             }
+
+            #visualizar-imagem {
+                position: relative;
+                left: 10px;
+                top: -5px;
+
+                img {
+                    @include box(95px, 95px);
+                    border-radius: 4px;
+                }
+            }
     
             label {
                 color: $neutra;
@@ -261,11 +272,11 @@ form {
         display: none;
     }
 
-    img {
+    #fechar img {
         @include box(35px, 35px);
         background-color: red;
-        border: 2px solid $escura;
         border-radius: 50%;
+        border: 2px solid $escura;
         cursor: pointer;
         transition: .5s;
         position: relative;
@@ -298,4 +309,10 @@ form {
     color: $escura;
     font-weight: map-get($densidade, extraBold);
     font-size: map-get($size, grau7);
+
+    #imagem-produto {
+        @include box(200px, 200px);
+        margin: 10px;
+        border-radius: 4px;
+    }
 }

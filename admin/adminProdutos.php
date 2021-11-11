@@ -8,7 +8,7 @@
 
     $nome = (string) null;
     $descricao = (string) null;
-    $imagem = (string) null;
+    $imagem = (string) 'semFoto.png';
     $preco = (string) null;
     $desconto = (string) null;
     $destaque = (boolean) null;
@@ -26,6 +26,7 @@
         $desconto = $_SESSION['produtos']['desconto'];
         $destaque = $_SESSION['produtos']['destaque'];
         $id = $_SESSION['produtos']['idprodutos'];
+        $imagem = $_SESSION['produtos']['imagem'];
         $modo = 'Atualizar';
         $destaqueNao = 0;
         $destaqueSim = 1;
@@ -63,7 +64,7 @@
 
     <div id="container-modal">
         <span id="fechar">
-            <img src="assets/img/x-preto.png" alt="Fechar modal" title="Fechar">
+            <img src="assets/img/x-preto.png" id="fechar" alt="Fechar modal" title="Fechar">
         </span>
         <div class="modal">
             
@@ -87,15 +88,18 @@
             Produtos
         </h2>
 
-        <form enctype="multipart/form-data" action="controles/recebeProdutos.php?modo=<?=$modo?>&id=<?=$id?>" name="frmProdutos" method="post">
+        <form enctype="multipart/form-data" action="controles/recebeProdutos.php?modo=<?=$modo?>&id=<?=$id?>&nomeImagem=<?=$imagem?>" name="frmProdutos" method="post">
             <img src="assets/img/tridente.png" alt="Tridente" id="img1">
             <img src="assets/img/raio.png" alt="Raio" id="img2">
 
             <div id="container-form">
                 <div class="caixa">
                     <input type="file" accept="image/png, image/jpg, image/jpeg" name="fleImagem" id="arquivo" class="arquivo" required>
-                    <input type="text" name="file" id="file" class="file" placeholder="Selecione a imagem do produto * " readonly="readonly">
+                    <input type="text" name="file" id="file" class="file" placeholder="Imagem do produto * " readonly="readonly">
                     <input type="button" class="btn" value="SELECIONAR">
+                    <div id="visualizar-imagem">
+                        <img src="<?=NOME_DIRETORIO_FILE.$imagem?>" id="fotopreview" alt="">
+                    </div>
                 </div>
                 <div class="caixa">
                     <label class="centro">nome: </label>
@@ -170,7 +174,7 @@
                             <img src="assets/img/editar.png" alt="Editar" title="Editar" class="editar ferramentas">
                         </a>
 
-                        <a onclick="return confirm('Tem certeza que deseja excluir o dado')" href="controles/excluiProdutos.php?id=<?=$rsProdutos['idprodutos']?>">
+                        <a onclick="return confirm('Tem certeza que deseja excluir o dado')" href="controles/excluiProdutos.php?id=<?=$rsProdutos['idprodutos']?>&imagem=<?=$rsProdutos['imagem']?>">
                             <img src="assets/img/x.png" alt="Excluir" title="Excluir" class="excluir ferramentas">
                         </a>
 

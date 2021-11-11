@@ -12,10 +12,12 @@
     require_once(SRC.'dataBase/excluirProdutos.php');
 
     $id = $_GET['id'];
+    $caminhoImagem = $_GET['imagem'];
 
     if (excluir($id)) {
 
         echo("<script> alert('". BD_MSG_EXCLUI ."'); window.location.href = '../adminProdutos.php'; </script>");
+        unlink(SRC.NOME_DIRETORIO_FILE.$caminhoImagem);
         
     } else {
 

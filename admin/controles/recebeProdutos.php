@@ -32,10 +32,29 @@
 
         $nome = $_POST['txtNome'];
         $descricao = $_POST['txtDescricao'];
-        $imagem = uploadFile($_FILES['fleImagem']);
         $preco = $_POST['txtPreco'];
         $desconto = $_POST['txtDesconto'];
         $destaque = $_POST['sltDestaque'];
+        $nomeImagem = $_GET['nomeImagem'];
+
+        if (strtoupper($_GET['modo']) == 'ATUALIZAR') {
+            
+            if ($_FILES['fleImagem']['name'] != '') {
+                
+                $imagem = uploadFile($_FILES['fleImagem']);
+                unlink(SRC.NOME_DIRETORIO_FILE.$nomeImagem);
+
+            } else {
+
+                $imagem = $nomeImagem;
+
+            }
+
+        } else {
+
+            $imagem = uploadFile($_FILES['fleImagem']);
+
+        }
 
         $produtos = array (
 

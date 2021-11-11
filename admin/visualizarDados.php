@@ -8,12 +8,25 @@
 
 ?>
 
+<!-- <html>
+
+    <body>
+        <div style="width: 100px; height: 100px; background-color: #000;">
+        Teste
+        <img src="assets/img/raio.png" alt="Fechar modal" title="Fechar">
+        </div>
+    </body>
+
+</html> -->
+
+
 <html>
     <head>
         <title>Visualizar</title>
     </head>
+
     <body>
-        <div id="container">
+         <div id="container">
             <table class="tblPesquisar">
                 <tr class="linhas">
                     <td class="colunas">Nome:</td>
@@ -25,7 +38,9 @@
                 </tr>
                 <tr class="linhas">
                     <td class="colunas">Imagem:</td>
-                    <td class="colunas"><?=$dadosProdutos['imagem']?></td>
+                    <td class="colunas">
+                        <img src="<?=NOME_DIRETORIO_FILE.$dadosProdutos['imagem']?>" id="imagem-produto" alt="">
+                    </td>
                 </tr>
                 <tr class="linhas">
                     <td class="colunas">Preço:</td>
@@ -40,6 +55,6 @@
                     <td class="colunas"><?=$dadosProdutos['destaque']?></td>
                 </tr>
             </table>
-        </div>
+        </div> 
     </body>
 </html>

@@ -137,6 +137,18 @@ form #container-form .caixa .btn:hover {
           transform: scale(1.1);
 }
 
+form #container-form .caixa #visualizar-imagem {
+  position: relative;
+  left: 10px;
+  top: -5px;
+}
+
+form #container-form .caixa #visualizar-imagem img {
+  height: 95px;
+  width: 95px;
+  border-radius: 4px;
+}
+
 form #container-form .caixa label {
   color: #FFF;
   font-weight: 400;
@@ -383,12 +395,12 @@ form #container-form #button input:hover {
   display: none;
 }
 
-#container-modal img {
+#container-modal #fechar img {
   height: 35px;
   width: 35px;
   background-color: red;
-  border: 2px solid #1f1f1f;
   border-radius: 50%;
+  border: 2px solid #1f1f1f;
   cursor: pointer;
   -webkit-transition: .5s;
   transition: .5s;
@@ -397,7 +409,7 @@ form #container-form #button input:hover {
   left: 965px;
 }
 
-#container-modal img:hover {
+#container-modal #fechar img:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: .5s;
@@ -436,5 +448,12 @@ form #container-form #button input:hover {
   color: #1f1f1f;
   font-weight: bold;
   font-size: 1.3rem;
+}
+
+.colunas #imagem-produto {
+  height: 200px;
+  width: 200px;
+  margin: 10px;
+  border-radius: 4px;
 }
 /*# sourceMappingURL=produtos.css.map */
