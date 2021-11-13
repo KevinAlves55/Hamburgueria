@@ -44,7 +44,7 @@
     
             } else {
     
-                echo("<script> alert('". BD_MSG_ERRO ."'); window.history.back(); </script>");
+                echo("<script> alert('". CAMPO_VAZIO ."'); window.history.back(); </script>");
     
             }
 

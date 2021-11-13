@@ -23,6 +23,7 @@
     const BD_DATABASE = 'db_burguergods';
 
     // Mensagens do sistema
+    const CAMPO_VAZIO = 'Por favor, preencher todos os campos';
     const ERRO_CONEXAO_BD = 'Não foi possível realizar a conexão com o Banco De Dados. Entrar em contato com o admin do sistema';
     const BD_MSG_INSERIR = 'Registro salvo com sucesso';
     const BD_MSG_ERRO = 'Algo deu errado, tente novamente';
