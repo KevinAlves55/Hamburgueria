@@ -2,7 +2,7 @@
 
 /*
 
-    Obejetivo: Arquivo responsável por exclui os dados das categorias e encaminhar para a função que irá exluir o dado 
+    Obejetivo: Arquivo responsável por exclui os dados dos produtos e encaminhar para a função que irá exluir o dado 
     Data: 20/10/2021
     Autor: Kevin
 

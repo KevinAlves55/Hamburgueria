@@ -18,4 +18,12 @@
 
     }
 
+    function exibiQuantidade() {
+
+        $total = listarQuantidadeProduto();
+
+        return $total;
+
+    }
+
 ?>

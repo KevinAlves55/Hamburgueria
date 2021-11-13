@@ -4,6 +4,9 @@
     require_once('dataBase/conexaoSql.php');
     require_once('controles/exibiProdutos.php');
 
+    $quantidade = listarQuantidadeProduto();
+    $dadoQuantidade = mysqli_fetch_assoc($quantidade);
+
     session_start();
 
     $nome = (string) null;
@@ -123,6 +126,12 @@
                         <option value="<?=$destaqueSim?>"<?=$destaqueSim == $destaque? 'selected' : ''?>>Sim</option>
                         <option value="<?=$destaqueNao?>"<?=$destaqueNao == $destaque? 'selected' : ''?>>Não</option>
                     </select>
+                </div>
+                <div class="caixa-qtde">
+                    <label>Quantidade de produtos: </label>
+                    <span>
+                        <?=$dadoQuantidade['quantidadeProduto']?>
+                    </span>
                 </div>
 
                 <div id="button">

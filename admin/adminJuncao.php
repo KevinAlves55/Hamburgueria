@@ -1,8 +1,31 @@
 <?php
 
     require_once('constantes/constantes.php');
+    require_once('controles/exibiJuncao.php');
     require_once(SRC.'controles/listarJuncaoProdutos.php');
     require_once(SRC.'controles/listarJuncaoCategorias.php');
+
+    session_start();
+
+    $produtos = (string) 'Selecione um produto';
+    $idProdutos = (int) null;
+    $categorias = (string) 'Selecione uma categoria';
+    $idCategorias = (int) null;
+    $id = (int) 0;
+    $modo = (string) 'Salvar';
+
+    if (isset($_SESSION['juncao'])) {
+
+        $produtos = $_SESSION['juncao']['Produto'];
+        $categorias = $_SESSION['juncao']['Categoria'];
+        $idProdutos = $_SESSION['juncao']['idprodutos'];
+        $idCategorias = $_SESSION['juncao']['idcategorias'];
+        $id = $_SESSION['juncao']['idprodutosCategorias'];
+        $modo = 'Atualizar';
+
+        unset($_SESSION['juncao']);
+
+    }
 
 ?>
 
@@ -44,14 +67,14 @@
             junção de categorias e produtos
         </h2>
 
-        <form action="controles/recebeJuncao.php" name="frmJuncao" method="post">
+        <form action="controles/recebeJuncao.php?modo=<?=$modo?>&id=<?=$id?>" name="frmJuncao" method="post">
             <img src="assets/img/tridente.png" alt="Tridente" id="img1">
             <img src="assets/img/raio.png" alt="Raio" id="img2">
 
             <div id="container-form">
                 <div id="caixa-select">
                     <select name="sltProdutos" required>
-                        <option selected value="">Selecione um produto</option>
+                        <option selected value="<?=$idProdutos?>"><?=$produtos?></option>
                         
                         <?php
 
@@ -69,7 +92,7 @@
                     </select>
                     
                     <select name="sltCategorias" required>
-                        <option selected value="">Selecione uma categoria</option>
+                        <option selected value="<?=$idCategorias?>"><?=$categorias?></option>
                         
                         <?php
                         
@@ -88,7 +111,7 @@
                 </div>
 
                 <div id="button">
-                    <input type="submit" value="Salvar">
+                    <input type="submit" value="<?=$modo?>">
                 </div>
             </div>
         </form>
@@ -106,22 +129,37 @@
                     <td class="tblColunas destaque">Opções</td>
                 </tr>
 
+                <?php
+                
+                    $dadosjuncao = exibirJuncao();
+
+                    while($rsJuncao = mysqli_fetch_assoc($dadosjuncao)) {
+                
+                ?>
+                
                 <tr class="tblLinhas">
-                    <td class="tblColunas"></td>
-                    <td class="tblColunas"></td>
+                    <td class="tblColunas">
+                        <?=$rsJuncao['Produto']?>
+                    </td>
+                    <td class="tblColunas">
+                        <?=$rsJuncao['Categoria']?>
+                    </td>
 
                     <td class="tblColunas">
-                        <a href="">
+                        
+                        <a href="controles/editaJuncao.php?id=<?=$rsJuncao['idprodutosCategorias']?>">
                             <img src="assets/img/editar.png" alt="Editar" title="Editar" class="editar">
                         </a>
-
-                        <a href="">
+                    
+                        <a onclick="return confirm('Tem certeza que deseja excluir o dado')" href="controles/excluiJuncao.php?id=<?=$rsJuncao['idprodutosCategorias']?>">
                             <img src="assets/img/x.png" alt="Excluir" title="Excluir" class="excluir">
                         </a>
-
-                        <img src="assets/img/search.png" alt="Pesquisar" title="Visualizar">
                     </td>
                 </tr>
+
+                <?php
+                    }
+                ?>
             </table>
         </div>
     </main>

@@ -2,7 +2,7 @@
 
 /*
 
-    Obejetivo: Arquivo responsável por receber os dados de categorias e criar a variável de seção
+    Obejetivo: Arquivo responsável por receber os dados de produtos e criar a variável de seção
     Data: 20/10/2021
     Autor: Kevin
 

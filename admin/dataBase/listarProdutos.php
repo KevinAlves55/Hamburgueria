@@ -34,4 +34,16 @@
 
     }
 
+    function listarQuantidadeProduto() {
+
+        $sql = "select count(*) as quantidadeProduto from tblprodutos";
+
+        $conexao = conexaoSql();
+
+        $select = mysqli_query($conexao, $sql);
+
+        return $select;
+
+    }
+
 ?>

@@ -8,9 +8,20 @@
 
     require_once('../constantes/constantes.php');
     require_once('../dataBase/inserirJuncao.php');
+    require_once('../dataBase/atualizarJuncao.php');
 
     $produtos = (int) null;
     $categorias = (int) null;
+
+    if (isset($_GET['id'])) {
+
+        $id = (int) $_GET['id'];
+
+    } else {
+
+        $id = (int) 0;
+
+    }
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -20,17 +31,34 @@
         $juncao = array (
 
             "produtos" => $produtos,
-            "categorias" => $categorias
+            "categorias" => $categorias,
+            "id" => $id
 
         );
 
-        if (inserirJuncao($juncao)) {
+        if (strtoupper($_GET['modo']) == 'SALVAR') {
 
-            echo("<script> alert('". BD_MSG_JUNCAO ."'); window.location.href = '../adminJuncao.php'; </script>");
+            if (inserirJuncao($juncao)) {
 
-        } else {
+                echo("<script> alert('". BD_MSG_JUNCAO ."'); window.location.href = '../adminJuncao.php'; </script>");
+    
+            } else {
+    
+                echo("<script> alert('". BD_MSG_ERRO ."'); window.history.back(); </script>");
+    
+            }
 
-            echo("<script> alert('". BD_MSG_ERRO ."'); window.history.back(); </script>");
+        } elseif (strtoupper($_GET['modo']) == 'ATUALIZAR') {
+
+            if(editar($juncao)) {
+
+                echo("<script> alert('". BD_MSG_ATUALIZADO ."'); window.location.href = '../adminJuncao.php'; </script>");
+    
+            } else {
+    
+                echo("<script> alert('". BD_MSG_EDITAR_ERRO ."'); window.history.back(); </script>");
+    
+            }
 
         }
 

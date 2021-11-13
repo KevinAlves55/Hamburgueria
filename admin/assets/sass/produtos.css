@@ -18,8 +18,8 @@ main {
 }
 
 form {
-  height: 675px;
-  width: 625px;
+  height: 725px;
+  width: 630px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,7 +59,7 @@ form #img2 {
 }
 
 form #container-form {
-  height: 520px;
+  min-height: 500px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -74,8 +74,39 @@ form #container-form {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 28px;
+  gap: 20px;
   margin-top: 25px;
+}
+
+form #container-form .caixa-qtde {
+  height: 50px;
+  width: 310px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+form #container-form .caixa-qtde label {
+  color: #FFF;
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+form #container-form .caixa-qtde span {
+  color: #c43535;
+  font-weight: 400;
+  font-size: 1.5rem;
 }
 
 form #container-form .caixa {
@@ -266,7 +297,6 @@ form #container-form #button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 15px;
   padding-right: 10px;
 }
 

@@ -8,7 +8,7 @@ main {
 }
 
 form {
-    @include box(675px, 625px);
+    @include box(725px, 630px);
     @include display-flex(row, center, center);
     background-color: $escura;
     margin-top: 40px;
@@ -33,10 +33,30 @@ form {
     }
 
     #container-form {
-        @include box(520px, 100%);
+        min-height: 500px;
+        width: 100%;
         @include display-flex(column, center, center);
-        gap: 28px;
+        // background-color: $vermelho;
+        gap: 20px;
         margin-top: 25px;
+
+        .caixa-qtde {
+            @include box(50px, 310px);
+            @include display-flex(row, space-between, center);
+
+            label {
+                color: $neutra;
+                font-weight: map-get($densidade, medium);
+                font-size: map-get($size, grau4);     
+                text-transform: capitalize;     
+            }
+
+            span {
+                color: $vermelho;
+                font-weight: map-get($densidade, medium);
+                font-size: map-get($size, grau4);
+            }
+        }
 
         .caixa {
             @include box(50px, 365px);
@@ -167,7 +187,6 @@ form {
         #button {
             @include box(85px, 80%);
             @include display-flex(row, center, center);
-            margin-top: 15px;
             padding-right: 10px;
         
             input {
