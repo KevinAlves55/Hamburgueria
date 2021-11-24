@@ -74,10 +74,6 @@ body {
   border: 0.188rem solid #C7491E;
 }
 
-.tamanho {
-  height: 100vh;
-}
-
 .densidade-img {
   -webkit-filter: brightness(90%);
           filter: brightness(90%);
@@ -189,7 +185,7 @@ body {
   -ms-flex-pack: center;
   -webkit-box-pack: center;
           justify-content: center;
-  width: 15%;
+  width: 12vw;
   color: #FFF;
   text-align: center;
   opacity: .5;
@@ -511,7 +507,7 @@ header {
 
 #conteudo-midia {
   height: 40px;
-  width: 1400px;
+  width: 73vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -642,7 +638,7 @@ header {
 }
 
 .conteudo {
-  width: 1350px;
+  width: 71vw;
 }
 
 .itens-header {
@@ -1274,14 +1270,15 @@ main .itens-main #produtos {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #1f1f1f;
 }
 
 #empresa .itens-empresa {
-  height: inherit;
+  min-height: 534px;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1295,7 +1292,8 @@ main .itens-main #produtos {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 4px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 #empresa .itens-empresa #informacoes-empresa {

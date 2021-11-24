@@ -1,13 +1,13 @@
-.tamanho {
-    height: 100vh;
-}
+// .tamanho {
+//     height: 100vh;
+// }
 
 .densidade-img {
     filter: brightness(90%);
 }
 
 .carousel {
-    position: relative
+    position: relative;
 }
 
 .carousel.pointer-event {
@@ -24,7 +24,7 @@
 .carousel-inner::after {
     display: block;
     clear: both;
-    content: ""
+    content: "";
 }
 
 .carousel-item {
@@ -41,9 +41,11 @@
 }
 
 @media (prefers-reduced-motion:reduce) {
+    
     .carousel-item {
-        transition: none
+        transition: none;
     }
+
 }
 
 .carousel-item-next,
@@ -55,41 +57,41 @@
 .active.carousel-item-right,
 .carousel-item-next:not(.carousel-item-left) {
     -webkit-transform: translateX(100%);
-    transform: translateX(100%)
+    transform: translateX(100%);
 }
 
 .active.carousel-item-left,
 .carousel-item-prev:not(.carousel-item-right) {
     -webkit-transform: translateX(-100%);
-    transform: translateX(-100%)
+    transform: translateX(-100%);
 }
 
 .carousel-fade .carousel-item {
     opacity: 0;
     transition-property: opacity;
     -webkit-transform: none;
-    transform: none
+    transform: none;
 }
 
 .carousel-fade .carousel-item-next.carousel-item-left,
 .carousel-fade .carousel-item-prev.carousel-item-right,
 .carousel-fade .carousel-item.active {
     z-index: 1;
-    opacity: 1
+    opacity: 1;
 }
 
 .carousel-fade .active.carousel-item-left,
 .carousel-fade .active.carousel-item-right {
     z-index: 0;
     opacity: 0;
-    transition: opacity 0s .6s
+    transition: opacity 0s .6s;
 }
 
 @media (prefers-reduced-motion:reduce) {
 
     .carousel-fade .active.carousel-item-left,
     .carousel-fade .active.carousel-item-right {
-        transition: none
+        transition: none;
     }
 }
 
@@ -105,7 +107,7 @@
     align-items: center;
     -ms-flex-pack: center;
     justify-content: center;
-    width: 15%;
+    width: 12vw;
     color: $neutra;
     text-align: center;
     opacity: .5;
@@ -120,7 +122,7 @@
 
     .carousel-control-next,
     .carousel-control-prev {
-        transition: none
+        transition: none;
     }
 }
 

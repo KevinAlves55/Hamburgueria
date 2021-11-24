@@ -20,7 +20,7 @@ header {
 }
 
 #conteudo-midia {
-    @include box(40px, 1400px);
+    @include box(40px, 73vw);
     @include display-flex(row, space-between, center);
 }
 
@@ -83,7 +83,8 @@ header {
 }
 
 .conteudo {
-    width: 1350px;
+    // width: 1350px;
+    width: 71vw;
 }
 
 .itens-header {
@@ -429,13 +430,14 @@ main {
 
 #empresa {
     @include box(534px, 100%);
-    @include display-flex(row, center, flex-start);
+    @include display-flex(row, center, center);
     background-color: $escura;
 
     .itens-empresa {
-        height: inherit;
+        min-height: 534px;
+        height: auto;
         @include display-flex(row, space-between, center);
-        border-radius: 4px;
+        flex-wrap: wrap;
 
         #informacoes-empresa {
             @include box(330px, 675px);
