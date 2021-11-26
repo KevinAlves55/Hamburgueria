@@ -18,4 +18,50 @@
 
     }
 
+    function criarArray($objeto) {
+        
+        $i = (int) 0;
+
+        while ($rsDados = mysqli_fetch_assoc($objeto)) {
+
+            $arrayDadosCategorias[$i] = array(
+
+                "nome" => $rsDados['nome']
+
+            );
+
+            $i++;
+
+        }
+
+        if (isset($arrayDadosCategorias)) {
+
+            return $arrayDadosCategorias;
+
+        } else {
+
+            return false;
+
+        }
+
+    }
+
+    function criarJson($arrayDadosCategorias) {
+
+        header('content-type:application/json');
+
+        $listarJson = json_encode($arrayDadosCategorias);
+
+        if (isset($listarJson)) {
+
+            return $listarJson;
+
+        } else {
+
+            return false;
+
+        }
+
+    }
+
 ?>
