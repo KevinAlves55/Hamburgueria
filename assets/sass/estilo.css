@@ -842,6 +842,7 @@ main .itens-main #filtragem #cardapio {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 main .itens-main #filtragem #cardapio input {
@@ -924,9 +925,9 @@ main .itens-main #filtragem #cardapio .menu .hamburger:after {
 }
 
 main .itens-main #filtragem #cardapio ul {
-  position: absolute;
-  top: 280%;
-  left: 18%;
+  position: relative;
+  top: 395%;
+  left: 95%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   font-size: 1.5rem;
@@ -990,6 +991,8 @@ main .itens-main #filtragem #cardapio span {
   font-weight: 500;
   color: #1f1f1f;
   text-transform: uppercase;
+  position: absolute;
+  right: 0;
 }
 
 main .itens-main #filtragem #buscar {

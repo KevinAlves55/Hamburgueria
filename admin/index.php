@@ -25,7 +25,7 @@
             <h2>BurguerGods</h2>
         </div>
         
-        <form method="post" name="frmLogin">
+        <form action="autenticar.php" method="post" name="frmLogin">
             <div class="label-float">
                 <ion-icon name="mail-outline" class="icon-input-footer"></ion-icon>
                 <input class="input-caixa-login" type="text" name="txtUser" value="" placeholder=" " maxlength="100" required="" autocomplete="off">
@@ -34,11 +34,11 @@
             <div class="label-float">
                 <ion-icon name="lock-closed-outline" class="icon-input-footer"></ion-icon>
                 <span class="lnr lnr-eye"></span>
-                <input id="password" type="password" class="input-caixa-login"  name="password" value="" placeholder=" " maxlength="50" required="">
+                <input id="password" type="password" class="input-caixa-login"  name="txtPassword" value="" placeholder=" " maxlength="50" required="">
                 <label>Senha</label>
             </div>
             <div id="button">
-                <input type="submit" value="Login" name="btnLogin">
+                <input type="submit" value="Autenticar" name="btnLogin">
             </div>
         </form>
     </div>

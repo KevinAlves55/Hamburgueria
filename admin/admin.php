@@ -1,3 +1,16 @@
+<?php
+
+    // if (!isset($_SESSION['statusLogin']) || !$_SESSION['statusLogin']) {
+            
+    //     session_start();
+        
+    //     header('location: index.php');
+
+    // }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="zxx">
 

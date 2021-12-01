@@ -167,6 +167,7 @@ main {
             #cardapio {
                 @include box(inherit, 215px);
                 @include display-flex(row, space-between, center);
+                position: relative;
                 
                 input {
                     display: none;
@@ -217,10 +218,9 @@ main {
                         background-color: $escura;
                         display: block;
                         transform-origin: center;
-                        transition: .5s ease-in-out;
-
-                        
+                        transition: .5s ease-in-out;                      
                     }
+
                     .hamburger:after, .hamburger:before {
                         background-color: $escura;
                         content: "";
@@ -241,9 +241,9 @@ main {
                 }
 
                 ul {
-                    position: absolute;
-                    top: 280%;
-                    left: 18%;
+                    position: relative;
+                    top: 395%;
+                    left: 95%;
                     transform: translate(-50%, -50%);
                     font-size: map-get($size, grau4);
                     opacity: 0;
@@ -289,6 +289,8 @@ main {
                     font-weight: map-get($densidade, bold);
                     color: $escura;
                     text-transform: uppercase;
+                    position: absolute;
+                    right: 0;
                 }
             }
         

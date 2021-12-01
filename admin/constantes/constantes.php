@@ -11,10 +11,10 @@
     // Variáveis para ajudar nos require_once
     
     # Local
-    define ('SRC' , $_SERVER['DOCUMENT_ROOT'] . '/BurguerGods/admin/');
+    // define ('SRC' , $_SERVER['DOCUMENT_ROOT'] . '/BurguerGods/admin/');
     
     # Senai
-    // define ('SRC' , $_SERVER['DOCUMENT_ROOT'] . '/ds2t20212/Kevin/BurguerGods/admin/');
+    define ('SRC' , $_SERVER['DOCUMENT_ROOT'] . '/ds2t20212/Kevin/BurguerGods/admin/');
 
     // Variáveis para conexão com o BD
     const BD_SERVER = 'localhost';
@@ -36,6 +36,7 @@
     const BD_SIZE_UPLOAD = 'Escolher imagem menor do que 5mb';
     const BD_UPLOAD_VAZIO = 'Campo de arquivo vazio';
     const BD_MSG_JUNCAO = 'Junção registrada';
+    const ERRO_LOGIN = 'Login ou Senha inválidos';
 
     // Mensagens para a index
     const APERTOU_BOTAO = 'Agradecemos seu feedback, retornaremos em breve';

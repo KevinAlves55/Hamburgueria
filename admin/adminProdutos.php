@@ -94,7 +94,7 @@
 
             <div id="container-form">
                 <div class="caixa">
-                    <input type="file" accept="image/png, image/jpg, image/jpeg" name="fleImagem" id="arquivo" class="arquivo" required>
+                    <input type="file" accept="image/png, image/jpg, image/jpeg" name="fleImagem" id="arquivo" class="arquivo">
                     <input type="text" name="file" id="file" class="file" placeholder="Imagem do produto * " readonly="readonly">
                     <input type="button" class="btn" value="SELECIONAR">
                     <div id="visualizar-imagem">

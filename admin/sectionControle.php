@@ -1,3 +1,13 @@
+<?php
+
+    if (session_status() != PHP_SESSION_ACTIVE) {   
+        
+        session_start();
+
+    }
+
+?>
+
 <div class="conteudo">
     <div id="nav-controles">
         <div class="opcoes-nav-controles">
@@ -26,7 +36,7 @@
         </div>
     </div>
     <div id="logout">
-        <span>Bem vindo</span>
+        <span>Bem vindo <?=$_SESSION['nomeUsuario'];?></span>
         <img src="assets/img/logout.png" alt="Logout">
         <i><a href="#">Logout</a></i>
     </div>
