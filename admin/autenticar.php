@@ -30,7 +30,7 @@
             session_start();
 
             $_SESSION['nomeUsuario'] = $rsUsuarios['nome'];
-            $_SESSION['statusLogin'] = true;
+            $_SESSION['login'] = true;
 
             header('location: admin.php');
 
@@ -39,10 +39,6 @@
             echo("<script> alert('".ERRO_LOGIN."') ; window.history.back(); </script>");
 
         }
-
-    } else {
-
-        echo("<script> alert('".CAMPO_VAZIO."') ; window.history.back(); </script>");
 
     }
  

@@ -6,6 +6,12 @@
 
     }
 
+    if (!isset($_SESSION['login']) || !$_SESSION['login']) {
+        
+        header('location: index.php');
+
+    }
+
 ?>
 
 <div class="conteudo">
