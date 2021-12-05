@@ -26,7 +26,8 @@
 
             $arrayDadosCategorias[$i] = array(
 
-                "nome" => $rsDados['nome']
+                'id' => $rsDados['idcategorias'], 
+                'nome' => $rsDados['nome']
 
             );
 

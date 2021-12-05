@@ -26,4 +26,56 @@
 
     }
 
+    function criarArray($objeto) {
+
+        $i = (int) 0;
+
+        while ($rsDados = mysqli_fetch_assoc($objeto)) {
+
+            $arrayDadosProdutos[$i] = array(
+
+                'id' => $rsDados['idprodutos'],
+                'nome' => $rsDados['nome'],
+                'descricao' => $rsDados['descricao'],
+                'imagem' => $rsDados['imagem'],
+                'preco' => $rsDados['preco'],
+                'desconto' => $rsDados['desconto'],
+                'destaque' => $rsDados['destaque']
+
+            );
+
+            $i++;
+
+        }
+
+        if (isset($arrayDadosProdutos)) {
+
+            return $arrayDadosProdutos;
+
+        } else {
+
+            return false;
+
+        }
+
+    }
+
+    function criarJson ($arrayDadosProdutos) {
+
+        header('content-type:application/json');
+
+        $listarJson = json_encode($arrayDadosProdutos);
+
+        if (isset($listarJson)) {
+            
+            return $listarJson;
+
+        } else {
+
+            return false;
+
+        }
+
+    }
+
 ?>
