@@ -9,11 +9,28 @@
 */
 
     require_once(SRC.'dataBase/listarProdutos.php');
+    require_once(SRC. 'dataBase/listarNomeProdutos.php');
 
     function exibirProdutos() {
 
         $dados = listar();
 
+        return $dados;
+
+    }
+
+    function exibirProdutosSite() {
+
+        $dados = listarProdutos();
+
+        return $dados;
+
+    }
+
+    function exibirNomeProdutos($nome) {
+
+        $dados = listarNome($nome);
+        
         return $dados;
 
     }

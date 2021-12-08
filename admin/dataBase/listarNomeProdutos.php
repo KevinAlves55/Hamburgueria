@@ -20,4 +20,16 @@
         return $select;
 
     }
+
+    function listarNome($nome) {
+
+        $sql = "select * from tblprodutos where nome like '%".$nome."%'";
+
+        $conexao = conexaoSql();
+
+        $select = mysqli_query($conexao, $sql);
+
+        return $select;
+
+    }
 ?>

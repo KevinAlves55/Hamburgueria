@@ -123,8 +123,8 @@
                     <label class="centro">destaque: </label>
                     <select name="sltDestaque" required>
                         <option value="">Selecione uma opção</option>
-                        <option value="<?=$destaqueSim?>"<?=$destaqueSim == $destaque? 'selected' : ''?>>Sim</option>
                         <option value="<?=$destaqueNao?>"<?=$destaqueNao == $destaque? 'selected' : ''?>>Não</option>
+                        <option value="<?=$destaqueSim?>"<?=$destaqueSim == $destaque? 'selected' : ''?>>Sim</option>
                     </select>
                 </div>
                 <div class="caixa-qtde">

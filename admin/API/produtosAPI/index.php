@@ -10,7 +10,10 @@
         require_once('../constantes/constantes.php');
         require_once('../controles/exibiProdutos.php');
 
-        if ($listarDados = exibirProdutos()) {
+        $desconto = (string) null;
+        $request -> getQueryParams()['nome'];
+        
+        if ($listarDados = exibirProdutosSite()) {
 
             if ($listarDadosArray = criarArray($listarDados)) {
 

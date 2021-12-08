@@ -11,10 +11,10 @@
     // Variáveis para ajudar nos require_once
     
     # Local
-    define ('SRC' , $_SERVER['DOCUMENT_ROOT'] . '/BurguerGods/admin/');
+    // define ('SRC' , $_SERVER['DOCUMENT_ROOT'] . '/BurguerGods/admin/');
     
     # Senai
-    // define ('SRC' , $_SERVER['DOCUMENT_ROOT'] . '/ds2t20212/Kevin/BurguerGods/admin/');
+    define ('SRC' , $_SERVER['DOCUMENT_ROOT'] . '/ds2t20212/Kevin/BurguerGods/admin/');
 
     // Variáveis para conexão com o BD
     const BD_SERVER = 'localhost';

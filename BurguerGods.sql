@@ -130,3 +130,9 @@ tblprodutos.preco as Preço, tblprodutos.desconto as Desconto from tblprodutosCa
 inner join tblprodutos on tblprodutos.idprodutos = PC.idprodutos
 inner join tblcategorias on tblcategorias.idcategorias = PC.idcategorias
 	where tblcategorias.nome like '%clássico%' and tblprodutos.preco >= '25.00' and tblprodutos.nome like 'E%';
+
+select * from tblprodutos where destaque = 0 and desconto = 0.00 order by idprodutos desc;
+
+select * from tblprodutos where nome like '%zeus%';
+
+select * from tblprodutos, round(preco - ((preco * desconto) / 100), 2) as Percentual;

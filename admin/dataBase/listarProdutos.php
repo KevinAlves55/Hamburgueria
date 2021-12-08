@@ -22,6 +22,18 @@
 
     }
 
+    function listarProdutos() {
+
+        $sql = "select tblprodutos.*, round(preco - ((preco * desconto) / 100), 2) as Percentualfrom from tblprodutos";
+
+        $conexao = conexaoSql();
+
+        $select = mysqli_query($conexao, $sql);
+
+        return $select;
+
+    }
+
     function buscar($idProdutos) {
 
         $sql = "select * from tblprodutos where idprodutos = ".$idProdutos;
