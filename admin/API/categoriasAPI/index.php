@@ -10,14 +10,32 @@
         require_once('../constantes/constantes.php');
         require_once('../controles/exibiCategorias.php');
 
-        if ($listarDados = exibirCategorias()) {
+        if (isset($request -> getQueryParams()['categoria'])) {
 
-            if ($listarDadosArray = criarArray($listarDados)) {
+            $categoria = (string) null;
+            $categoria = $request -> getQueryParams()['categoria'];
 
-                $listarDadosJson = criarJson($listarDadosArray);
+            if ($listarDados = nomeCategorias($categoria)) {
 
-            } 
+                if ($listarDadosArray = criarArrayJuncao($listarDados)) {
 
+                    $listarDadosJson = criarJsonProdutosCategorias($listarDadosArray);
+
+                }
+
+            }
+        
+        } else {
+
+            if ($listarDados = exibirCategorias()) {
+
+                if ($listarDadosArray = criarArray($listarDados)) {
+
+                    $listarDadosJson = criarJson($listarDadosArray);
+
+                } 
+
+            }
         }
 
         if ($listarDadosArray) {

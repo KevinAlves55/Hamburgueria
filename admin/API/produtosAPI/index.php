@@ -10,19 +10,34 @@
         require_once('../constantes/constantes.php');
         require_once('../controles/exibiProdutos.php');
 
-        $desconto = (string) null;
-        $request -> getQueryParams()['nome'];
-        
-        if ($listarDados = exibirProdutosSite()) {
+        if (isset($request -> getQueryParams()['nome'])) {
 
-            if ($listarDadosArray = criarArray($listarDados)) {
+            $nome = (string) null;
+            $nome = $request -> getQueryParams()['nome'];
 
-                $listarDadosJson = criarJson($listarDadosArray);
+            if ($listarDados = nomeProdutos($nome)) {
 
+                if ($listarDadosArray = criarArray($listarDados)) {
+    
+                    $listarDadosJson = criarJson($listarDadosArray);
+    
+                }
+    
             }
 
-        }
+        } else {
+        
+            if ($listarDados = exibirProdutosSite()) {
 
+                if ($listarDadosArray = criarArray($listarDados)) {
+
+                    $listarDadosJson = criarJson($listarDadosArray);
+
+                }
+
+            }
+        }
+        
         if ($listarDadosArray) {
 
             return $response

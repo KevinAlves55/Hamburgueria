@@ -22,9 +22,21 @@
 
     }
 
-    function listarProdutos() {
+    function listarNome($nome) {
 
-        $sql = "select tblprodutos.*, round(preco - ((preco * desconto) / 100), 2) as Percentualfrom from tblprodutos";
+        $sql = "select tblprodutos.*, round(preco - ((preco * desconto) / 100), 2) as percentual from tblprodutos where nome like '%".$nome."%'";
+
+        $conexao = conexaoSql();
+
+        $select = mysqli_query($conexao, $sql);
+
+        return $select;
+
+    }
+
+    function listarTodosProdutos() {
+
+        $sql = "select tblprodutos.*, round(preco - ((preco * desconto) / 100), 2) as percentual from tblprodutos";
 
         $conexao = conexaoSql();
 

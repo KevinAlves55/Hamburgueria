@@ -9,7 +9,6 @@
 */
 
     require_once(SRC.'dataBase/listarProdutos.php');
-    require_once(SRC. 'dataBase/listarNomeProdutos.php');
 
     function exibirProdutos() {
 
@@ -21,13 +20,13 @@
 
     function exibirProdutosSite() {
 
-        $dados = listarProdutos();
+        $dados = listarTodosProdutos();
 
         return $dados;
 
     }
 
-    function exibirNomeProdutos($nome) {
+    function nomeProdutos($nome) {
 
         $dados = listarNome($nome);
         
@@ -57,7 +56,8 @@
                 'imagem' => $rsDados['imagem'],
                 'preco' => $rsDados['preco'],
                 'desconto' => $rsDados['desconto'],
-                'destaque' => $rsDados['destaque']
+                'destaque' => $rsDados['destaque'],
+                'percentual' => $rsDados['percentual']
 
             );
 

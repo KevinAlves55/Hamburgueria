@@ -129,10 +129,16 @@ select tblprodutos.nome as Hamburguer, tblcategorias.nome as Categoria,
 tblprodutos.preco as Preço, tblprodutos.desconto as Desconto from tblprodutosCategorias as PC
 inner join tblprodutos on tblprodutos.idprodutos = PC.idprodutos
 inner join tblcategorias on tblcategorias.idcategorias = PC.idcategorias
-	where tblcategorias.nome like '%clássico%' and tblprodutos.preco >= '25.00' and tblprodutos.nome like 'E%';
+	where tblcategorias.nome like '%clássico%';
 
 select * from tblprodutos where destaque = 0 and desconto = 0.00 order by idprodutos desc;
 
 select * from tblprodutos where nome like '%zeus%';
 
-select * from tblprodutos, round(preco - ((preco * desconto) / 100), 2) as Percentual;
+select tblprodutos.*, round(preco - ((preco * desconto) / 100), 2) from tblprodutos;
+
+select PC.idprodutosCategorias, tblprodutos.*, tblcategorias.*, round((preco - ((preco * desconto) / 100)), 2) as percentual
+from tblprodutosCategorias as PC
+    inner join tblprodutos on tblprodutos.idprodutos = PC.idprodutos
+    inner join tblcategorias on tblcategorias.idcategorias = PC.idcategorias
+where tblcategorias.nome like '%especiais%';
