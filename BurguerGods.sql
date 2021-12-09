@@ -142,3 +142,6 @@ from tblprodutosCategorias as PC
     inner join tblprodutos on tblprodutos.idprodutos = PC.idprodutos
     inner join tblcategorias on tblcategorias.idcategorias = PC.idcategorias
 where tblcategorias.nome like '%especiais%';
+
+update tblprodutos
+set descricao = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet erat urna, sit amet molestie augue vestibulum vitae.";
