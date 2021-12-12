@@ -58,13 +58,13 @@
 
         $produtos = array (
 
-            "nome" => $nome,
-            "descricao" => $descricao,
-            "imagem" => $imagem,
-            "preco" => $preco,
-            "desconto" => $desconto,
-            "destaque" => $destaque,
-            "id" => $id
+            'nome' => $nome,
+            'descricao' => $descricao,
+            'imagem' => $imagem,
+            'preco' => $preco,
+            'desconto' => $desconto,
+            'destaque' => $destaque,
+            'id' => $id
             
         );
 

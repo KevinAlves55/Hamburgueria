@@ -303,7 +303,7 @@ main {
                     @include box(inherit, 465px);
                     @include display-flex(row, space-between, center);
         
-                    #serarch {
+                    #search {
                         @include box(40px, 330px);
                         padding: 18px;
                         border-radius: 3px;
@@ -314,7 +314,7 @@ main {
                         font-size: map-get($size, grau6);
                     }
 
-                    #submit {
+                    #pesquisar {
                         @include box(45px, 120px);
                         @include display-flex(row, center, center);
                         text-transform: uppercase;
@@ -645,8 +645,8 @@ footer {
                         }
 
                         .icon-input-footer {
-                            position: absolute;
-                            left: 177px;
+                            position: relative;
+                            left: 40px;
                         }
 
                         input {

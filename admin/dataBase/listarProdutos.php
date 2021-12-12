@@ -24,7 +24,9 @@
 
     function listarNome($nome) {
 
-        $sql = "select tblprodutos.*, round(preco - ((preco * desconto) / 100), 2) as percentual from tblprodutos where nome like '%".$nome."%'";
+        $sql = "select tblprodutos.*, round(preco - ((preco * desconto) / 100), 2) as percentual 
+            from tblprodutos 
+        where nome like '%".$nome."%'";
 
         $conexao = conexaoSql();
 
@@ -36,7 +38,7 @@
 
     function listarTodosProdutos() {
 
-        $sql = "select tblprodutos.*, round(preco - ((preco * desconto) / 100), 3) as percentual from tblprodutos";
+        $sql = "select tblprodutos.*, round(preco - ((preco * desconto) / 100), 2) as percentual from tblprodutos";
 
         $conexao = conexaoSql();
 

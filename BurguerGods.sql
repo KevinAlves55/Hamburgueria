@@ -135,7 +135,7 @@ select * from tblprodutos where destaque = 0 and desconto = 0.00 order by idprod
 
 select * from tblprodutos where nome like '%zeus%';
 
-select tblprodutos.*, round(preco - ((preco * desconto) / 100), 2) from tblprodutos;
+select tblprodutos.*, round(preco - ((preco * desconto) / 100), 2) as percentual from tblprodutos;
 
 select PC.idprodutosCategorias, tblprodutos.*, tblcategorias.*, round((preco - ((preco * desconto) / 100)), 2) as percentual
 from tblprodutosCategorias as PC

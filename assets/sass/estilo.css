@@ -1032,7 +1032,7 @@ main .itens-main #filtragem #buscar #pesquisa {
           align-items: center;
 }
 
-main .itens-main #filtragem #buscar #pesquisa #serarch {
+main .itens-main #filtragem #buscar #pesquisa #search {
   height: 40px;
   width: 330px;
   padding: 18px;
@@ -1044,7 +1044,7 @@ main .itens-main #filtragem #buscar #pesquisa #serarch {
   font-size: 1.1rem;
 }
 
-main .itens-main #filtragem #buscar #pesquisa #submit {
+main .itens-main #filtragem #buscar #pesquisa #pesquisar {
   height: 45px;
   width: 120px;
   display: -webkit-box;
@@ -1070,7 +1070,7 @@ main .itens-main #filtragem #buscar #pesquisa #submit {
   transition: .5s;
 }
 
-main .itens-main #filtragem #buscar #pesquisa #submit:hover {
+main .itens-main #filtragem #buscar #pesquisa #pesquisar:hover {
   -webkit-filter: brightness(110%);
           filter: brightness(110%);
   -webkit-transition: .5s;
@@ -1733,8 +1733,8 @@ footer .itens-footer #informacoes-footer #contatos-footer form .caixa label {
 }
 
 footer .itens-footer #informacoes-footer #contatos-footer form .caixa .icon-input-footer {
-  position: absolute;
-  left: 177px;
+  position: relative;
+  left: 40px;
 }
 
 footer .itens-footer #informacoes-footer #contatos-footer form .caixa input {

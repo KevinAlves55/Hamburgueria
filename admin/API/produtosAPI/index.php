@@ -13,6 +13,8 @@
         if (isset($request -> getQueryParams()['nome'])) {
 
             $nome = (string) null;
+            $descricao = (string) null;
+            
             $nome = $request -> getQueryParams()['nome'];
 
             if ($listarDados = nomeProdutos($nome)) {
