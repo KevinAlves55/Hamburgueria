@@ -1392,8 +1392,9 @@ main .itens-main #produtos {
 }
 
 #promocoes {
-  height: 600px;
   width: 100%;
+  min-height: 600px;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1404,9 +1405,9 @@ main .itens-main #produtos {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: linear-gradient(135deg, #C7491E, #e6bb1f);
 }
 
@@ -1425,6 +1426,12 @@ main .itens-main #produtos {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#promocoes .espaco {
+  margin: 15px;
 }
 
 #destaques {

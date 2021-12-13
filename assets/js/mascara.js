@@ -2,7 +2,6 @@
 
 "use strict"
 
-const celular = document.getElementById("celular").value
 const nome = document.getElementById("nome").value
 const email = document.getElementById("email").value
 

@@ -1,6 +1,28 @@
 'use strict'
 
-import { getProdutos } from "./produtos.js";
+import { getProdutos, getProdutosPesquisa } from "./produtos.js";
+
+// const CriarOwl = ({imagem}) => {
+
+//     const carrousel = document.createElement('div')
+
+//     carrousel.innerHTML = 
+//     `
+//         <div class="owl-img">
+//             <img src="admin/arquivos/${imagem}" alt="Destaques">
+//         </div>
+//     `
+
+// }
+
+// const carregarImagens = async () => {
+
+//     const container = document.querySelector('.owl-track')
+//     const produtos = await getProdutos()
+//     const owl = produtos.map(CriarOwl)
+//     container.replaceChildren(...owl)
+
+// }
 
 const CriarCard = ({nome, imagem, percentual, descricao}) => {
 
@@ -38,12 +60,11 @@ const carregarProdutosPrincipais = async () => {
 
 }
 
-// const nome = document.getElementById('search').value
-
 const pesquisarProdutos = async () => {
 
+    const nome = document.getElementById('search').value
     const container = document.querySelector('#produtos')
-    const produtos = await getProdutos()
+    const produtos = await getProdutosPesquisa(nome)
     const cards = produtos.map(CriarCard)
     container.replaceChildren(...cards)
 
@@ -51,3 +72,4 @@ const pesquisarProdutos = async () => {
 
 carregarProdutosPrincipais()
 document.getElementById('pesquisar').addEventListener('click', pesquisarProdutos)
+// carregarImagens()

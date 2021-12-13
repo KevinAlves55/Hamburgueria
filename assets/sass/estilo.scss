@@ -497,13 +497,20 @@ main {
 }
 
 #promocoes {
-    @include box(600px, 100%);
-    @include display-flex(row, center, flex-start);
+    width: 100%;
+    min-height: 600px;
+    height: auto;
+    @include display-flex(row, center, center);
     background: linear-gradient(135deg, #C7491E, #e6bb1f);
 
     .itens-promocoes {
         height: inherit;
         @include display-flex(row, space-between, center);
+        flex-wrap: wrap;
+    }
+
+    .espaco {
+        margin: 15px;
     }
 }
 
