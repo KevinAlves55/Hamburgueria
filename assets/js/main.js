@@ -1,6 +1,7 @@
 'use strict'
 
 import { getProdutos, getProdutosPesquisa } from "./produtos.js";
+import { getCategorias } from "./categorias.js";
 
 // const CriarOwl = ({imagem}) => {
 
@@ -51,6 +52,19 @@ const CriarCard = ({nome, imagem, percentual, descricao}) => {
 
 }
 
+const CriarCardapio = ({nome}) => {
+
+    const card = document.createElement('li')
+
+    card.innerHTML = 
+    `
+        <li>${nome}</li>
+    `
+
+    return card
+
+}
+
 const carregarProdutosPrincipais = async () => {
 
     const container = document.querySelector('#produtos')
@@ -70,6 +84,16 @@ const pesquisarProdutos = async () => {
 
 }
 
+const carregarCategorias = async () => {
+
+    const container = document.querySelector('#categorias')
+    const categorias = await getCategorias()
+    const cards = categorias.map(CriarCardapio)
+    container.replaceChildren(...cards)
+
+}
+
 carregarProdutosPrincipais()
+carregarCategorias()
 document.getElementById('pesquisar').addEventListener('click', pesquisarProdutos)
 // carregarImagens()

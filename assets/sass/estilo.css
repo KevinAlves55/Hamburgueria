@@ -952,38 +952,21 @@ main .itens-main #filtragem #cardapio ul {
   gap: 30px;
 }
 
-main .itens-main #filtragem #cardapio ul img {
-  height: 2.8rem;
-  width: 2.8rem;
-}
-
-main .itens-main #filtragem #cardapio ul #tridente {
-  position: absolute;
-  top: -80px;
-  right: -75px;
-}
-
-main .itens-main #filtragem #cardapio ul #raio {
-  position: absolute;
-  bottom: -70px;
-  left: -150px;
-}
-
-main .itens-main #filtragem #cardapio a {
+main .itens-main #filtragem #cardapio ul li {
   color: #C7491E;
-  display: block;
   -webkit-transition: .2s;
   transition: .2s;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
-main .itens-main #filtragem #cardapio a:hover {
+main .itens-main #filtragem #cardapio ul li:hover {
   -webkit-filter: brightness(140%);
           filter: brightness(140%);
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 main .itens-main #filtragem #cardapio span {
