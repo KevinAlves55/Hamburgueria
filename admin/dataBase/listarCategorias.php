@@ -36,13 +36,13 @@
 
     }
 
-    function listarNomeJuncao($categoria) {
+    function listarJuncao($idCategoria) {
 
         $sql = "select PC.idprodutosCategorias, tblprodutos.*, tblcategorias.*, round((preco - ((preco * desconto) / 100)), 2) as percentual
         from tblprodutosCategorias as PC
             inner join tblprodutos on tblprodutos.idprodutos = PC.idprodutos
             inner join tblcategorias on tblcategorias.idcategorias = PC.idcategorias
-        where tblcategorias.nome like '%".$categoria."%'";
+        where tblcategorias.idcategorias = ".$idCategoria;
 
         $conexao = conexaoSql();
 

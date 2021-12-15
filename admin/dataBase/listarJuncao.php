@@ -12,10 +12,7 @@
 
     function listar () {
 
-        $sql = "select PC.idprodutosCategorias, tblprodutos.nome as Produto, tblcategorias.nome as Categoria 
-        from tblprodutosCategorias as PC
-        inner join tblprodutos on tblprodutos.idprodutos = PC.idprodutos
-        inner join tblcategorias on tblcategorias.idcategorias = PC.idcategorias order by idprodutosCategorias desc";
+        $sql = "select * from vwListarJuncao";
 
         $conexao = conexaoSql();
 

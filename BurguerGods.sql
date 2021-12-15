@@ -145,3 +145,18 @@ where tblcategorias.nome like '%especiais%';
 
 update tblprodutos
 set descricao = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet erat urna, sit amet molestie augue vestibulum vitae.";
+
+select PC.idprodutosCategorias, tblprodutos.*, tblcategorias.*, round((preco - ((preco * desconto) / 100)), 2) as percentual
+from tblprodutosCategorias as PC
+    inner join tblprodutos on tblprodutos.idprodutos = PC.idprodutos
+    inner join tblcategorias on tblcategorias.idcategorias = PC.idcategorias
+where tblcategorias.idcategorias = 1;
+
+create view vwListarJuncao as
+select PC.idprodutosCategorias, tblprodutos.nome as Produto, tblcategorias.nome as Categoria 
+
+from tblprodutosCategorias as PC
+inner join tblprodutos on tblprodutos.idprodutos = PC.idprodutos
+inner join tblcategorias on tblcategorias.idcategorias = PC.idcategorias order by idprodutosCategorias desc;
+
+select * from vwListarJuncao;

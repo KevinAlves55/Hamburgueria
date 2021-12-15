@@ -18,9 +18,9 @@
 
     }
 
-    function nomeCategorias($categoria) {
+    function BuscarIdCategorias($idCategorias) {
 
-        $dados = listarNomeJuncao($categoria);
+        $dados = listarJuncao($idCategorias);
 
         return $dados;
 

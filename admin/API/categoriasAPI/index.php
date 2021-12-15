@@ -10,12 +10,12 @@
         require_once('../constantes/constantes.php');
         require_once('../controles/exibiCategorias.php');
 
-        if (isset($request -> getQueryParams()['categoria'])) {
+        if (isset($request -> getQueryParams()['id'])) {
 
-            $categoria = (string) null;
-            $categoria = $request -> getQueryParams()['categoria'];
+            $id = (int) null;
+            $id = $request -> getQueryParams()['id'];
 
-            if ($listarDados = nomeCategorias($categoria)) {
+            if ($listarDados = BuscarIdCategorias($id)) {
 
                 if ($listarDadosArray = criarArrayJuncao($listarDados)) {
 
