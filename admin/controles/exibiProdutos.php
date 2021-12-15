@@ -42,6 +42,14 @@
 
     }
 
+    function BuscarIdCategorias($idCategorias) {
+
+        $dados = listarJuncao($idCategorias);
+
+        return $dados;
+
+    }
+
     function criarArray($objeto) {
 
         $i = (int) 0;
@@ -85,6 +93,61 @@
 
         if (isset($listarJson)) {
             
+            return $listarJson;
+
+        } else {
+
+            return false;
+
+        }
+
+    }
+
+    function criarArrayJuncao($objeto) {
+        
+        $i = (int) 0;
+
+        while ($rsDados = mysqli_fetch_assoc($objeto)) {
+
+            $arrayDadosCategoriasProdutos[$i] = array(
+
+                'idProduto' => $rsDados['idprodutos'],
+                'nomeProduto' => $rsDados['nome'],
+                'descricao' => $rsDados['descricao'],
+                'imagem' => $rsDados['imagem'],
+                'preco' => $rsDados['preco'],
+                'desconto' => $rsDados['desconto'],
+                'destaque' => $rsDados['destaque'],
+                'idCategoria' => $rsDados['idcategorias'], 
+                'nomeCategoria' => $rsDados['Categoria'],
+                'percentual' => $rsDados['percentual']
+
+            );
+
+            $i++;
+
+        }
+
+        if (isset($arrayDadosCategoriasProdutos)) {
+
+            return $arrayDadosCategoriasProdutos;
+
+        } else {
+
+            return false;
+
+        }
+
+    }
+
+    function criarJsonProdutosCategorias($arrayDadosCategoriasProdutos) {
+
+        header('content-type:application/json');
+
+        $listarJson = json_encode($arrayDadosCategoriasProdutos);
+
+        if (isset($listarJson)) {
+
             return $listarJson;
 
         } else {

@@ -10,32 +10,14 @@
         require_once('../constantes/constantes.php');
         require_once('../controles/exibiCategorias.php');
 
-        if (isset($request -> getQueryParams()['id'])) {
+        if ($listarDados = exibirCategorias()) {
 
-            $id = (int) null;
-            $id = $request -> getQueryParams()['id'];
+            if ($listarDadosArray = criarArray($listarDados)) {
 
-            if ($listarDados = BuscarIdCategorias($id)) {
+                $listarDadosJson = criarJson($listarDadosArray);
 
-                if ($listarDadosArray = criarArrayJuncao($listarDados)) {
+            } 
 
-                    $listarDadosJson = criarJsonProdutosCategorias($listarDadosArray);
-
-                }
-
-            }
-        
-        } else {
-
-            if ($listarDados = exibirCategorias()) {
-
-                if ($listarDadosArray = criarArray($listarDados)) {
-
-                    $listarDadosJson = criarJson($listarDadosArray);
-
-                } 
-
-            }
         }
 
         if ($listarDadosArray) {
@@ -48,7 +30,16 @@
         } else {
 
             return $response
-            -> withStatus(204);
+            -> withStatus(204)
+            -> withHeader('Content-Type', 'application/json')
+            -> write('
+                
+                {
+                    "message":"Não há dados para essa requisição"
+                }
+            
+            '); 
+
 
         }
 

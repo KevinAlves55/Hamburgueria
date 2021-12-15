@@ -19,10 +19,6 @@
             require_once('produtosAPI/index.php');
         break;
 
-        case 'contatos':
-            require_once('contatosAPI/index.php');
-        break;
-
     }
 
 ?>

@@ -390,9 +390,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: calc(330px * 14);
-  -webkit-animation: scroll 25s linear infinite;
-          animation: scroll 25s linear infinite;
+  width: calc(330px * 9);
+  -webkit-animation: scroll 15s linear infinite;
+          animation: scroll 15s linear infinite;
 }
 
 .owl-track:hover {
@@ -406,8 +406,8 @@ body {
             transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(calc(-330px * 8.25));
-            transform: translateX(calc(-330px * 8.25));
+    -webkit-transform: translateX(calc(-330px * 4));
+            transform: translateX(calc(-330px * 4));
   }
 }
 
@@ -417,8 +417,8 @@ body {
             transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(calc(-330px * 8.25));
-            transform: translateX(calc(-330px * 8.25));
+    -webkit-transform: translateX(calc(-330px * 4));
+            transform: translateX(calc(-330px * 4));
   }
 }
 

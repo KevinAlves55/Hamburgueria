@@ -13,7 +13,6 @@
         if (isset($request -> getQueryParams()['nome'])) {
 
             $nome = (string) null;
-            $descricao = (string) null;
             
             $nome = $request -> getQueryParams()['nome'];
 
@@ -27,7 +26,25 @@
     
             }
 
-        } else {
+        } elseif (isset($request -> getQueryParams()['id'])) {
+
+            $id = (int) null;
+            
+            $id = $request -> getQueryParams()['id'];
+
+            if ($listarDados = buscarIdCategorias($id)) {
+
+                if ($listarDadosArray = criarArrayJuncao($listarDados)) {
+    
+                    $listarDadosJson = criarJsonProdutosCategorias($listarDadosArray);
+    
+                }
+    
+            }
+
+        }
+        
+        else {
         
             if ($listarDados = exibirProdutosSite()) {
 
