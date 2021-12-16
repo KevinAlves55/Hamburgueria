@@ -148,14 +148,12 @@ header {
 }
 
 main {
-    // @include box(1800px, 100%);
     width: 100%;
     min-height: 1800px;
     @include display-flex(column, flex-start, center);
     background: linear-gradient(135deg, #C7491E, #e6bb1f);
 
     .itens-main {
-        height: inherit;
         @include display-flex(column, flex-start, flex-start);
 
         #filtragem {
@@ -337,7 +335,7 @@ main {
 
         #produtos {
             @include box(auto, 100%);
-            @include display-flex(row, space-between, flex-start);
+            @include display-flex(row, space-between, center);
             flex-wrap: wrap;
             min-height: 1600px;
             overflow: auto;
@@ -349,7 +347,7 @@ main {
 }
 
 .cards {
-    @include box(520px, 420px);
+    @include box(520px, 430px);
     @include display-flex(column, space-between, center);
     background-color: $escura;
     padding: 15px;
@@ -431,24 +429,27 @@ main {
 }
 
 #empresa {
-    @include box(534px, 100%);
+    min-height: 534px;
+    height: auto;
+    width: 100%;
     @include display-flex(row, center, center);
     background-color: $escura;
 
     .itens-empresa {
-        min-height: 534px;
-        height: auto;
-        @include display-flex(row, space-between, center);
+        @include display-flex(row, center, center);
         flex-wrap: wrap;
 
         #informacoes-empresa {
-            @include box(330px, 675px);
-            @include display-flex(column, space-between, flex-start);
+            @include box(330px, 625px);
+            @include display-flex(column, space-between, center);
+            margin: 20px 0px 30px 40px;
+            gap: 15px;
 
             h2 {
                 font-size: map-get($size, subTitulo);
                 font-weight: map-get($densidade, medium);
                 color: $alaranjado;
+                text-align: center;
             }
 
             p {
@@ -499,18 +500,16 @@ main {
 #promocoes {
     width: 100%;
     min-height: 600px;
-    height: auto;
     @include display-flex(row, center, center);
     background: linear-gradient(135deg, #C7491E, #e6bb1f);
 
     .itens-promocoes {
-        height: inherit;
         @include display-flex(row, space-between, center);
         flex-wrap: wrap;
     }
 
     .espaco {
-        margin: 15px;
+        margin: 15px 0 30px 0;
     }
 }
 
@@ -535,38 +534,22 @@ main {
 }
 
 footer {
-    @include box(475px, 100%);
+    min-height: 475px;
+    width: 100%;
     @include display-flex(column, center, center);
+    flex-wrap: wrap;
     margin-top: 5rem;
     background-color: $escura;
 
     .itens-footer {
         height: inherit;
-        @include display-flex(column, space-between, flex-start);
+        @include display-flex(row, space-between, flex-start);
 
         #informacoes-footer {
-            height: 390px;
+            min-height: 390px;
             width: 100%;
             @include display-flex(row, space-between, flex-start);
-
-            #logo-footer {
-                @include box(inherit, 436px);
-                @include display-flex(row, center, center);
-
-                img {
-                    @include box(13rem, 13rem);
-                    border-radius: 50%;
-                    transition: 0.5s;
-                    box-shadow: $box-shadow;
-                    cursor: pointer;
-                    filter: brightness(110%);
-
-                    &:hover {
-                        transform: scale(1.1);
-                        transition: 0.5s;
-                    }
-                }
-            }
+            flex-wrap: wrap;
 
             .titulo-footer {
                 color: $neutra;
@@ -721,7 +704,7 @@ footer {
         @include box(60px, 100%);
         @include display-flex(row, center, center);
         margin-top: 25px;
-        background-color: $escura;
+        background-color: #2c2c2c;
 
         span {
             color: $neutra;

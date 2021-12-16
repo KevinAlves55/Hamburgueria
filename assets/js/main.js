@@ -7,29 +7,25 @@ const CriarCard = ({nome, imagem, percentual, descricao, destaque, desconto}) =>
 
     const card = document.createElement('div')
     
-    if (desconto == 0 && destaque == 0) {
-
-        card.innerHTML = 
-        `
-            <div class="cards">
-                <div class="card-foto">
-                    <img src="admin/arquivos/${imagem}" alt="Produto">
-                </div>
-                <div class="card-nome">
-                    <h3>${nome}</h3>
-                </div>
-                <div class="card-descricao">
-                    <p>${descricao}</p>
-                </div>
-                <div class="informacoes">
-                    <button>saiba mais</button>
-                    <span>R$ ${percentual.toString().replace('.', ',')}</span>
-                </div>
+    card.innerHTML = 
+    `
+        <div class="cards">
+            <div class="card-foto">
+                <img src="admin/arquivos/${imagem}" alt="Produto">
             </div>
-        `
-
-    }
-
+            <div class="card-nome">
+                <h3>${nome}</h3>
+            </div>
+            <div class="card-descricao">
+                <p>${descricao}</p>
+            </div>
+            <div class="informacoes">
+                <button>saiba mais</button>
+                <span>R$ ${percentual.toString().replace('.', ',')}</span>
+            </div>
+        </div> 
+    `
+    
     return card
 
 }
@@ -38,7 +34,8 @@ const carregarProdutosPrincipais = async () => {
 
     const container = document.querySelector('#produtos')
     const produtos = await getProdutos()
-    const cards = produtos.map(CriarCard)
+    const produtosComuns = produtos.filter(({desconto, destaque}) => desconto <= 0 && destaque == 0)
+    const cards = produtosComuns.map(CriarCard)
     container.replaceChildren(...cards)
 
 }
@@ -140,29 +137,25 @@ const CriarCardDesconto = ({nome, imagem, percentual, descricao, preco, desconto
 
     const descontos = document.createElement('div')
 
-    if (desconto >= 1) {
-
-        descontos.innerHTML =
-        `
-            <div class="cards espaco">
-                <div class="card-foto">
-                    <img src="admin/arquivos/${imagem}" alt="Hamburguer dos deuses">
-                </div>
-                <div class="card-nome">
-                    <h3>${nome}</h3>
-                </div>
-                <div class="card-descricao">
-                    <p>${descricao}</p>
-                </div>
-                <div class="informacoes">
-                    <button>saiba mais</button>
-                    <i>R$ ${preco.toString().replace('.', ',')}</i>
-                    <span>R$ ${percentual.toString().replace('.', ',')}</span>
-                </div>
+    descontos.innerHTML =
+    `
+        <div class="cards espaco">
+            <div class="card-foto">
+                <img src="admin/arquivos/${imagem}" alt="Hamburguer dos deuses">
             </div>
-        `
-
-    }
+            <div class="card-nome">
+                <h3>${nome}</h3>
+            </div>
+            <div class="card-descricao">
+                <p>${descricao}</p>
+            </div>
+            <div class="informacoes">
+                <button>saiba mais</button>
+                <i>R$ ${preco.toString().replace('.', ',')}</i>
+                <span>R$ ${percentual.toString().replace('.', ',')}</span>
+            </div>
+        </div>
+    `
 
     return descontos
 
@@ -172,7 +165,8 @@ const carregarProdutosDesconto = async () => {
 
     const container = document.querySelector('.itens-promocoes')
     const produtos = await getProdutos()
-    const cards = produtos.map(CriarCardDesconto)
+    const produtosDesconto = produtos.filter(({desconto}) => desconto >= 1)
+    const cards = produtosDesconto.map(CriarCardDesconto)
     container.replaceChildren(...cards)
 
 }

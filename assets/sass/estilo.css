@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
 input:focus {
@@ -790,7 +790,6 @@ main {
 }
 
 main .itens-main {
-  height: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1075,9 +1074,9 @@ main .itens-main #produtos {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   min-height: 1600px;
@@ -1089,7 +1088,7 @@ main .itens-main #produtos {
 
 .cards {
   height: 520px;
-  width: 420px;
+  width: 430px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1244,7 +1243,8 @@ main .itens-main #produtos {
 }
 
 #empresa {
-  height: 534px;
+  min-height: 534px;
+  height: auto;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1263,8 +1263,6 @@ main .itens-main #produtos {
 }
 
 #empresa .itens-empresa {
-  min-height: 534px;
-  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1272,9 +1270,9 @@ main .itens-main #produtos {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1284,7 +1282,7 @@ main .itens-main #produtos {
 
 #empresa .itens-empresa #informacoes-empresa {
   height: 330px;
-  width: 675px;
+  width: 625px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1295,15 +1293,18 @@ main .itens-main #produtos {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0px 30px 40px;
+  gap: 15px;
 }
 
 #empresa .itens-empresa #informacoes-empresa h2 {
   font-size: 1.9rem;
   font-weight: 400;
   color: #C7491E;
+  text-align: center;
 }
 
 #empresa .itens-empresa #informacoes-empresa p {
@@ -1377,7 +1378,6 @@ main .itens-main #produtos {
 #promocoes {
   width: 100%;
   min-height: 600px;
-  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1395,7 +1395,6 @@ main .itens-main #produtos {
 }
 
 #promocoes .itens-promocoes {
-  height: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1414,7 +1413,7 @@ main .itens-main #produtos {
 }
 
 #promocoes .espaco {
-  margin: 15px;
+  margin: 15px 0 30px 0;
 }
 
 #destaques {
@@ -1464,7 +1463,7 @@ main .itens-main #produtos {
 }
 
 footer {
-  height: 475px;
+  min-height: 475px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1479,6 +1478,8 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 5rem;
   background-color: #1f1f1f;
 }
@@ -1488,10 +1489,10 @@ footer .itens-footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1501,7 +1502,7 @@ footer .itens-footer {
 }
 
 footer .itens-footer #informacoes-footer {
-  height: 390px;
+  min-height: 390px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1516,44 +1517,8 @@ footer .itens-footer #informacoes-footer {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-}
-
-footer .itens-footer #informacoes-footer #logo-footer {
-  height: inherit;
-  width: 436px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-footer .itens-footer #informacoes-footer #logo-footer img {
-  height: 13rem;
-  width: 13rem;
-  border-radius: 50%;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  -webkit-box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
-          box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  -webkit-filter: brightness(110%);
-          filter: brightness(110%);
-}
-
-footer .itens-footer #informacoes-footer #logo-footer img:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 footer .itens-footer #informacoes-footer .titulo-footer {
@@ -1834,7 +1799,7 @@ footer #criador-footer {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 25px;
-  background-color: #1f1f1f;
+  background-color: #2c2c2c;
 }
 
 footer #criador-footer span {
