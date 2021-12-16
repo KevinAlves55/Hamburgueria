@@ -38,7 +38,8 @@
 
     function listarTodosProdutos() {
 
-        $sql = "select tblprodutos.*, round(preco - ((preco * desconto) / 100), 2) as percentual from tblprodutos";
+        $sql = "select tblprodutos.*, round(preco - ((preco * desconto) / 100), 2) as percentual,
+        round(preco, 2) as valor from tblprodutos";
 
         $conexao = conexaoSql();
 

@@ -479,7 +479,7 @@ body {
 
 header {
   height: 170px;
-  width: 100%;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -823,6 +823,8 @@ main .itens-main #filtragem {
           align-items: center;
   position: relative;
   margin-top: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 main .itens-main #filtragem #cardapio {
@@ -1262,6 +1264,12 @@ main .itens-main #produtos {
   background-color: #1f1f1f;
 }
 
+#empresa video {
+  height: 324px;
+  width: 600px;
+  margin-top: 25px;
+}
+
 #empresa .itens-empresa {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1270,9 +1278,9 @@ main .itens-main #produtos {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1281,7 +1289,7 @@ main .itens-main #produtos {
 }
 
 #empresa .itens-empresa #informacoes-empresa {
-  height: 330px;
+  min-height: 330px;
   width: 625px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1296,7 +1304,6 @@ main .itens-main #produtos {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 20px 0px 30px 40px;
   gap: 15px;
 }
 
@@ -1304,13 +1311,13 @@ main .itens-main #produtos {
   font-size: 1.9rem;
   font-weight: 400;
   color: #C7491E;
-  text-align: center;
 }
 
 #empresa .itens-empresa #informacoes-empresa p {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 300;
   color: #FFF;
+  text-align: center;
 }
 
 .barra {
@@ -1804,5 +1811,234 @@ footer #criador-footer {
 
 footer #criador-footer span {
   color: #FFF;
+}
+
+@media (max-width: 1440px) {
+  .itens-empresa video {
+    margin: auto;
+  }
+  .itens-empresa #informacoes-empresa {
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 80px;
+  }
+  #nav {
+    display: none;
+  }
+  #conteudo-midia {
+    height: 30px;
+    width: 73vw;
+  }
+  #contatos {
+    height: inherit;
+    width: 200px;
+  }
+  #contatos .midia {
+    height: 1rem;
+    width: 1rem;
+    color: #C7491E;
+  }
+  #contatos #telefone {
+    height: inherit;
+    width: 120px;
+  }
+  #contatos #telefone span {
+    font-size: 0.7rem;
+  }
+  #contatos #hora {
+    display: none;
+  }
+  #redes-sociais {
+    height: inherit;
+    width: 133px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #redes-sociais img {
+    height: 1.4rem;
+    width: 1.4rem;
+    cursor: pointer;
+    color: #FFF;
+  }
+  #redes-sociais img:hover {
+    -webkit-filter: brightness(80%);
+            filter: brightness(80%);
+  }
+  #logo img {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  #logo h1 {
+    font-size: 1.5rem;
+  }
+  main .itens-main #filtragem #buscar {
+    display: none;
+  }
+  .cards {
+    min-height: 180px;
+    width: 235px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #1f1f1f;
+    padding: 25px;
+    border-radius: 5px;
+  }
+  .cards .card-foto {
+    width: inherit;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    margin-bottom: 10px;
+    padding: 8px;
+  }
+  .cards .card-foto img {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+  }
+  .cards .card-nome {
+    height: 45px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cards .card-nome h3 {
+    color: #C7491E;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  .cards .card-descricao {
+    height: 100px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cards .card-descricao p {
+    color: #FFF;
+    font-size: 0.7rem;
+    font-weight: 300;
+  }
+  .cards .informacoes {
+    height: 50px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+  }
+  .cards .informacoes button {
+    height: 30px;
+    width: 100px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    background-color: #C7491E;
+    color: #FFF;
+    border: none;
+    border-radius: 0.2rem;
+    -webkit-transition: .5s;
+    transition: .5s;
+    cursor: pointer;
+  }
+  .cards .informacoes button:hover {
+    -webkit-filter: brightness(110%);
+            filter: brightness(110%);
+    -webkit-transition: .5s;
+    transition: .5s;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .cards .informacoes i {
+    height: 15px;
+    width: 70px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    right: 0;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    color: #e6bb1f;
+    font-size: 0.7rem;
+    text-decoration: line-through;
+    top: -6px;
+  }
+  .cards .informacoes span {
+    color: #C7491E;
+    font-size: 0.9rem;
+  }
+  #empresa video {
+    height: 250px;
+    width: 250px;
+  }
 }
 /*# sourceMappingURL=estilo.css.map */

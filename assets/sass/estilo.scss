@@ -7,7 +7,7 @@
 @import '../sass/owlCarrousel';
 
 header {
-    @include box(170px, 100%);
+    @include box(170px, 100vw);
     @include display-flex(column, space-between, center);
     z-index: 999;
     position: fixed;
@@ -83,7 +83,6 @@ header {
 }
 
 .conteudo {
-    // width: 1350px;
     width: 71vw;
 }
 
@@ -161,6 +160,7 @@ main {
             @include display-flex(row, space-between, center);
             position: relative;
             margin-top: 20px;
+            flex-wrap: wrap;
         
             #cardapio {
                 @include box(inherit, 215px);
@@ -435,27 +435,34 @@ main {
     @include display-flex(row, center, center);
     background-color: $escura;
 
+    video {
+        height: 324px;
+        width: 600px;
+        margin-top: 25px;
+    }
+
     .itens-empresa {
-        @include display-flex(row, center, center);
+        @include display-flex(row, space-between, center);
         flex-wrap: wrap;
 
         #informacoes-empresa {
-            @include box(330px, 625px);
+            min-height: 330px;
+            width: 625px;
             @include display-flex(column, space-between, center);
-            margin: 20px 0px 30px 40px;
+            // margin: 25px 0px 40px 40px;
             gap: 15px;
 
             h2 {
                 font-size: map-get($size, subTitulo);
                 font-weight: map-get($densidade, medium);
                 color: $alaranjado;
-                text-align: center;
             }
 
             p {
-                font-size: map-get($size, grau6);
+                font-size: map-get($size, grau7);
                 font-weight: map-get($densidade, regular);
                 color: $neutra;
+                text-align: center;
             }
         }
     }
@@ -710,4 +717,178 @@ footer {
             color: $neutra;
         }
     }
+}
+
+
+@media (max-width: 1440px) {
+    
+    .itens-empresa {
+
+        video {
+            margin: auto;
+        }
+
+        #informacoes-empresa {
+            margin: auto;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    
+    header {
+        height: 80px;
+    }
+    
+    #nav {
+        display: none;
+    }
+
+    #conteudo-midia {
+        @include box(30px, 73vw);
+    }
+
+    #contatos {
+        @include box(inherit, 200px);
+    
+        .midia {
+            @include box(1rem, 1rem);
+            color: $alaranjado;
+        }
+    
+        #telefone {
+            @include box(inherit, 120px);
+    
+            span {
+                font-size: map-get($size, grau8);
+            }
+        }
+    
+        #hora {
+            display: none;
+        }
+    }
+
+    #redes-sociais {
+        @include box(inherit, 133px);
+        @include display-flex(row, space-between, center);
+    
+        img {
+            @include box(1.4rem, 1.4rem);
+            cursor: pointer;
+            color: $neutra;
+    
+            &:hover {
+                filter: brightness(80%);
+            }
+        }
+    }
+
+    #logo {
+        
+        img {
+            @include box(2.5rem, 2.5rem);
+        }
+
+        h1 {
+            font-size: map-get($size, grau4);
+        }
+    }
+
+    main .itens-main #filtragem #buscar {
+        display: none;
+    }
+
+    .cards {
+        min-height: 180px;
+        width: 235px;
+        @include display-flex(column, space-between, center);
+        background-color: $escura;
+        padding: 25px;
+        border-radius: 5px;
+        
+        .card-foto {
+            width: inherit;
+            flex-grow: 1;
+            margin-bottom: 10px;
+            padding: 8px;
+    
+            img {
+                @include box(100%, 100%);
+                border-radius: 5px;
+            }
+        }
+    
+        .card-nome {
+            @include box(45px, 100%);
+            @include display-flex(row, flex-start, center);
+    
+            h3 {
+                color: $alaranjado;
+                font-size: map-get($size, grau6);
+                font-weight: map-get($densidade, bold);
+            }
+        }
+    
+        .card-descricao {
+            @include box(100px, 100%);
+            @include display-flex(row, flex-start, center);
+    
+            p {
+                color: $neutra;
+                font-size: map-get($size, grau8);
+                font-weight: map-get($densidade, regular);
+            }
+        }
+    
+        .informacoes {
+            @include box(50px, 100%);
+            @include display-flex(row, space-between, center);
+            position: relative;
+    
+            button {
+                @include box(30px, 100px);
+                font-size: map-get($size, grau8);
+                text-transform: uppercase;
+                background-color: $alaranjado;
+                color: $neutra;
+                border: none;
+                border-radius: 0.2rem;
+                transition: .5s;
+                cursor: pointer;
+    
+                &:hover {
+                    filter: brightness(110%);
+                    transition: .5s;
+                    transform: scale(1.1); 
+                }
+            }
+    
+            i {
+                @include box(15px, 70px);
+                @include display-flex(row, center, center);
+                position: absolute;
+                right: 0;
+                align-self: flex-start;
+                color: $amarelado;
+                font-size: map-get($size, grau8);
+                text-decoration: line-through;
+                top: -6px;
+            }
+    
+            span {
+                color: $alaranjado;
+                font-size: map-get($size, grau5);
+            }
+        }
+    }
+
+    #empresa video {
+        height: 250px;
+        width: 250px;
+    }
+
 }

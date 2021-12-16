@@ -160,3 +160,6 @@ inner join tblprodutos on tblprodutos.idprodutos = PC.idprodutos
 inner join tblcategorias on tblcategorias.idcategorias = PC.idcategorias order by idprodutosCategorias desc;
 
 select * from vwListarJuncao;
+
+select tblprodutos.*, round(preco - ((preco * desconto) / 100), 2) as percentual,
+        round(preco, 2) as valor from tblprodutos;

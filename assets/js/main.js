@@ -133,7 +133,7 @@ const carregarImagens = async () => {
 
 }
 
-const CriarCardDesconto = ({nome, imagem, percentual, descricao, preco, desconto}) => {
+const CriarCardDesconto = ({nome, imagem, percentual, descricao, valor}) => {
 
     const descontos = document.createElement('div')
 
@@ -151,7 +151,7 @@ const CriarCardDesconto = ({nome, imagem, percentual, descricao, preco, desconto
             </div>
             <div class="informacoes">
                 <button>saiba mais</button>
-                <i>R$ ${preco.toString().replace('.', ',')}</i>
+                <i>R$ ${valor.toString().replace('.', ',')}</i>
                 <span>R$ ${percentual.toString().replace('.', ',')}</span>
             </div>
         </div>
