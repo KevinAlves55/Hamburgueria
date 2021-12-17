@@ -335,7 +335,7 @@ main {
 
         #produtos {
             @include box(auto, 100%);
-            @include display-flex(row, space-between, center);
+            @include display-flex(row, space-between, flex-start);
             flex-wrap: wrap;
             min-height: 1600px;
             overflow: auto;

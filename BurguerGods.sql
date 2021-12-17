@@ -163,3 +163,7 @@ select * from vwListarJuncao;
 
 select tblprodutos.*, round(preco - ((preco * desconto) / 100), 2) as percentual,
         round(preco, 2) as valor from tblprodutos;
+        
+        
+select tblprodutos.*, round(preco - ((preco * desconto) / 100), 2) as percentual, round(preco, 2) as valor
+from tblprodutos where nome like '%at%';

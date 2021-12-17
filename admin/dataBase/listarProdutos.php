@@ -24,7 +24,7 @@
 
     function listarNome($nome) {
 
-        $sql = "select tblprodutos.*, round(preco - ((preco * desconto) / 100), 2) as percentual 
+        $sql = "select tblprodutos.*, round(preco - ((preco * desconto) / 100), 2) as percentual, round(preco, 2) as valor
             from tblprodutos 
         where nome like '%".$nome."%'";
 
