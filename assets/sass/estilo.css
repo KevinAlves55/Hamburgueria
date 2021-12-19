@@ -362,13 +362,13 @@ body {
 }
 
 [data-anime="right-form"] {
-  -webkit-transform: translate3d(100px, 0, 0);
-          transform: translate3d(100px, 0, 0);
+  -webkit-transform: translate3d(30px, 0, 0);
+          transform: translate3d(30px, 0, 0);
 }
 
 [data-anime="left-form"] {
-  -webkit-transform: translate3d(-180px, 0, 0);
-          transform: translate3d(-180px, 0, 0);
+  -webkit-transform: translate3d(-160px, 0, 0);
+          transform: translate3d(-160px, 0, 0);
 }
 
 [data-anime="top"] {
@@ -815,7 +815,6 @@ main .itens-main {
 
 main .itens-main #filtragem {
   min-height: 100px;
-  background-color: red;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -838,7 +837,7 @@ main .itens-main #filtragem {
 
 main .itens-main #filtragem #cardapio {
   height: 100px;
-  width: 215px;
+  width: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -853,7 +852,6 @@ main .itens-main #filtragem #cardapio {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  background-color: blue;
 }
 
 main .itens-main #filtragem #cardapio input {
@@ -938,7 +936,7 @@ main .itens-main #filtragem #cardapio .menu .hamburger:after {
 main .itens-main #filtragem #cardapio ul {
   position: relative;
   top: 395%;
-  left: 95%;
+  left: 200%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   font-size: 1.5rem;
@@ -1006,7 +1004,6 @@ main .itens-main #filtragem #buscar {
       -ms-flex-align: center;
           align-items: center;
   margin-left: 15px;
-  background-color: gold;
 }
 
 main .itens-main #filtragem #buscar #search {
@@ -1238,7 +1235,7 @@ main .itens-main #produtos {
 }
 
 #empresa {
-  min-height: 534px;
+  min-height: 600px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1484,7 +1481,6 @@ footer {
 }
 
 footer .itens-footer {
-  height: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1529,7 +1525,7 @@ footer .itens-footer #informacoes-footer .titulo-footer {
 }
 
 footer .itens-footer #informacoes-footer #lojas-footer {
-  height: inherit;
+  min-height: 390px;
   width: 436px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1809,7 +1805,6 @@ footer #criador-footer span {
 @media (max-width: 1340px) {
   #nav {
     width: 480px;
-    background-color: red;
   }
   #nav ul li {
     font-size: 0.9rem;
@@ -1922,7 +1917,7 @@ footer #criador-footer span {
 /* Quebra para Mobile */
 @media (max-width: 648px) {
   header {
-    height: 100px;
+    height: 110px;
   }
   #conteudo-midia {
     height: 30px;
@@ -1956,6 +1951,163 @@ footer #criador-footer span {
   }
   #logo h1 {
     font-size: 1.5rem;
+  }
+  main .itens-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .itens-main #filtragem {
+    width: 300px;
+  }
+  main .itens-main #filtragem #cardapio {
+    width: 110px;
+  }
+  main .itens-main #filtragem #cardapio input:checked ~ label .menu {
+    height: 400px;
+    width: 280px;
+  }
+  main .itens-main #filtragem #cardapio .menu {
+    height: 40px;
+    width: 40px;
+  }
+  main .itens-main #filtragem #cardapio .menu .hamburger {
+    top: 19px;
+    left: 5px;
+  }
+  main .itens-main #filtragem #cardapio ul {
+    top: 330%;
+    left: 145%;
+    font-size: 1.2rem;
+  }
+  main .itens-main #filtragem #buscar {
+    width: 280px;
+  }
+  main .itens-main #filtragem #buscar #search {
+    width: 180px;
+    font-size: 0.9rem;
+  }
+  main .itens-main #filtragem #buscar #pesquisar {
+    height: 40px;
+    width: 90px;
+  }
+  .cards {
+    height: 420px;
+    width: 280px;
+  }
+  .cards .card-nome {
+    height: 30px;
+  }
+  .cards .card-nome h3 {
+    font-size: 1.1rem;
+  }
+  .cards .card-descricao {
+    height: 90px;
+  }
+  .cards .card-descricao p {
+    font-size: .8rem;
+  }
+  .cards .informacoes button {
+    height: 40px;
+    width: 110px;
+  }
+  .cards .informacoes i {
+    font-size: .7rem;
+  }
+  .cards .informacoes span {
+    font-size: 1.1rem;
+  }
+  #empresa .itens-empresa {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #empresa .itens-empresa img {
+    height: 15rem;
+    width: 19rem;
+  }
+  #empresa .itens-empresa #informacoes-empresa {
+    width: 280px;
+    height: 355px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 25px;
+    margin-left: 0;
+  }
+  #empresa .itens-empresa #informacoes-empresa h2 {
+    font-size: 1.3rem;
+  }
+  #empresa .itens-empresa #informacoes-empresa p {
+    font-size: 0.9rem;
+  }
+  .barra h2 {
+    font-size: 1.9rem;
+  }
+  .barra span {
+    font-size: 0.9rem;
+  }
+  .barra img {
+    height: 3rem;
+    width: 3rem;
+  }
+  footer .itens-footer #informacoes-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .itens-footer #informacoes-footer .titulo-footer {
+    font-size: 1.5rem;
+  }
+  footer .itens-footer #informacoes-footer #lojas-footer .unidade span {
+    font-size: 0.9rem;
+  }
+  footer .itens-footer #informacoes-footer #lojas-footer .unidade .descricao img {
+    height: 4rem;
+    width: 4.1rem;
+  }
+  footer .itens-footer #informacoes-footer #lojas-footer .unidade .descricao p {
+    font-size: 0.7rem;
   }
 }
 

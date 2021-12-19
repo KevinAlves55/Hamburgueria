@@ -159,7 +159,6 @@ main {
 
         #filtragem {
             min-height: 100px;
-            background-color: red;
             width: 100%;
             @include display-flex(row, space-between, center);
             position: relative;
@@ -167,10 +166,9 @@ main {
             flex-wrap: wrap;
         
             #cardapio {
-                @include box(100px, 215px);
+                @include box(100px, 120px);
                 @include display-flex(row, space-between, center);
                 position: relative;
-                background-color: blue;
                 
                 input {
                     display: none;
@@ -246,7 +244,7 @@ main {
                 ul {
                     position: relative;
                     top: 395%;
-                    left: 95%;
+                    left: 200%;
                     transform: translate(-50%, -50%);
                     font-size: map-get($size, grau4);
                     opacity: 0;
@@ -285,7 +283,6 @@ main {
                 width: 460px;
                 @include display-flex(row, space-between, center);
                 margin-left: 15px;
-                background-color: gold;
         
                 #search {
                     @include box(40px, 330px);
@@ -414,7 +411,7 @@ main {
 }
 
 #empresa {
-    min-height: 534px;
+    min-height: 600px;
     width: 100%;
     @include display-flex(row, center, center);
     background-color: $escura;
@@ -531,7 +528,6 @@ footer {
     background-color: $escura;
 
     .itens-footer {
-        height: inherit;
         @include display-flex(row, space-between, flex-start);
 
         #informacoes-footer {
@@ -549,7 +545,9 @@ footer {
             }
 
             #lojas-footer {
-                @include box(inherit, 436px);
+                min-height: 390px;
+                width: 436px;
+                // @include box(inherit, 436px);
                 @include display-flex(column, flex-start, flex-start);
                 gap: 20px;
 
@@ -706,7 +704,6 @@ footer {
 
     #nav {
         width: 480px;
-        background-color: red;
 
         ul {
 
@@ -818,7 +815,7 @@ footer {
 @media (max-width: 648px) {
 
     header {
-        height: 100px;
+        height: 110px;
     }
 
     #conteudo-midia {
@@ -861,6 +858,177 @@ footer {
 
         h1 {
             font-size: map-get($size, grau4);
+        }
+
+    }
+
+    main {
+
+        .itens-main {
+            @include display-flex(column, center, center);
+
+            #filtragem {
+                width: 300px;
+
+                #cardapio {
+                    width: 110px;
+                }
+
+            }
+
+        }
+
+    }
+
+    main .itens-main #filtragem #cardapio input:checked ~ label .menu {
+        @include box(400px, 280px);
+    }
+
+    main .itens-main #filtragem #cardapio .menu {
+        @include box(40px, 40px);
+    }
+
+    main .itens-main #filtragem #cardapio .menu .hamburger {
+        top: 19px;
+        left: 5px;
+    }
+
+    main .itens-main #filtragem #cardapio ul {
+        top: 330%;
+        left: 145%;
+        font-size: map-get($size, garu9);
+    }
+
+    main .itens-main #filtragem #buscar {
+        width: 280px;
+
+        #search {
+            width: 180px;
+            font-size: map-get($size, grau5);
+        }
+
+        #pesquisar {
+            @include box(40px, 90px);
+        }
+    }
+
+    .cards {
+        @include box(420px, 280px);
+
+        .card-nome {
+            height: 30px;
+
+            h3 {
+                font-size: map-get($size, grau6);
+            }
+        }
+
+        .card-descricao {
+            height: 90px;
+
+            p {
+                font-size: .8rem;
+            }
+        }
+
+        .informacoes {
+
+            button {
+                @include box(40px, 110px);
+            }
+
+            i {
+                font-size: .7rem;
+            }
+
+            span {
+                font-size: map-get($size, grau6);
+            }
+
+        }
+    }
+
+    #empresa {
+
+        .itens-empresa {
+            @include display-flex(column, center, center);
+
+            img {
+                @include box(15rem, 19rem);
+            }
+
+            #informacoes-empresa {
+                width: 280px;
+                height: 355px;
+                @include display-flex(column, flex-start, flex-start);
+                gap: 25px;
+                margin-left: 0;
+
+                h2 {
+                    font-size: map-get($size, grau7);
+                }
+
+                p {
+                    font-size: map-get($size, grau5);
+                }
+
+            }
+
+        }
+
+    }
+
+    .barra {
+
+        h2 {
+            font-size: map-get($size, subTitulo);
+        }
+
+        span {
+            font-size: map-get($size, grau5);
+        }
+
+        img {
+            @include box(3rem, 3rem);
+        }
+
+    }
+
+    footer {
+
+        .itens-footer {
+
+            #informacoes-footer {
+                @include display-flex(column, center, center);
+
+                .titulo-footer {
+                    font-size: map-get($size, grau4);
+                }
+
+                #lojas-footer {
+
+                    .unidade {
+
+                        span {
+                            font-size: map-get($size, grau5);
+                        }
+
+                        .descricao {
+
+                            img {
+                                @include box(4rem, 4.1rem);
+                            }
+
+                            p {
+                                font-size: map-get($size, grau8);
+                            }
+
+                        }
+                    }
+                }
+
+            }
+
         }
 
     }
