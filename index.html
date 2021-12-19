@@ -132,10 +132,8 @@
                 </div>
     
                 <div id="buscar">
-                    <div id="pesquisa">
-                        <input type="text" id="search" placeholder="Deixe sua fome escolher por você" maxlength="31">
-                        <button id="pesquisar">Buscar</button>
-                    </div>
+                    <input type="text" id="search" placeholder="Deixe sua fome escolher por você" maxlength="31">
+                    <button id="pesquisar">Buscar</button>
                 </div>
             </section>
 
@@ -154,13 +152,13 @@
     
     <section id="empresa">
         <div class="conteudo itens-empresa">
-            <video src="assets/video/empresa.mp4" data-anime="left-video" poster="assets/img/banner-video.JPG" controls loop></video>
+            <img src="assets/img/banner-empresa.jpg" alt="">
 
             <div id="informacoes-empresa" data-anime="right">
                 <h2>Prezamos a qualidade de nossos produtos</h2>
 
                 <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet neque tenetur dolorum? Similique quae quas ipsa, nam illo facere facilis repellendus aperiam ut est eos sed dignissimos qui autem praesentium. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo at commodi veniam totam laboriosam dolore exercitationem nulla perspiciatis obcaecati culpa neque dolorum eum doloremque mollitia, delectus perferendis animi. Voluptas, praesentium? Lorem ipsum dolor, sit amet consectetur.
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet neque tenetur dolorum? Similique quae quas ipsa, nam illo facere facilis repellendus aperiam ut est eos sed dignissimos qui autem praesentium. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo at commodi veniam totam laboriosam dolore exercitationem nulla perspiciatis obcaecati culpa. neque dolorum eum doloremque mollitia.
                 </p>
             </div>
         </div>
@@ -201,7 +199,7 @@
     <footer id="footer">
         <div class="conteudo itens-footer">
             <div id="informacoes-footer">        
-                <div id="lojas-footer">
+                <div id="lojas-footer" data-anime="left-form">
                     <h2 class="titulo-footer">nossas lojas</h2>
 
                     <div class="unidade">
@@ -223,10 +221,10 @@
                     </div>
                 </div>
 
-                <div id="contatos-footer">
+                <div id="contatos-footer" data-anime="right-form">
                     <h2 class="titulo-footer">entre em contato</h2>
 
-                    <form action="admin/controles/recebeContatos.php" method="post" name="frmPost" data-anime="right-form">
+                    <form action="admin/controles/recebeContatos.php" method="post" name="frmPost">
                         <div class="caixa">
                            <label>Nome: </label>
                            <ion-icon name="person-outline" class="icon-input-footer"></ion-icon>
