@@ -759,7 +759,7 @@ header {
 
 main {
   width: 100%;
-  min-height: 1800px;
+  min-height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -774,6 +774,8 @@ main {
       -ms-flex-align: center;
           align-items: center;
   background: linear-gradient(135deg, #C7491E, #e6bb1f);
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 main .itens-main {
@@ -809,7 +811,6 @@ main .itens-main #filtragem {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  margin-top: 20px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -985,34 +986,51 @@ main .itens-main #filtragem #buscar {
   margin-left: 15px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  position: relative;
 }
 
 main .itens-main #filtragem #buscar #search {
   height: 40px;
   width: 330px;
-  padding: 18px;
   border-radius: 3px;
-  border: none;
-  padding: 5% 5%;
+  border: 2px solid #FFF;
+  padding: 5% 8%;
   border-radius: 3rem;
-  color: #1f1f1f;
+  color: #FFF;
+  background-color: transparent;
   font-size: 1.1rem;
+  font-weight: 400;
 }
 
 main .itens-main #filtragem #buscar #search::-webkit-input-placeholder {
-  color: #1f1f1f;
+  color: #FFF;
+  font-weight: 400;
 }
 
 main .itens-main #filtragem #buscar #search:-ms-input-placeholder {
-  color: #1f1f1f;
+  color: #FFF;
+  font-weight: 400;
 }
 
 main .itens-main #filtragem #buscar #search::-ms-input-placeholder {
-  color: #1f1f1f;
+  color: #FFF;
+  font-weight: 400;
 }
 
 main .itens-main #filtragem #buscar #search::placeholder {
-  color: #1f1f1f;
+  color: #FFF;
+  font-weight: 400;
+}
+
+main .itens-main #filtragem #buscar #search:focus {
+  border: 2px solid #e6bb1f;
+}
+
+main .itens-main #filtragem #buscar img {
+  height: 1.2rem;
+  width: 1.2rem;
+  left: 14px;
+  position: absolute;
 }
 
 main .itens-main #filtragem #buscar #pesquisar {
@@ -1034,8 +1052,8 @@ main .itens-main #filtragem #buscar #pesquisar {
   text-transform: uppercase;
   color: #FFF;
   background-color: #C7491E;
-  border: none;
-  border-radius: 3rem;
+  border: 2px solid #e6bb1f;
+  border-radius: .8rem;
   cursor: pointer;
   -webkit-transition: .5s;
   transition: .5s;
@@ -1048,6 +1066,18 @@ main .itens-main #filtragem #buscar #pesquisar:hover {
   transition: .5s;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+main .itens-main #erro {
+  color: #161515;
+  display: block;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  text-align: center;
 }
 
 main .itens-main #produtos {
@@ -1068,10 +1098,9 @@ main .itens-main #produtos {
           align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  min-height: 1600px;
+  min-height: 400px;
   overflow: auto;
   margin-top: 20px;
-  margin-bottom: 20px;
   gap: 20px;
 }
 
@@ -1933,6 +1962,9 @@ footer #criador-footer span {
   #logo h1 {
     font-size: 1.1rem;
   }
+  main .itens-main #erro {
+    font-size: 0.9rem;
+  }
   main .itens-main #filtragem {
     width: 230px;
     display: -webkit-box;
@@ -1966,8 +1998,11 @@ footer #criador-footer span {
   }
   main .itens-main #filtragem #cardapio ul {
     top: 293%;
-    left: 56%;
+    left: 45%;
     font-size: 1.2rem;
+  }
+  main .itens-main #filtragem #cardapio ul li {
+    font-size: 1.1rem;
   }
   main .itens-main #filtragem #buscar {
     width: inherit;
@@ -1990,10 +2025,17 @@ footer #criador-footer span {
   main .itens-main #filtragem #buscar #search {
     width: inherit;
     font-size: .8rem;
+    padding: 5% 15%;
   }
   main .itens-main #filtragem #buscar #pesquisar {
-    height: 40px;
-    width: 90px;
+    height: 45px;
+    width: 100px;
+    font-size: .8rem;
+  }
+  main .itens-main #filtragem #buscar img {
+    height: 0.9rem;
+    width: 0.9rem;
+    top: 12px;
   }
   main .itens-main #filtragem #cardapio span {
     font-size: 1.1rem;

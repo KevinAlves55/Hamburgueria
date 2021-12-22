@@ -132,10 +132,13 @@
                 </div>
     
                 <div id="buscar">
-                    <input type="text" id="search" placeholder="Deixe sua fome escolher" maxlength="31">
+                    <img src="assets/img/lupa-pesquisa.png" alt="Lupa de pesquisa">
+                    <input type="text" value="" id="search" placeholder="Deixe sua fome escolher" maxlength="30"onkeyup="pesquisarProdutos()">
                     <button id="pesquisar">Buscar</button>
                 </div>
             </section>
+
+            <span id="erro"></span>
 
             <section id="produtos"></section>
         </div>

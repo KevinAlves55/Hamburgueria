@@ -17,7 +17,7 @@
             $nome = $request -> getQueryParams()['nome'];
 
             if ($listarDados = nomeProdutos($nome)) {
-
+                
                 if ($listarDadosArray = criarArray($listarDados)) {
     
                     $listarDadosJson = criarJson($listarDadosArray);
@@ -67,7 +67,15 @@
         } else {
 
             return $response
-            -> withStatus(204);
+            -> withStatus(404)
+            -> withHeader('Content-Type', 'application/json')
+            -> write (
+                
+                '{
+                    "message":"A pesquisa não corresponde a nenhum produto"
+                }'
+            
+            );
 
         }
 

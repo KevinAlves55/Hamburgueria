@@ -113,14 +113,13 @@
             $arrayDadosCategoriasProdutos[$i] = array(
 
                 'idProduto' => $rsDados['idprodutos'],
-                'nomeProduto' => $rsDados['nome'],
+                'nome' => $rsDados['nome'],
                 'descricao' => $rsDados['descricao'],
                 'imagem' => $rsDados['imagem'],
                 'preco' => $rsDados['preco'],
                 'desconto' => $rsDados['desconto'],
                 'destaque' => $rsDados['destaque'],
                 'idCategoria' => $rsDados['idcategorias'], 
-                'nomeCategoria' => $rsDados['Categoria'],
                 'percentual' => $rsDados['percentual']
 
             );

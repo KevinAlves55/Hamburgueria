@@ -13,7 +13,7 @@
     // Funcão responsável para abrir um script de seleção
     function listar() {
 
-        $sql = "select * from tblcategorias order by idcategorias desc";
+        $sql = "select * from tblcategorias order by idcategorias";
 
         $conexao = conexaoSql();
 

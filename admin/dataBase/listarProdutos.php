@@ -75,7 +75,7 @@
 
     function listarJuncao($idCategoria) {
 
-        $sql = "select PC.idprodutosCategorias, tblprodutos.*, tblcategorias.nome as Categoria, tblcategorias.idcategorias, 
+        $sql = "select PC.idprodutosCategorias, tblprodutos.*, tblcategorias.idcategorias, 
         round((preco - ((preco * desconto) / 100)), 2) as percentual
         from tblprodutosCategorias as PC
             inner join tblprodutos on tblprodutos.idprodutos = PC.idprodutos

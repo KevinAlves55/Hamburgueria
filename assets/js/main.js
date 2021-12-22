@@ -3,7 +3,7 @@
 import { getProdutos, getProdutosPesquisa, getProdutosCategoria } from "./produtos.js";
 import { getCategorias } from "./categorias.js";
 
-const CriarCard = ({nome, imagem, percentual, descricao, destaque, desconto}) => {
+const CriarCard = ({nome, imagem, percentual, descricao}) => {
 
     const card = document.createElement('div')
     
@@ -30,53 +30,6 @@ const CriarCard = ({nome, imagem, percentual, descricao, destaque, desconto}) =>
 
 }
 
-const carregarProdutosPrincipais = async () => {
-
-    const container = document.querySelector('#produtos')
-    const produtos = await getProdutos()
-    const produtosComuns = produtos.filter(({desconto, destaque}) => desconto <= 0 && destaque == 0)
-    const cards = produtosComuns.map(CriarCard)
-    container.replaceChildren(...cards)
-
-}
-
-const pesquisarProdutos = async () => {
-
-    const nome = document.getElementById('search').value
-    const container = document.querySelector('#produtos')
-    const produtos = await getProdutosPesquisa(nome)
-    const cards = produtos.map(CriarCard)
-    container.replaceChildren(...cards)
-
-}
-
-const CriarCardCategoria = ({nomeProduto, imagem, percentual, descricao}) => {
-
-    const card = document.createElement('div')
-    
-    card.innerHTML = 
-    `
-        <div class="cards">
-            <div class="card-foto">
-                <img src="admin/arquivos/${imagem}" alt="Produto">
-            </div>
-            <div class="card-nome">
-                <h3>${nomeProduto}</h3>
-            </div>
-            <div class="card-descricao">
-                <p>${descricao}</p>
-            </div>
-            <div class="informacoes">
-                <button>saiba mais</button>
-                <span>R$ ${percentual.toString().replace('.', ',')}</span>
-            </div>
-        </div>
-    `
-
-    return card
-
-}
-
 const CriarCardapio = ({nome, id}) => {
 
     const card = document.createElement('li')
@@ -87,49 +40,6 @@ const CriarCardapio = ({nome, id}) => {
     `
 
     return card
-
-}
-
-const carregarCategorias = async () => {
-
-    const container = document.querySelector('#categorias')
-    const categorias = await getCategorias()
-    const cards = categorias.map(CriarCardapio)
-    container.replaceChildren(...cards)
-
-}
-
-const filtarId = async ({target}) => {
- 
-    const idCategoria = target.dataset.id
-    const container = document.querySelector('#produtos')
-    const produtos = await getProdutosCategoria(idCategoria)
-    const cards = produtos.map(CriarCardCategoria)
-    container.replaceChildren(...cards)
-
-}
-
-const CriarOwl = ({imagem}) => {
-
-    const carrousel = document.createElement('div')
-
-    carrousel.innerHTML = 
-    `
-        <div class="owl-img">
-            <img src="admin/arquivos/${imagem}" alt="Destaques">
-        </div>
-    `
-
-    return carrousel
-
-}
-
-const carregarImagens = async () => {
-
-    const container = document.querySelector('.owl-track')
-    const destaques = await getProdutos()
-    const owl = destaques.map(CriarOwl)
-    container.replaceChildren(...owl)
 
 }
 
@@ -161,6 +71,102 @@ const CriarCardDesconto = ({nome, imagem, percentual, descricao, valor}) => {
 
 }
 
+const CriarOwl = ({imagem}) => {
+
+    const carrousel = document.createElement('div')
+
+    carrousel.innerHTML = 
+    `
+        <div class="owl-img">
+            <img src="admin/arquivos/${imagem}" alt="Destaques">
+        </div>
+    `
+
+    return carrousel
+
+}
+
+const carregarProdutosPrincipais = async () => {
+
+    const container = document.querySelector('#produtos')
+    const produtos = await getProdutos()
+    const produtosComuns = produtos.filter(({desconto, destaque}) => desconto <= 0 && destaque == 0)
+    const cards = produtosComuns.map(CriarCard)
+    container.replaceChildren(...cards)
+
+}
+
+const pesquisarProdutos = async () => {
+    
+    const nome = document.getElementById('search').value
+    const error = document.getElementById('erro')
+
+    if (nome != '') {
+
+        const container = document.querySelector('#produtos')
+        const produtos = await getProdutosPesquisa(nome)
+        
+        if (produtos.hasOwnProperty('message')) {
+
+            error.textContent = `A pesquisa - ${nome} - não corresponde aos resultados de produtos`
+            container.innerText = ''
+
+        } else {
+
+            error.textContent = ''
+            const cards = produtos.map(CriarCard)
+            container.replaceChildren(...cards)
+
+        }
+
+    } else {
+
+        error.textContent = 'Digite uma palavra chave'
+
+    }
+
+}
+
+const carregarCategorias = async () => {
+
+    const container = document.querySelector('#categorias')
+    const categorias = await getCategorias()
+    const cards = categorias.map(CriarCardapio)
+    container.replaceChildren(...cards)
+
+}
+
+const carregarProdutosCatgegoria = async ({target}) => {
+ 
+    const error = document.getElementById('erro')
+    const idCategoria = target.dataset.id
+    const container = document.querySelector('#produtos')
+    const produtos = await getProdutosCategoria(idCategoria)
+    
+    if (produtos.hasOwnProperty('message')) {
+
+        error.textContent = 'A categoria selecionada não contém produtos'
+        container.innerText = ''
+
+    } else {
+
+        error.textContent = ''
+        const cards = produtos.map(CriarCard)
+        container.replaceChildren(...cards)
+
+    }
+
+}
+
+const carregarImagens = async () => {
+
+    const container = document.querySelector('.owl-track')
+    const destaques = await getProdutos()
+    const owl = destaques.map(CriarOwl)
+    container.replaceChildren(...owl)
+
+}
+
 const carregarProdutosDesconto = async () => {
 
     const container = document.querySelector('.itens-promocoes')
@@ -175,5 +181,5 @@ carregarProdutosPrincipais()
 carregarCategorias()
 carregarImagens()
 carregarProdutosDesconto()
-document.querySelector('#categorias').addEventListener('click', filtarId)
+document.querySelector('#categorias').addEventListener('click', carregarProdutosCatgegoria)
 document.getElementById('pesquisar').addEventListener('click', pesquisarProdutos)

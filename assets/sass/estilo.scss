@@ -150,9 +150,11 @@ header {
 
 main {
     width: 100%;
-    min-height: 1800px;
+    min-height: 300px;
     @include display-flex(column, flex-start, center);
     background: linear-gradient(135deg, #C7491E, #e6bb1f);
+    padding-bottom: 20px;
+    padding-top: 20px;
 
     .itens-main {
         @include display-flex(column, flex-start, flex-start);
@@ -162,7 +164,6 @@ main {
             width: 100%;
             @include display-flex(row, space-between, center);
             position: relative;
-            margin-top: 20px;
             flex-wrap: wrap;
         
             #cardapio {
@@ -284,30 +285,43 @@ main {
                 @include display-flex(row, space-between, center);
                 margin-left: 15px;
                 flex-wrap: wrap;
+                position: relative;
         
                 #search {
                     @include box(40px, 330px);
-                    padding: 18px;
                     border-radius: 3px;
-                    border: none;
-                    padding: 5% 5%;
+                    border: 2px solid $neutra;
+                    padding: 5% 8%;
                     border-radius: 3rem;
-                    color: $escura;
+                    color: $neutra;
+                    background-color: transparent;
                     font-size: map-get($size, grau6);
+                    font-weight: map-get($densidade, medium);
 
                     &::placeholder {
-                        color: $escura;
+                        color: $neutra;
+                        font-weight: map-get($densidade, medium);
+                    }
+
+                    &:focus {
+                        border: 2px solid $amarelado;
                     }
                 }
 
+                img {
+                    @include box(1.2rem, 1.2rem);
+                    left: 14px;
+                    position: absolute;
+                }
+                
                 #pesquisar {
                     @include box(45px, 120px);
                     @include display-flex(row, center, center);
                     text-transform: uppercase;
                     color: $neutra;
                     background-color: $alaranjado;
-                    border: none;
-                    border-radius: 3rem;
+                    border: 2px solid $amarelado;
+                    border-radius: .8rem;
                     cursor: pointer;
                     transition: .5s;
         
@@ -318,16 +332,28 @@ main {
                     }
                 }
             }
+
+            
         }
 
+        #erro {
+            color: rgb(22, 21, 21);
+            display: block;
+            align-self: center;
+            font-size: 1.3rem;
+            font-weight: map-get($densidade, medium);
+            text-transform: capitalize;
+            text-align: center;
+        }
+        
         #produtos {
             @include box(auto, 100%);
             @include display-flex(row, space-between, flex-start);
             flex-wrap: wrap;
-            min-height: 1600px;
+            min-height: 400px;
             overflow: auto;
             margin-top: 20px;
-            margin-bottom: 20px;
+            // margin-bottom: 30px;
             gap: 20px;
         }
     }
@@ -860,6 +886,10 @@ footer {
 
         .itens-main {
 
+            #erro {
+                font-size: map-get($size, grau5);
+            }
+            
             #filtragem {
                 width: 230px;
                 @include display-flex(column, flex-start, flex-start);
@@ -889,8 +919,12 @@ footer {
 
     main .itens-main #filtragem #cardapio ul {
         top: 293%;
-        left: 56%;
+        left: 45%;
         font-size: map-get($size, grau9);
+
+        li {
+            font-size: map-get($size, grau6);
+        }
     }
 
     main .itens-main #filtragem #buscar {
@@ -902,10 +936,17 @@ footer {
         #search {
             width: inherit;
             font-size: .8rem;
+            padding: 5% 15%;
         }
 
         #pesquisar {
-            @include box(40px, 90px);
+            @include box(45px, 100px);
+            font-size: .8rem;
+        }
+
+        img {
+            @include box(0.9rem, 0.9rem);
+            top: 12px;
         }
     }
 
