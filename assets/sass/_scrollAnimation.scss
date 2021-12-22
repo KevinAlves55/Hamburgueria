@@ -4,27 +4,11 @@
 }
 
 [data-anime="left"] {
-    transform: translate3d(-500px, 0, 0);
-}
-
-[data-anime="left-video"] {
     transform: translate3d(-100px, 0, 0);
 }
 
 [data-anime="right"] {
-    transform: translate3d(42px, 0, 0);
-}
-
-[data-anime="right-form"] {
-    transform: translate3d(30px, 0, 0);
-}
-
-[data-anime="left-form"] {
-    transform: translate3d(-160px, 0, 0);
-}
-
-[data-anime="top"] {
-    transform: translate3d(0, -55px, 0);
+    transform: translate3d(100px, 0, 0);
 }
 
 [data-anime].animate {

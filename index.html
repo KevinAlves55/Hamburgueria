@@ -126,13 +126,13 @@
                         </div>
                     </label>
 
-                    <span>menu</span>
+                    <span>olympus menu</span>
 
                     <ul id="categorias"></ul>
                 </div>
     
                 <div id="buscar">
-                    <input type="text" id="search" placeholder="Deixe sua fome escolher por você" maxlength="31">
+                    <input type="text" id="search" placeholder="Deixe sua fome escolher" maxlength="31">
                     <button id="pesquisar">Buscar</button>
                 </div>
             </section>
@@ -152,7 +152,7 @@
     
     <section id="empresa">
         <div class="conteudo itens-empresa">
-            <img src="assets/img/banner-empresa.jpg" alt="">
+            <img src="assets/img/banner-empresa.jpg" data-anime="left" alt="">
 
             <div id="informacoes-empresa" data-anime="right">
                 <h2>Prezamos a qualidade de nossos produtos</h2>
@@ -197,60 +197,58 @@
     </section>
 
     <footer id="footer">
-        <div class="conteudo itens-footer">
-            <div id="informacoes-footer">        
-                <div id="lojas-footer" data-anime="left-form">
-                    <h2 class="titulo-footer">nossas lojas</h2>
+        <div class="conteudo itens-footer">       
+            <div id="lojas-footer" data-anime="left">
+                <h2 class="titulo-footer">nossas lojas</h2>
 
-                    <div class="unidade">
-                        <span>Unidade Jandira</span>
-                        <div class="descricao">
-                            <img src="assets/img/loja-footer.jpg" alt="Imagem hamburgueria">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, minima commodi! Odit
-                                ducimus sit eligendi cumque blanditiis aperiam</p>
-                        </div>
-                    </div>
-
-                    <div class="unidade">
-                        <span>Unidade Barueri</span>
-                        <div class="descricao">
-                            <img src="assets/img/loja-footer2.jpg" alt="Imagem hamburgueria">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, minima commodi! Odit
-                                ducimus sit eligendi cumque blanditiis aperiam</p>
-                        </div>
+                <div class="unidade">
+                    <span>Unidade Jandira</span>
+                    <div class="descricao">
+                        <img src="assets/img/loja-footer.jpg" alt="Imagem hamburgueria">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, minima commodi! Odit
+                            ducimus sit eligendi cumque blanditiis aperiam</p>
                     </div>
                 </div>
 
-                <div id="contatos-footer" data-anime="right-form">
-                    <h2 class="titulo-footer">entre em contato</h2>
-
-                    <form action="admin/controles/recebeContatos.php" method="post" name="frmPost">
-                        <div class="caixa">
-                           <label>Nome: </label>
-                           <ion-icon name="person-outline" class="icon-input-footer"></ion-icon>
-                           <input class="maiusculo" type="text" id="nome" name="txtNome" value="" onkeyup="caracteresInvalidos(this)" required placeholder="Informe seu nome" maxlength="100">
-                        </div>
-                        <div class="caixa">
-                            <label>Email: </label>
-                            <ion-icon name="mail-outline" class="icon-input-footer"></ion-icon>
-                            <input type="email" id="email" name="txtEmail" value="" required placeholder="Digite seu Email" autocomplete="on" maxlength="100">
-                        </div>
-                        <div class="caixa">
-                            <label>Celular: </label>
-                            <ion-icon name="call-outline" class="icon-input-footer"></ion-icon>
-                            <input type="tel" id="telefone" name="txtCelular" value="" required onkeyup="mascaraCelular(this)" placeholder="Informe seu celular" maxlength="15">
-                        </div>
-                        <div id="button-footer">
-                            <input type="submit" name="btnEnviar" value="Enviar">
-                        </div>
-                    </form>
-                    
-                    <div id="galeria-contatos-footer">
-                        <img src="assets/img/twitter.png" alt="Twitter">
-                        <img src="assets/img/slack.png" alt="Slack">
-                        <img src="assets/img/telegram.png" alt="Telegram">
-                        <img src="assets/img/youtube.png" alt="Youtube">
+                <div class="unidade">
+                    <span>Unidade Barueri</span>
+                    <div class="descricao">
+                        <img src="assets/img/loja-footer2.jpg" alt="Imagem hamburgueria">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, minima commodi! Odit
+                            ducimus sit eligendi cumque blanditiis aperiam</p>
                     </div>
+                </div>
+            </div>
+
+            <div id="contatos-footer" data-anime="right">
+                <h2 class="titulo-footer">entre em contato</h2>
+
+                <form action="admin/controles/recebeContatos.php" method="post" name="frmPost">
+                    <div class="caixa">
+                        <label>Nome: </label>
+                        <ion-icon name="person-outline" class="icon-input-footer"></ion-icon>
+                        <input class="maiusculo" type="text" id="nome" name="txtNome" value="" onkeyup="caracteresInvalidos(this)" required placeholder="Informe seu nome" maxlength="100">
+                    </div>
+                    <div class="caixa">
+                        <label>Email: </label>
+                        <ion-icon name="mail-outline" class="icon-input-footer"></ion-icon>
+                        <input type="email" id="email" name="txtEmail" value="" required placeholder="Digite seu Email" autocomplete="on" maxlength="100">
+                    </div>
+                    <div class="caixa">
+                        <label>Celular: </label>
+                        <ion-icon name="call-outline" class="icon-input-footer"></ion-icon>
+                        <input type="tel" id="telefone" name="txtCelular" value="" required onkeyup="mascaraCelular(this)" placeholder="Informe seu celular" maxlength="15">
+                    </div>
+                    <div id="button-footer">
+                        <input type="submit" name="btnEnviar" value="Enviar">
+                    </div>
+                </form>
+                
+                <div id="galeria-contatos-footer">
+                    <img src="assets/img/twitter.png" alt="Twitter">
+                    <img src="assets/img/slack.png" alt="Slack">
+                    <img src="assets/img/telegram.png" alt="Telegram">
+                    <img src="assets/img/youtube.png" alt="Youtube">
                 </div>
             </div>
         </div>

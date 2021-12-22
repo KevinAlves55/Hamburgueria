@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html {
   scroll-behavior: smooth;
 }
@@ -347,33 +346,13 @@ body {
 }
 
 [data-anime="left"] {
-  -webkit-transform: translate3d(-500px, 0, 0);
-          transform: translate3d(-500px, 0, 0);
-}
-
-[data-anime="left-video"] {
   -webkit-transform: translate3d(-100px, 0, 0);
           transform: translate3d(-100px, 0, 0);
 }
 
 [data-anime="right"] {
-  -webkit-transform: translate3d(42px, 0, 0);
-          transform: translate3d(42px, 0, 0);
-}
-
-[data-anime="right-form"] {
-  -webkit-transform: translate3d(30px, 0, 0);
-          transform: translate3d(30px, 0, 0);
-}
-
-[data-anime="left-form"] {
-  -webkit-transform: translate3d(-160px, 0, 0);
-          transform: translate3d(-160px, 0, 0);
-}
-
-[data-anime="top"] {
-  -webkit-transform: translate3d(0, -55px, 0);
-          transform: translate3d(0, -55px, 0);
+  -webkit-transform: translate3d(100px, 0, 0);
+          transform: translate3d(100px, 0, 0);
 }
 
 [data-anime].animate {
@@ -837,7 +816,7 @@ main .itens-main #filtragem {
 
 main .itens-main #filtragem #cardapio {
   height: 100px;
-  width: 120px;
+  width: 215px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -936,7 +915,7 @@ main .itens-main #filtragem #cardapio .menu .hamburger:after {
 main .itens-main #filtragem #cardapio ul {
   position: relative;
   top: 395%;
-  left: 200%;
+  left: 96%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   font-size: 1.5rem;
@@ -1004,6 +983,8 @@ main .itens-main #filtragem #buscar {
       -ms-flex-align: center;
           align-items: center;
   margin-left: 15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 main .itens-main #filtragem #buscar #search {
@@ -1016,6 +997,22 @@ main .itens-main #filtragem #buscar #search {
   border-radius: 3rem;
   color: #1f1f1f;
   font-size: 1.1rem;
+}
+
+main .itens-main #filtragem #buscar #search::-webkit-input-placeholder {
+  color: #1f1f1f;
+}
+
+main .itens-main #filtragem #buscar #search:-ms-input-placeholder {
+  color: #1f1f1f;
+}
+
+main .itens-main #filtragem #buscar #search::-ms-input-placeholder {
+  color: #1f1f1f;
+}
+
+main .itens-main #filtragem #buscar #search::placeholder {
+  color: #1f1f1f;
 }
 
 main .itens-main #filtragem #buscar #pesquisar {
@@ -1388,6 +1385,7 @@ main .itens-main #produtos {
       -ms-flex-align: center;
           align-items: center;
   background: linear-gradient(135deg, #C7491E, #e6bb1f);
+  padding-bottom: 15px;
 }
 
 #promocoes .itens-promocoes {
@@ -1409,7 +1407,7 @@ main .itens-main #produtos {
 }
 
 #promocoes .espaco {
-  margin: 15px 0 30px 0;
+  margin: 15px 15px 0px 0;
 }
 
 #destaques {
@@ -1474,8 +1472,6 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   margin-top: 5rem;
   background-color: #1f1f1f;
 }
@@ -1494,29 +1490,10 @@ footer .itens-footer {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  gap: 10px;
 }
 
-footer .itens-footer #informacoes-footer {
-  min-height: 390px;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-footer .itens-footer #informacoes-footer .titulo-footer {
+footer .itens-footer .titulo-footer {
   color: #FFF;
   font-size: 1.9rem;
   font-weight: 500;
@@ -1524,8 +1501,8 @@ footer .itens-footer #informacoes-footer .titulo-footer {
   text-transform: capitalize;
 }
 
-footer .itens-footer #informacoes-footer #lojas-footer {
-  min-height: 390px;
+footer .itens-footer #lojas-footer {
+  min-height: 475px;
   width: 436px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1543,11 +1520,10 @@ footer .itens-footer #informacoes-footer #lojas-footer {
   gap: 20px;
 }
 
-footer .itens-footer #informacoes-footer #lojas-footer .unidade {
+footer .itens-footer #lojas-footer .unidade {
   height: auto;
-  width: auto;
+  width: inherit;
   min-height: 50px;
-  min-width: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1561,22 +1537,23 @@ footer .itens-footer #informacoes-footer #lojas-footer .unidade {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding-left: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   gap: 10px;
 }
 
-footer .itens-footer #informacoes-footer #lojas-footer .unidade span {
+footer .itens-footer #lojas-footer .unidade span {
   color: #C7491E;
   font-size: 1.1rem;
   font-weight: 400;
   cursor: pointer;
 }
 
-footer .itens-footer #informacoes-footer #lojas-footer .unidade span:hover {
+footer .itens-footer #lojas-footer .unidade span:hover {
   text-decoration: underline;
 }
 
-footer .itens-footer #informacoes-footer #lojas-footer .unidade .descricao {
+footer .itens-footer #lojas-footer .unidade .descricao {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1587,13 +1564,12 @@ footer .itens-footer #informacoes-footer #lojas-footer .unidade .descricao {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  gap: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-footer .itens-footer #informacoes-footer #lojas-footer .unidade .descricao img {
+footer .itens-footer #lojas-footer .unidade .descricao img {
   height: 7rem;
   width: 7.2rem;
   margin-right: 10px;
@@ -1603,18 +1579,18 @@ footer .itens-footer #informacoes-footer #lojas-footer .unidade .descricao img {
   border-radius: 6px;
 }
 
-footer .itens-footer #informacoes-footer #lojas-footer .unidade .descricao img:hover {
+footer .itens-footer #lojas-footer .unidade .descricao img:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: .5s linear;
   transition: .5s linear;
 }
 
-footer .itens-footer #informacoes-footer #lojas-footer .unidade .descricao p {
+footer .itens-footer #lojas-footer .unidade .descricao p {
   color: #FFF;
 }
 
-footer .itens-footer #informacoes-footer #contatos-footer {
+footer .itens-footer #contatos-footer {
   height: inherit;
   width: 380px;
   display: -webkit-box;
@@ -1632,7 +1608,7 @@ footer .itens-footer #informacoes-footer #contatos-footer {
           align-items: flex-start;
 }
 
-footer .itens-footer #informacoes-footer #contatos-footer form {
+footer .itens-footer #contatos-footer form {
   height: 235px;
   width: 100%;
   display: -webkit-box;
@@ -1651,7 +1627,7 @@ footer .itens-footer #informacoes-footer #contatos-footer form {
   margin-top: 20px;
 }
 
-footer .itens-footer #informacoes-footer #contatos-footer form .caixa {
+footer .itens-footer #contatos-footer form .caixa {
   height: 50px;
   width: 100%;
   display: -webkit-box;
@@ -1672,22 +1648,22 @@ footer .itens-footer #informacoes-footer #contatos-footer form .caixa {
   padding-right: 10px;
 }
 
-footer .itens-footer #informacoes-footer #contatos-footer form .caixa .maiusculo {
+footer .itens-footer #contatos-footer form .caixa .maiusculo {
   text-transform: capitalize;
 }
 
-footer .itens-footer #informacoes-footer #contatos-footer form .caixa label {
+footer .itens-footer #contatos-footer form .caixa label {
   color: #FFF;
   font-weight: 400;
   font-size: 1.1rem;
 }
 
-footer .itens-footer #informacoes-footer #contatos-footer form .caixa .icon-input-footer {
+footer .itens-footer #contatos-footer form .caixa .icon-input-footer {
   position: relative;
   left: 40px;
 }
 
-footer .itens-footer #informacoes-footer #contatos-footer form .caixa input {
+footer .itens-footer #contatos-footer form .caixa input {
   width: 55%;
   height: 40px;
   border-radius: 8px;
@@ -1699,11 +1675,11 @@ footer .itens-footer #informacoes-footer #contatos-footer form .caixa input {
   font-size: 0.9rem;
 }
 
-footer .itens-footer #informacoes-footer #contatos-footer form .caixa input:focus {
+footer .itens-footer #contatos-footer form .caixa input:focus {
   border: 2px solid #C7491E;
 }
 
-footer .itens-footer #informacoes-footer #contatos-footer form #button-footer {
+footer .itens-footer #contatos-footer form #button-footer {
   height: 85px;
   width: 100%;
   display: -webkit-box;
@@ -1722,7 +1698,7 @@ footer .itens-footer #informacoes-footer #contatos-footer form #button-footer {
   padding-right: 10px;
 }
 
-footer .itens-footer #informacoes-footer #contatos-footer form #button-footer input {
+footer .itens-footer #contatos-footer form #button-footer input {
   width: 35%;
   height: 45px;
   background-color: #C7491E;
@@ -1737,7 +1713,7 @@ footer .itens-footer #informacoes-footer #contatos-footer form #button-footer in
   transition: 0.5s;
 }
 
-footer .itens-footer #informacoes-footer #contatos-footer form #button-footer input:hover {
+footer .itens-footer #contatos-footer form #button-footer input:hover {
   -webkit-filter: brightness(110%);
           filter: brightness(110%);
   -webkit-transition: .5s;
@@ -1746,7 +1722,7 @@ footer .itens-footer #informacoes-footer #contatos-footer form #button-footer in
           transform: scale(1.1);
 }
 
-footer .itens-footer #informacoes-footer #contatos-footer #galeria-contatos-footer {
+footer .itens-footer #contatos-footer #galeria-contatos-footer {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -1766,13 +1742,13 @@ footer .itens-footer #informacoes-footer #contatos-footer #galeria-contatos-foot
   margin: auto;
 }
 
-footer .itens-footer #informacoes-footer #contatos-footer #galeria-contatos-footer img {
+footer .itens-footer #contatos-footer #galeria-contatos-footer img {
   height: 1.7rem;
   width: 1.7rem;
   cursor: pointer;
 }
 
-footer .itens-footer #informacoes-footer #contatos-footer #galeria-contatos-footer img:hover {
+footer .itens-footer #contatos-footer #galeria-contatos-footer img:hover {
   -webkit-filter: brightness(130%);
           filter: brightness(130%);
 }
@@ -1842,6 +1818,9 @@ footer #criador-footer span {
   #empresa .itens-empresa #informacoes-empresa h2 {
     margin-top: 25px;
   }
+  #empresa .itens-empresa #informacoes-empresa p {
+    font-size: 1.2rem;
+  }
   main .itens-main #produtos {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1879,7 +1858,9 @@ footer #criador-footer span {
   #nav {
     width: 435px;
   }
-  footer .itens-footer #informacoes-footer {
+  footer .itens-footer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1894,8 +1875,8 @@ footer #criador-footer span {
         -ms-flex-align: center;
             align-items: center;
   }
-  footer .itens-footer #informacoes-footer #contatos-footer {
-    margin-top: 20px;
+  footer .itens-footer #contatos-footer {
+    margin-top: 8px;
   }
   main .itens-main #filtragem {
     display: -webkit-box;
@@ -1917,10 +1898,10 @@ footer #criador-footer span {
 /* Quebra para Mobile */
 @media (max-width: 648px) {
   header {
-    height: 110px;
+    height: 80px;
   }
   #conteudo-midia {
-    height: 30px;
+    height: 25px;
   }
   #contatos {
     width: 250px;
@@ -1942,17 +1923,18 @@ footer #criador-footer span {
     width: 90px;
   }
   #redes-sociais img {
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 1.2rem;
+    width: 1.2rem;
   }
   #logo img {
-    height: 4.2rem;
-    width: 4.3rem;
+    height: 3.2rem;
+    width: 3.3rem;
   }
   #logo h1 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
-  main .itens-main {
+  main .itens-main #filtragem {
+    width: 230px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1960,22 +1942,19 @@ footer #criador-footer span {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  main .itens-main #filtragem {
-    width: 300px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   main .itens-main #filtragem #cardapio {
-    width: 110px;
+    width: 180px;
   }
   main .itens-main #filtragem #cardapio input:checked ~ label .menu {
-    height: 400px;
-    width: 280px;
+    height: 340px;
+    width: 220px;
   }
   main .itens-main #filtragem #cardapio .menu {
     height: 40px;
@@ -1986,24 +1965,42 @@ footer #criador-footer span {
     left: 5px;
   }
   main .itens-main #filtragem #cardapio ul {
-    top: 330%;
-    left: 145%;
+    top: 293%;
+    left: 56%;
     font-size: 1.2rem;
   }
   main .itens-main #filtragem #buscar {
-    width: 280px;
+    width: inherit;
+    margin-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 8px;
   }
   main .itens-main #filtragem #buscar #search {
-    width: 180px;
-    font-size: 0.9rem;
+    width: inherit;
+    font-size: .8rem;
   }
   main .itens-main #filtragem #buscar #pesquisar {
     height: 40px;
     width: 90px;
   }
+  main .itens-main #filtragem #cardapio span {
+    font-size: 1.1rem;
+  }
   .cards {
     height: 420px;
-    width: 280px;
+    width: 210px;
   }
   .cards .card-nome {
     height: 30px;
@@ -2015,11 +2012,12 @@ footer #criador-footer span {
     height: 90px;
   }
   .cards .card-descricao p {
-    font-size: .8rem;
+    font-size: .7rem;
   }
   .cards .informacoes button {
-    height: 40px;
-    width: 110px;
+    height: 35px;
+    width: 100px;
+    font-size: 0.7rem;
   }
   .cards .informacoes i {
     font-size: .7rem;
@@ -2043,11 +2041,11 @@ footer #criador-footer span {
             align-items: center;
   }
   #empresa .itens-empresa img {
-    height: 15rem;
-    width: 19rem;
+    height: 10rem;
+    width: 10rem;
   }
   #empresa .itens-empresa #informacoes-empresa {
-    width: 280px;
+    width: 220px;
     height: 355px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2069,19 +2067,73 @@ footer #criador-footer span {
     font-size: 1.3rem;
   }
   #empresa .itens-empresa #informacoes-empresa p {
-    font-size: 0.9rem;
+    font-size: .8rem;
+  }
+  .barra {
+    height: 250px;
   }
   .barra h2 {
     font-size: 1.9rem;
   }
   .barra span {
     font-size: 0.9rem;
+    text-align: center;
   }
   .barra img {
     height: 3rem;
     width: 3rem;
+    top: 18px;
+    right: 20px;
   }
-  footer .itens-footer #informacoes-footer {
+  #destaques {
+    height: 370px;
+  }
+  #destaques .itens-destaque h2 {
+    height: 30px;
+    font-size: 1.3rem;
+  }
+  .owl {
+    height: 300px;
+  }
+  .owl-track {
+    width: calc(250px * 15);
+    -webkit-animation: scroll 25s linear infinite;
+            animation: scroll 25s linear infinite;
+  }
+  @-webkit-keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-250px * 13.50));
+              transform: translateX(calc(-250px * 13.50));
+    }
+  }
+  @keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-250px * 13.50));
+              transform: translateX(calc(-250px * 13.50));
+    }
+  }
+  .owl-img {
+    height: 250px;
+    width: 250px;
+    padding: 10px;
+  }
+  .owl-img img {
+    height: 100%;
+    width: 100%;
+  }
+  .owl::before,
+  .owl::after {
+    width: 6%;
+  }
+  footer .itens-footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2089,29 +2141,90 @@ footer #criador-footer span {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
-  footer .itens-footer #informacoes-footer .titulo-footer {
-    font-size: 1.5rem;
+  footer .itens-footer .titulo-footer {
+    font-size: 1.3rem;
   }
-  footer .itens-footer #informacoes-footer #lojas-footer .unidade span {
+  footer .itens-footer #lojas-footer {
+    width: 220px;
+  }
+  footer .itens-footer #lojas-footer .unidade span {
     font-size: 0.9rem;
   }
-  footer .itens-footer #informacoes-footer #lojas-footer .unidade .descricao img {
-    height: 4rem;
-    width: 4.1rem;
+  footer .itens-footer #lojas-footer .unidade .descricao img {
+    height: 5.4rem;
+    width: 5.4rem;
   }
-  footer .itens-footer #informacoes-footer #lojas-footer .unidade .descricao p {
+  footer .itens-footer #lojas-footer .unidade .descricao p {
+    font-size: .6rem;
+  }
+  footer .itens-footer #contatos-footer {
+    width: 230px;
+  }
+  footer .itens-footer #contatos-footer form {
+    width: 230px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  footer .itens-footer #contatos-footer form .caixa {
+    width: 230px;
+  }
+  footer .itens-footer #contatos-footer form .caixa label {
+    font-size: 0.9rem;
+  }
+  footer .itens-footer #contatos-footer form .caixa input {
+    height: 35px;
+    width: 135px;
+    padding: 0 10px;
     font-size: 0.7rem;
+  }
+  footer .itens-footer #contatos-footer form .caixa .icon-input-footer {
+    display: none;
+  }
+  footer .itens-footer #contatos-footer form #button-footer input {
+    width: 100px;
+    height: 40px;
+    font-size: .9rem;
+  }
+  footer .itens-footer #contatos-footer #galeria-contatos-footer {
+    width: inherit;
+    height: 40px;
+  }
+  footer .itens-footer #contatos-footer #galeria-contatos-footer img {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  footer #criador-footer span {
+    font-size: 0.9rem;
+  }
+  [data-anime="right"] {
+    -webkit-transform: translate3d(20px, 0, 0);
+            transform: translate3d(20px, 0, 0);
+  }
+  [data-anime="left"] {
+    -webkit-transform: translate3d(-20px, 0, 0);
+            transform: translate3d(-20px, 0, 0);
   }
 }
 
-/* Menu drop responsivél */
+/* Menu drop */
 @media (max-width: 1072px) {
   #nav {
     display: none;

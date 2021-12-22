@@ -166,7 +166,7 @@ main {
             flex-wrap: wrap;
         
             #cardapio {
-                @include box(100px, 120px);
+                @include box(100px, 215px);
                 @include display-flex(row, space-between, center);
                 position: relative;
                 
@@ -244,7 +244,7 @@ main {
                 ul {
                     position: relative;
                     top: 395%;
-                    left: 200%;
+                    left: 96%;
                     transform: translate(-50%, -50%);
                     font-size: map-get($size, grau4);
                     opacity: 0;
@@ -283,6 +283,7 @@ main {
                 width: 460px;
                 @include display-flex(row, space-between, center);
                 margin-left: 15px;
+                flex-wrap: wrap;
         
                 #search {
                     @include box(40px, 330px);
@@ -293,6 +294,10 @@ main {
                     border-radius: 3rem;
                     color: $escura;
                     font-size: map-get($size, grau6);
+
+                    &::placeholder {
+                        color: $escura;
+                    }
                 }
 
                 #pesquisar {
@@ -488,6 +493,7 @@ main {
     min-height: 600px;
     @include display-flex(row, center, center);
     background: linear-gradient(135deg, #C7491E, #e6bb1f);
+    padding-bottom: 15px;
 
     .itens-promocoes {
         @include display-flex(row, space-between, center);
@@ -495,7 +501,7 @@ main {
     }
 
     .espaco {
-        margin: 15px 0 30px 0;
+        margin: 15px 15px 0px 0;
     }
 }
 
@@ -523,164 +529,154 @@ footer {
     min-height: 475px;
     width: 100%;
     @include display-flex(column, center, center);
-    flex-wrap: wrap;
     margin-top: 5rem;
     background-color: $escura;
 
     .itens-footer {
         @include display-flex(row, space-between, flex-start);
+        gap: 10px;
 
-        #informacoes-footer {
-            min-height: 390px;
-            width: 100%;
-            @include display-flex(row, space-between, flex-start);
-            flex-wrap: wrap;
+        .titulo-footer {
+            color: $neutra;
+            font-size: map-get($size, subTitulo);
+            font-weight: map-get($densidade, bold);
+            margin-top: 30px;
+            text-transform: capitalize;
+        }
 
-            .titulo-footer {
-                color: $neutra;
-                font-size: map-get($size, subTitulo);
-                font-weight: map-get($densidade, bold);
-                margin-top: 30px;
-                text-transform: capitalize;
-            }
+        #lojas-footer {
+            min-height: 475px;
+            width: 436px;
+            @include display-flex(column, flex-start, flex-start);
+            gap: 20px;
 
-            #lojas-footer {
-                min-height: 390px;
-                width: 436px;
-                // @include box(inherit, 436px);
-                @include display-flex(column, flex-start, flex-start);
-                gap: 20px;
-
-                .unidade {
-                    @include box(auto, auto);
-                    min-height: 50px;
-                    min-width: 100px;
-                    @include display-flex(column, space-between, flex-start);
-                    padding-left: 20px;
-                    gap: 10px;
-
-                    span {
-                        color: $alaranjado;
-                        font-size: map-get($size, grau6);
-                        font-weight: map-get($densidade, medium);
-                        cursor: pointer;
-
-                        &:hover {
-                            text-decoration: underline;
-                        }
-                    }
-
-                    .descricao {
-                        @include display-flex(row, space-between, flex-start);
-                        gap: 8px;
-
-                        img {
-                            @include box(7rem, 7.2rem);
-                            margin-right: 10px;
-                            transition: .5s linear;
-                            cursor: pointer;
-                            border-radius: 6px;
-    
-                            &:hover {
-                                transform: scale(1.1);
-                                transition: .5s linear;
-                            }
-                        }
-    
-                        p {
-                            color: $neutra;
-                            
-                        }
-                    }
-                }
-            }
-
-            #contatos-footer {
-                @include box(inherit, 380px);
+            .unidade {
+                @include box(auto, inherit);
+                min-height: 50px;
                 @include display-flex(column, space-between, flex-start);
+                padding-left: 10px;
+                padding-right: 10px;
+                gap: 10px;
 
-                form {
-                    @include box(235px, 100%);
-                    @include display-flex(column, flex-start, flex-end);
-                    margin-top: 20px;
+                span {
+                    color: $alaranjado;
+                    font-size: map-get($size, grau6);
+                    font-weight: map-get($densidade, medium);
+                    cursor: pointer;
 
-                    .caixa {
-                        @include box(50px, 100%);
-                        @include display-flex(row, flex-end, center);
-                        gap: 15px;
-                        position: relative;
-                        padding-right: 10px;
-
-                        .maiusculo {
-                            text-transform: capitalize;
-                        }
-
-                        label {
-                            color: $neutra;
-                            font-weight: map-get($densidade, medium);
-                            font-size: map-get($size, grau6);
-                        }
-
-                        .icon-input-footer {
-                            position: relative;
-                            left: 40px;
-                        }
-
-                        input {
-                            width: 55%;
-                            height: 40px;
-                            border-radius: 8px;
-                            outline: none;
-                            border: 2px solid #c4c4c4;
-                            padding: 0 30px;
-                            box-shadow: $box-shadow;
-                            font-size: map-get($size, grau5);
-                        }
-
-                        input:focus {
-                            border: 2px solid $alaranjado;
-                        }
-                    }
-
-                    #button-footer {
-                        @include box(85px, 100%);
-                        @include display-flex(row, flex-end, center);
-                        padding-right: 10px;
-
-                        input {
-                            width: 35%;
-                            height: 45px;
-                            background-color: $alaranjado;
-                            border: 2px solid $alaranjado;
-                            border-radius: 8px;
-                            color: #fff;
-                            font-size: 20px;
-                            cursor: pointer;
-                            box-shadow: $box-shadow;
-                            transition: 0.5s;
-
-                            &:hover {
-                                filter: brightness(110%);
-                                transition: .5s;
-                                transform: scale(1.1); 
-                            }
-                        }
+                    &:hover {
+                        text-decoration: underline;
                     }
                 }
 
-                #galeria-contatos-footer {
-                    flex-grow: 1;
-                    width: 280px;
-                    @include display-flex(row, space-around, center);
-                    margin: auto;
+                .descricao {
+                    @include display-flex(row, space-between, center);
 
                     img {
-                        @include box(1.7rem, 1.7rem);
+                        @include box(7rem, 7.2rem);
+                        margin-right: 10px;
+                        transition: .5s linear;
                         cursor: pointer;
+                        border-radius: 6px;
 
                         &:hover {
-                            filter: brightness(130%);
+                            transform: scale(1.1);
+                            transition: .5s linear;
                         }
+                    }
+
+                    p {
+                        color: $neutra;
+                    }
+                }
+            }
+        }
+
+        #contatos-footer {
+            @include box(inherit, 380px);
+            @include display-flex(column, space-between, flex-start);
+
+            form {
+                @include box(235px, 100%);
+                @include display-flex(column, flex-start, flex-end);
+                margin-top: 20px;
+
+                .caixa {
+                    @include box(50px, 100%);
+                    @include display-flex(row, flex-end, center);
+                    gap: 15px;
+                    position: relative;
+                    padding-right: 10px;
+
+                    .maiusculo {
+                        text-transform: capitalize;
+                    }
+
+                    label {
+                        color: $neutra;
+                        font-weight: map-get($densidade, medium);
+                        font-size: map-get($size, grau6);
+                    }
+
+                    .icon-input-footer {
+                        position: relative;
+                        left: 40px;
+                    }
+
+                    input {
+                        width: 55%;
+                        height: 40px;
+                        border-radius: 8px;
+                        outline: none;
+                        border: 2px solid #c4c4c4;
+                        padding: 0 30px;
+                        box-shadow: $box-shadow;
+                        font-size: map-get($size, grau5);
+                    }
+
+                    input:focus {
+                        border: 2px solid $alaranjado;
+                    }
+                }
+
+                #button-footer {
+                    @include box(85px, 100%);
+                    @include display-flex(row, flex-end, center);
+                    padding-right: 10px;
+
+                    input {
+                        width: 35%;
+                        height: 45px;
+                        background-color: $alaranjado;
+                        border: 2px solid $alaranjado;
+                        border-radius: 8px;
+                        color: #fff;
+                        font-size: 20px;
+                        cursor: pointer;
+                        box-shadow: $box-shadow;
+                        transition: 0.5s;
+
+                        &:hover {
+                            filter: brightness(110%);
+                            transition: .5s;
+                            transform: scale(1.1); 
+                        }
+                    }
+                }
+            }
+
+            #galeria-contatos-footer {
+                flex-grow: 1;
+                width: 280px;
+                @include display-flex(row, space-around, center);
+                margin: auto;
+
+                img {
+                    @include box(1.7rem, 1.7rem);
+                    cursor: pointer;
+
+                    &:hover {
+                        filter: brightness(130%);
                     }
                 }
             }
@@ -784,13 +780,11 @@ footer {
     footer {
 
         .itens-footer {
+            flex-wrap: wrap;
+            @include display-flex(column, flex-start, center);       
             
-            #informacoes-footer {
-                @include display-flex(column, flex-start, center);  
-                
-                #contatos-footer {
-                    margin-top: 20px;
-                }
+            #contatos-footer {
+                margin-top: 8px;
             }
 
         }
@@ -815,11 +809,11 @@ footer {
 @media (max-width: 648px) {
 
     header {
-        height: 110px;
+        height: 80px;
     }
 
     #conteudo-midia {
-        height: 30px;
+        height: 25px;
     }
     
     #contatos {
@@ -846,18 +840,18 @@ footer {
         width: 90px;
 
         img {
-            @include box(1.5rem, 1.5rem);
+            @include box(1.2rem, 1.2rem);
         }
     }
 
     #logo {
 
         img {
-            @include box(4.2rem, 4.3rem);
+            @include box(3.2rem, 3.3rem);
         }
 
         h1 {
-            font-size: map-get($size, grau4);
+            font-size: map-get($size, grau6);
         }
 
     }
@@ -865,13 +859,13 @@ footer {
     main {
 
         .itens-main {
-            @include display-flex(column, center, center);
 
             #filtragem {
-                width: 300px;
+                width: 230px;
+                @include display-flex(column, flex-start, flex-start);
 
                 #cardapio {
-                    width: 110px;
+                    width: 180px;
                 }
 
             }
@@ -881,7 +875,7 @@ footer {
     }
 
     main .itens-main #filtragem #cardapio input:checked ~ label .menu {
-        @include box(400px, 280px);
+        @include box(340px, 220px);
     }
 
     main .itens-main #filtragem #cardapio .menu {
@@ -894,17 +888,20 @@ footer {
     }
 
     main .itens-main #filtragem #cardapio ul {
-        top: 330%;
-        left: 145%;
-        font-size: map-get($size, garu9);
+        top: 293%;
+        left: 56%;
+        font-size: map-get($size, grau9);
     }
 
     main .itens-main #filtragem #buscar {
-        width: 280px;
+        width: inherit;
+        margin-left: 0;
+        @include display-flex(column, flex-start, center);
+        gap: 8px;
 
         #search {
-            width: 180px;
-            font-size: map-get($size, grau5);
+            width: inherit;
+            font-size: .8rem;
         }
 
         #pesquisar {
@@ -912,8 +909,12 @@ footer {
         }
     }
 
+    main .itens-main #filtragem #cardapio span {
+        font-size: map-get($size, grau6);
+    }
+
     .cards {
-        @include box(420px, 280px);
+        @include box(420px, 210px);
 
         .card-nome {
             height: 30px;
@@ -927,14 +928,15 @@ footer {
             height: 90px;
 
             p {
-                font-size: .8rem;
+                font-size: .7rem;
             }
         }
 
         .informacoes {
 
             button {
-                @include box(40px, 110px);
+                @include box(35px, 100px);
+                font-size: map-get($size, grau8);
             }
 
             i {
@@ -954,11 +956,11 @@ footer {
             @include display-flex(column, center, center);
 
             img {
-                @include box(15rem, 19rem);
+                @include box(10rem, 10rem);
             }
 
             #informacoes-empresa {
-                width: 280px;
+                width: 220px;
                 height: 355px;
                 @include display-flex(column, flex-start, flex-start);
                 gap: 25px;
@@ -969,7 +971,7 @@ footer {
                 }
 
                 p {
-                    font-size: map-get($size, grau5);
+                    font-size: .8rem;
                 }
 
             }
@@ -979,6 +981,7 @@ footer {
     }
 
     .barra {
+        height: 250px;
 
         h2 {
             font-size: map-get($size, subTitulo);
@@ -986,44 +989,141 @@ footer {
 
         span {
             font-size: map-get($size, grau5);
+            text-align: center;
         }
 
         img {
             @include box(3rem, 3rem);
+            top: 18px;
+            right: 20px;
         }
 
+    }
+
+    #destaques {
+        height: 370px;
+
+        .itens-destaque {
+
+            h2 {
+                height: 30px;
+                font-size: map-get($size, grau7);
+            }
+
+        }
+
+    }
+
+    .owl {
+        height: 300px;
+    }
+
+    .owl-track {
+        width: calc(250px * 15);
+        animation: scroll 25s linear infinite;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+    
+        100% {
+            transform: translateX(calc(-250px * 13.50));
+        }
+    }
+
+    .owl-img {
+        @include box(250px, 250px);
+        padding: 10px;
+
+        img {
+            @include box(100%, 100%);
+        }
+    }
+
+    .owl::before,
+    .owl::after {
+        width: 6%;
     }
 
     footer {
 
         .itens-footer {
+            @include display-flex(column, flex-start, flex-start);
 
-            #informacoes-footer {
-                @include display-flex(column, center, center);
+            .titulo-footer {
+                font-size: map-get($size, grau7);
+            }
 
-                .titulo-footer {
-                    font-size: map-get($size, grau4);
+            #lojas-footer {
+                width: 220px;
+
+                .unidade {
+
+                    span {
+                        font-size: map-get($size, grau5);
+                    }
+
+                    .descricao {
+    
+                        img {
+                            @include box(5.4rem, 5.4rem);
+                        }
+    
+                        p {
+                            font-size: .6rem;
+                        }
+    
+                    }
+
                 }
+            }
 
-                #lojas-footer {
+            #contatos-footer {
+                width: 230px;
 
-                    .unidade {
+                form {
+                    width: 230px;
+                    @include display-flex(column, flex-start, flex-start);
 
-                        span {
+                    .caixa {
+                        width: 230px;
+                        
+                        label {
                             font-size: map-get($size, grau5);
                         }
 
-                        .descricao {
-
-                            img {
-                                @include box(4rem, 4.1rem);
-                            }
-
-                            p {
-                                font-size: map-get($size, grau8);
-                            }
-
+                        input {
+                            height: 35px;
+                            width: 135px;
+                            padding: 0 10px;
+                            font-size: map-get($size, grau8);
                         }
+
+                        .icon-input-footer {
+                            display: none;
+                        }
+
+                    }
+
+                    #button-footer {
+                        
+                        input {
+                            width: 100px;
+                            height: 40px;
+                            font-size: .9rem;
+                        }
+
+                    }
+                }
+
+                #galeria-contatos-footer {
+                    width: inherit;
+                    height: 40px;
+
+                    img {
+                        @include box(1.5rem, 1.5rem);
                     }
                 }
 
@@ -1031,11 +1131,27 @@ footer {
 
         }
 
+        #criador-footer {
+
+            span {
+                font-size: map-get($size, grau5);
+            }
+
+        }
+
+    }
+
+    [data-anime="right"] {
+        transform: translate3d(20px, 0, 0);
+    }
+
+    [data-anime="left"] {
+        transform: translate3d(-20px, 0, 0);
     }
     
 }
 
-/* Menu drop responsivél */
+/* Menu drop */
 @media (max-width: 1072px) {
 
     #nav {
