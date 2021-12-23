@@ -144,13 +144,13 @@ from tblprodutosCategorias as PC
 where tblcategorias.nome like '%especiais%';
 
 update tblprodutos
-set descricao = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet erat urna, sit amet molestie augue vestibulum vitae.";
+set descricao = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet erat urna, sit amet molestie augue vestibulum vitae Id id est velit esse proident in incididunt ea et consequat est. Incididunt nostrud ut aute et cupidatat.';
 
 select PC.idprodutosCategorias, tblprodutos.*, tblcategorias.*, round((preco - ((preco * desconto) / 100)), 2) as percentual
 from tblprodutosCategorias as PC
     inner join tblprodutos on tblprodutos.idprodutos = PC.idprodutos
     inner join tblcategorias on tblcategorias.idcategorias = PC.idcategorias
-where tblcategorias.idcategorias = 1;
+where tblcategorias.idcategorias = 1 order by rand();
 
 create view vwListarJuncao as
 select PC.idprodutosCategorias, tblprodutos.nome as Produto, tblcategorias.nome as Categoria 
@@ -162,7 +162,7 @@ inner join tblcategorias on tblcategorias.idcategorias = PC.idcategorias order b
 select * from vwListarJuncao;
 
 select tblprodutos.*, round(preco - ((preco * desconto) / 100), 2) as percentual,
-        round(preco, 2) as valor from tblprodutos;
+round(preco, 2) as valor, left(descricao, 10) as descricao from tblprodutos;
         
         
 select tblprodutos.*, round(preco - ((preco * desconto) / 100), 2) as percentual, round(preco, 2) as valor

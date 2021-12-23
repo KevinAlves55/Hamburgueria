@@ -66,7 +66,8 @@
                 'desconto' => $rsDados['desconto'],
                 'destaque' => $rsDados['destaque'],
                 'percentual' => $rsDados['percentual'],
-                'valor' => $rsDados['valor']
+                'valor' => $rsDados['valor'],
+                'limit' => $rsDados['descLimit']
 
             );
 
@@ -120,7 +121,8 @@
                 'desconto' => $rsDados['desconto'],
                 'destaque' => $rsDados['destaque'],
                 'idCategoria' => $rsDados['idcategorias'], 
-                'percentual' => $rsDados['percentual']
+                'percentual' => $rsDados['percentual'],
+                'limit' => $rsDados['descLimit']
 
             );
 

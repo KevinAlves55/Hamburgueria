@@ -33,11 +33,11 @@
                 </tr>
                 <tr class="linhas">
                     <td class="colunas">Preço:</td>
-                    <td class="colunas destaque-modal"><?=$dadosProdutos['preco']?></td>
+                    <td class="colunas destaque-modal"><?=$dadosProdutos['valor']?></td>
                 </tr>
                 <tr class="linhas">
                     <td class="colunas">Desconto:</td>
-                    <td class="colunas destaque-modal"><?=$dadosProdutos['desconto']?></td>
+                    <td class="colunas destaque-modal"><?=$dadosProdutos['descontoRound']?></td>
                 </tr>
                 <tr class="linhas">
                     <td class="colunas">Destaque:</td>

@@ -3,7 +3,7 @@
 import { getProdutos, getProdutosPesquisa, getProdutosCategoria } from "./produtos.js";
 import { getCategorias } from "./categorias.js";
 
-const CriarCard = ({nome, imagem, percentual, descricao}) => {
+const CriarCard = ({nome, imagem, percentual, limit}) => {
 
     const card = document.createElement('div')
     
@@ -17,7 +17,7 @@ const CriarCard = ({nome, imagem, percentual, descricao}) => {
                 <h3>${nome}</h3>
             </div>
             <div class="card-descricao">
-                <p>${descricao}</p>
+                <p>${limit}</p>
             </div>
             <div class="informacoes">
                 <button>saiba mais</button>
@@ -43,7 +43,7 @@ const CriarCardapio = ({nome, id}) => {
 
 }
 
-const CriarCardDesconto = ({nome, imagem, percentual, descricao, valor}) => {
+const CriarCardDesconto = ({nome, imagem, percentual, valor, limit}) => {
 
     const descontos = document.createElement('div')
 
@@ -57,7 +57,7 @@ const CriarCardDesconto = ({nome, imagem, percentual, descricao, valor}) => {
                 <h3>${nome}</h3>
             </div>
             <div class="card-descricao">
-                <p>${descricao}</p>
+                <p>${limit}</p>
             </div>
             <div class="informacoes">
                 <button>saiba mais</button>
@@ -98,12 +98,12 @@ const carregarProdutosPrincipais = async () => {
 
 const pesquisarProdutos = async () => {
     
-    const nome = document.getElementById('search').value
     const error = document.getElementById('erro')
+    const nome = document.getElementById('search').value
+    const container = document.querySelector('#produtos')
 
     if (nome != '') {
-
-        const container = document.querySelector('#produtos')
+        
         const produtos = await getProdutosPesquisa(nome)
         
         if (produtos.hasOwnProperty('message')) {
@@ -113,14 +113,15 @@ const pesquisarProdutos = async () => {
 
         } else {
 
-            error.textContent = ''
             const cards = produtos.map(CriarCard)
             container.replaceChildren(...cards)
+            error.textContent = ''
 
         }
 
     } else {
 
+        container.innerText = ''
         error.textContent = 'Digite uma palavra chave'
 
     }

@@ -16,9 +16,9 @@
     $desconto = (string) null;
     $destaque = (boolean) null;
     $id = (int) 0;
-    $modo = (string) "Salvar";
-    $destaqueNao = (boolean) "Não";
-    $destaqueSim = (boolean) "Sim";
+    $modo = (string) 'Salvar';
+    $destaqueSim = (boolean) 'Sim';
+    $destaqueNao = (boolean) 'Não';
 
     if (isset($_SESSION['produtos'])) {
 
@@ -31,8 +31,8 @@
         $id = $_SESSION['produtos']['idprodutos'];
         $imagem = $_SESSION['produtos']['imagem'];
         $modo = 'Atualizar';
-        $destaqueNao = 0;
         $destaqueSim = 1;
+        $destaqueNao = 0;
 
         unset($_SESSION['produtos']);
 
@@ -123,8 +123,8 @@
                     <label class="centro">destaque: </label>
                     <select name="sltDestaque" required>
                         <option value="">Selecione uma opção</option>
-                        <option value="<?=$destaqueNao?>"<?=$destaqueNao == $destaque? 'selected' : ''?>>Não</option>
-                        <option value="<?=$destaqueSim?>"<?=$destaqueSim == $destaque? 'selected' : ''?>>Sim</option>
+                        <option value="1"<?=$destaqueSim == $destaque? 'selected' : ''?>>Sim</option>
+                        <option value="0"<?=$destaqueNao == $destaque? 'selected' : ''?>>Não</option>
                     </select>
                 </div>
                 <div class="caixa-qtde">
@@ -167,12 +167,12 @@
                 
                 <tr class="tblLinhas">
                     <td class="tblColunas"><?=$rsProdutos['nome']?></td>
-                    <td class="tblColunas"><?=$rsProdutos['descricao']?></td>
+                    <td class="tblColunas"><?=$rsProdutos['descLimit']?></td>
                     <td class="tblColunas">
                         <img src="<?=NOME_DIRETORIO_FILE.$rsProdutos['imagem']?>" id="upload-imagem" alt="Imagem do produto">
                      </td>
-                    <td class="tblColunas"><?=$rsProdutos['preco']?></td>
-                    <td class="tblColunas"><?=$rsProdutos['desconto']?></td>
+                    <td class="tblColunas"><?=$rsProdutos['valor']?></td>
+                    <td class="tblColunas"><?=$rsProdutos['descontoRound']?></td>
                     <td class="tblColunas"><?=$rsProdutos['destaque']?></td>
 
                     <td class="tblColunas">

@@ -2,7 +2,7 @@
 
 /*
 
-    Objetivo: Listar todas as categorias
+    Objetivo: Listar todos os produtos
     Data: 19/10/2021
     Autor: Kevin
     
@@ -12,7 +12,9 @@
 
     function listar() {
 
-        $sql = "select * from tblprodutos order by idprodutos desc";
+        $sql = "select tblprodutos.*, round(preco, 2) as valor, round(desconto, 2) as descontoRound, 
+            left(descricao, 126) as descLimit 
+        from tblprodutos order by idprodutos desc";
 
         $conexao = conexaoSql();
 
@@ -24,7 +26,7 @@
 
     function listarNome($nome) {
 
-        $sql = "select tblprodutos.*, round(preco - ((preco * desconto) / 100), 2) as percentual, round(preco, 2) as valor
+        $sql = "select tblprodutos.*, round(preco - ((preco * desconto) / 100), 2) as percentual, round(preco, 2) as valor, left(descricao, 126) as descLimit
             from tblprodutos 
         where nome like '%".$nome."%'";
 
@@ -39,7 +41,7 @@
     function listarTodosProdutos() {
 
         $sql = "select tblprodutos.*, round(preco - ((preco * desconto) / 100), 2) as percentual,
-        round(preco, 2) as valor from tblprodutos";
+        round(preco, 2) as valor, left(descricao, 126) as descLimit from tblprodutos order by rand()";
 
         $conexao = conexaoSql();
 
@@ -51,7 +53,8 @@
 
     function buscar($idProdutos) {
 
-        $sql = "select * from tblprodutos where idprodutos = ".$idProdutos;
+        $sql = "select tblprodutos.*, round(preco, 2) as valor, round(desconto, 2) as descontoRound 
+        from tblprodutos where idprodutos = ".$idProdutos." order by idprodutos desc";
 
         $conexao = conexaoSql();
 
@@ -76,11 +79,11 @@
     function listarJuncao($idCategoria) {
 
         $sql = "select PC.idprodutosCategorias, tblprodutos.*, tblcategorias.idcategorias, 
-        round((preco - ((preco * desconto) / 100)), 2) as percentual
+        round((preco - ((preco * desconto) / 100)), 2) as percentual, left(descricao, 126) as descLimit
         from tblprodutosCategorias as PC
             inner join tblprodutos on tblprodutos.idprodutos = PC.idprodutos
             inner join tblcategorias on tblcategorias.idcategorias = PC.idcategorias
-        where tblcategorias.idcategorias = ".$idCategoria;
+        where tblcategorias.idcategorias = ".$idCategoria." order by rand()";
 
         $conexao = conexaoSql();
 
