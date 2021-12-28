@@ -144,7 +144,8 @@ from tblprodutosCategorias as PC
 where tblcategorias.nome like '%especiais%';
 
 update tblprodutos
-set descricao = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet erat urna, sit amet molestie augue vestibulum vitae Id id est velit esse proident in incididunt ea et consequat est. Incididunt nostrud ut aute et cupidatat.';
+set descricao = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet erat urna, sit amet molestie augue vestibulum 
+vitae Id id est velit esse proident in incididunt ea et consequat est. Incididunt nostrud ut aute et cupidatat.';
 
 select PC.idprodutosCategorias, tblprodutos.*, tblcategorias.*, round((preco - ((preco * desconto) / 100)), 2) as percentual
 from tblprodutosCategorias as PC
@@ -164,6 +165,30 @@ select * from vwListarJuncao;
 select tblprodutos.*, round(preco - ((preco * desconto) / 100), 2) as percentual,
 round(preco, 2) as valor, left(descricao, 10) as descricao from tblprodutos;
         
-        
 select tblprodutos.*, round(preco - ((preco * desconto) / 100), 2) as percentual, round(preco, 2) as valor
 from tblprodutos where nome like '%at%';
+
+select PC.idprodutosCategorias, tblprodutos.*, tblcategorias.idcategorias, 
+        round((preco - ((preco * desconto) / 100)), 2) as percentual, left(descricao, 126) as descLimit
+from tblprodutosCategorias as PC
+	inner join tblprodutos on tblprodutos.idprodutos = PC.idprodutos
+	inner join tblcategorias on tblcategorias.idcategorias = PC.idcategorias
+where tblcategorias.idcategorias = 1 order by rand();
+
+DELIMITER $$
+CREATE PROCEDURE procListarJuncaoPorCategoria (IN idCategoria INTEGER)
+
+	BEGIN
+
+		select PC.idprodutosCategorias, tblprodutos.*, tblcategorias.idcategorias, 
+        round((preco - ((preco * desconto) / 100)), 2) as percentual, left(descricao, 126) as descLimit
+		
+        from tblprodutosCategorias as PC
+			inner join tblprodutos on tblprodutos.idprodutos = PC.idprodutos
+			inner join tblcategorias on tblcategorias.idcategorias = PC.idcategorias
+
+		where tblcategorias.idcategorias = idCategoria order by rand();
+
+	END $$
+
+CALL procListarJuncaoPorCategoria(1);
