@@ -20,6 +20,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
+h1 {
+  font-family: 'Righteous', cursive;
+}
+
 p {
   line-height: 1.8;
 }
@@ -462,6 +466,484 @@ body {
           transform: rotateZ(180deg);
 }
 
+/* Quebra para Desktop */
+@media (max-width: 1340px) {
+  header #itens-header #nav {
+    width: 480px;
+  }
+  header #itens-header #nav ul li {
+    font-size: 0.9rem;
+  }
+  header #itens-header #logo img {
+    height: 6.2rem;
+    width: 6.3rem;
+  }
+  header #itens-header #logo h1 {
+    font-size: 1.9rem;
+  }
+  #empresa #itens-empresa {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #empresa #itens-empresa img {
+    height: 25rem;
+    width: 30rem;
+    margin-top: 25px;
+  }
+  #empresa #itens-empresa #informacoes-empresa {
+    margin-bottom: 25px;
+  }
+  #empresa #itens-empresa #informacoes-empresa h2 {
+    margin-top: 25px;
+  }
+  #empresa #itens-empresa #informacoes-empresa p {
+    font-size: 1.2rem;
+  }
+  main #itens-main #produtos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  #promocoes #itens-promocoes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+/* Quebra para Tablet */
+@media (max-width: 1259px) {
+  header .itens-header #nav {
+    width: 435px;
+  }
+  main #itens-main #filtragem {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer #itens-footer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer #itens-footer #contatos-footer {
+    margin-top: 8px;
+  }
+}
+
+/* Quebra para Mobile */
+@media (max-width: 648px) {
+  header {
+    height: 80px;
+  }
+  header #conteudo-midia {
+    height: 25px;
+  }
+  header #conteudo-midia #contatos {
+    width: 250px;
+  }
+  header #conteudo-midia #contatos .midia {
+    height: 0.9rem;
+    width: 0.9rem;
+  }
+  header #conteudo-midia #contatos #telefone {
+    width: 115px;
+  }
+  header #conteudo-midia #contatos #telefone span {
+    font-size: 0.7rem;
+  }
+  header #conteudo-midia #contatos #hora {
+    display: none;
+  }
+  header #conteudo-midia #redes-sociais {
+    width: 90px;
+  }
+  header #conteudo-midia #redes-sociais img {
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+  header #itens-header #logo img {
+    height: 3.2rem;
+    width: 3.3rem;
+  }
+  header #itens-header #logo h1 {
+    font-size: 1.1rem;
+  }
+  main #itens-main #erro {
+    font-size: 0.9rem;
+  }
+  main #itens-main #filtragem {
+    width: 230px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  main #itens-main #filtragem #cardapio {
+    width: 180px;
+  }
+  main #itens-main #filtragem #cardapio input:checked ~ label .menu {
+    height: 340px;
+    width: 220px;
+  }
+  main #itens-main #filtragem #cardapio .menu {
+    height: 40px;
+    width: 40px;
+  }
+  main #itens-main #filtragem #cardapio .menu .hamburger {
+    top: 19px;
+    left: 5px;
+  }
+  main #itens-main #filtragem #cardapio ul {
+    top: 293%;
+    left: 45%;
+    font-size: 1.2rem;
+  }
+  main #itens-main #filtragem #cardapio ul li {
+    font-size: 1.1rem;
+  }
+  main #itens-main #filtragem #buscar {
+    width: inherit;
+    margin-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 8px;
+  }
+  main #itens-main #filtragem #buscar #search {
+    width: inherit;
+    font-size: .8rem;
+    padding: 5% 15%;
+  }
+  main #itens-main #filtragem #buscar #pesquisar {
+    height: 45px;
+    width: 100px;
+    font-size: .8rem;
+  }
+  main #itens-main #filtragem #buscar img {
+    height: 0.9rem;
+    width: 0.9rem;
+    top: 12px;
+  }
+  main #itens-main #filtragem #cardapio span {
+    font-size: 1.1rem;
+  }
+  .cards {
+    height: 420px;
+    width: 210px;
+  }
+  .cards .card-nome {
+    height: 30px;
+  }
+  .cards .card-nome h3 {
+    font-size: 1.1rem;
+  }
+  .cards .card-descricao {
+    height: 90px;
+  }
+  .cards .card-descricao p {
+    font-size: .7rem;
+  }
+  .cards .informacoes button {
+    height: 35px;
+    width: 100px;
+    font-size: 0.7rem;
+  }
+  .cards .informacoes i {
+    font-size: .7rem;
+  }
+  .cards .informacoes span {
+    font-size: 1.1rem;
+  }
+  #empresa #itens-empresa {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #empresa #itens-empresa img {
+    height: 10rem;
+    width: 10rem;
+  }
+  #empresa #itens-empresa #informacoes-empresa {
+    width: 220px;
+    height: 355px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 25px;
+    margin-left: 0;
+  }
+  #empresa #itens-empresa #informacoes-empresa h2 {
+    font-size: 1.3rem;
+  }
+  #empresa #itens-empresa #informacoes-empresa p {
+    font-size: .8rem;
+  }
+  .barra {
+    height: 250px;
+  }
+  .barra h2 {
+    font-size: 1.9rem;
+  }
+  .barra span {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .barra img {
+    height: 3rem;
+    width: 3rem;
+    top: 18px;
+    right: 20px;
+  }
+  #destaques {
+    height: 370px;
+  }
+  #destaques .itens-destaque h2 {
+    height: 30px;
+    font-size: 1.3rem;
+  }
+  .owl {
+    height: 300px;
+  }
+  .owl-track {
+    width: calc(250px * 15);
+    -webkit-animation: scroll 25s linear infinite;
+            animation: scroll 25s linear infinite;
+  }
+  @-webkit-keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-250px * 13.50));
+              transform: translateX(calc(-250px * 13.50));
+    }
+  }
+  @keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-250px * 13.50));
+              transform: translateX(calc(-250px * 13.50));
+    }
+  }
+  .owl-img {
+    height: 250px;
+    width: 250px;
+    padding: 10px;
+  }
+  .owl-img img {
+    height: 100%;
+    width: 100%;
+  }
+  .owl::before,
+  .owl::after {
+    width: 6%;
+  }
+  footer #itens-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  footer #itens-footer .titulo-footer {
+    font-size: 1.3rem;
+  }
+  footer #itens-footer #lojas-footer {
+    width: 220px;
+  }
+  footer #itens-footer #lojas-footer .unidade span {
+    font-size: 0.9rem;
+  }
+  footer #itens-footer #lojas-footer .unidade .descricao img {
+    height: 5.4rem;
+    width: 5.4rem;
+  }
+  footer #itens-footer #lojas-footer .unidade .descricao p {
+    font-size: .6rem;
+  }
+  footer #itens-footer #contatos-footer {
+    width: 230px;
+  }
+  footer #itens-footer #contatos-footer form {
+    width: 230px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  footer #itens-footer #contatos-footer form .caixa {
+    width: 230px;
+  }
+  footer #itens-footer #contatos-footer form .caixa label {
+    font-size: 0.9rem;
+  }
+  footer #itens-footer #contatos-footer form .caixa input {
+    height: 35px;
+    width: 135px;
+    padding: 0 10px;
+    font-size: 0.7rem;
+  }
+  footer #itens-footer #contatos-footer form .caixa .icon-input-footer {
+    display: none;
+  }
+  footer #itens-footer #contatos-footer form #button-footer input {
+    width: 100px;
+    height: 40px;
+    font-size: .9rem;
+  }
+  footer #itens-footer #contatos-footer #galeria-contatos-footer {
+    width: inherit;
+    height: 40px;
+  }
+  footer #itens-footer #contatos-footer #galeria-contatos-footer img {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  footer #criador-footer span {
+    font-size: 0.9rem;
+  }
+  [data-anime="right"] {
+    -webkit-transform: translate3d(20px, 0, 0);
+            transform: translate3d(20px, 0, 0);
+  }
+  [data-anime="left"] {
+    -webkit-transform: translate3d(-20px, 0, 0);
+            transform: translate3d(-20px, 0, 0);
+  }
+}
+
+/* Menu drop */
+@media (max-width: 1129px) {
+  header #itens-header #nav {
+    display: none;
+  }
+}
+
+.conteudo, header #itens-header, main #itens-main, #empresa #itens-empresa, #promocoes #itens-promocoes, footer #itens-footer {
+  height: inherit;
+  width: 71vw;
+}
+
+.headerGradientt {
+  background-color: #1f1f1f;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
 header {
   height: 170px;
   width: 100vw;
@@ -484,13 +966,7 @@ header {
   transition: 0.5s linear;
 }
 
-.headerGradientt {
-  background-color: #1f1f1f;
-  -webkit-transition: 0.5s linear;
-  transition: 0.5s linear;
-}
-
-#conteudo-midia {
+header #conteudo-midia {
   height: 40px;
   width: 73vw;
   display: -webkit-box;
@@ -508,7 +984,7 @@ header {
           align-items: center;
 }
 
-#contatos {
+header #conteudo-midia #contatos {
   height: inherit;
   width: 400px;
   display: -webkit-box;
@@ -526,13 +1002,13 @@ header {
           align-items: flex-start;
 }
 
-#contatos .midia {
+header #conteudo-midia #contatos .midia {
   height: 1.25rem;
   width: 1.25rem;
   color: #C7491E;
 }
 
-#contatos #telefone {
+header #conteudo-midia #contatos #telefone {
   height: inherit;
   width: 151px;
   display: -webkit-box;
@@ -551,19 +1027,21 @@ header {
   margin-right: 15px;
 }
 
-#contatos #telefone span {
-  font-size: 0.9rem;
+header #conteudo-midia #contatos #telefone span {
   color: #FFF;
+  font-size: 0.9rem;
   font-weight: bold;
+  text-transform: none;
+  letter-spacing: none;
   cursor: pointer;
 }
 
-#contatos #telefone span:hover {
+header #conteudo-midia #contatos #telefone span:hover {
   -webkit-filter: brightness(80%);
           filter: brightness(80%);
 }
 
-#contatos #hora {
+header #conteudo-midia #contatos #hora {
   height: inherit;
   width: 199px;
   display: -webkit-box;
@@ -581,19 +1059,21 @@ header {
           align-items: center;
 }
 
-#contatos #hora span {
-  font-size: 0.9rem;
+header #conteudo-midia #contatos #hora span {
   color: #FFF;
+  font-size: 0.9rem;
   font-weight: bold;
+  text-transform: none;
+  letter-spacing: none;
   cursor: default;
 }
 
-#contatos #hora span:hover {
+header #conteudo-midia #contatos #hora span:hover {
   -webkit-filter: brightness(80%);
           filter: brightness(80%);
 }
 
-#redes-sociais {
+header #conteudo-midia #redes-sociais {
   height: inherit;
   width: 133px;
   display: -webkit-box;
@@ -612,24 +1092,19 @@ header {
   margin-left: 20px;
 }
 
-#redes-sociais img {
+header #conteudo-midia #redes-sociais img {
   height: 1.8rem;
   width: 1.8rem;
   cursor: pointer;
   color: #FFF;
 }
 
-#redes-sociais img:hover {
+header #conteudo-midia #redes-sociais img:hover {
   -webkit-filter: brightness(80%);
           filter: brightness(80%);
 }
 
-.conteudo {
-  width: 71vw;
-}
-
-.itens-header {
-  height: 130px;
+header #itens-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -645,11 +1120,11 @@ header {
           align-items: center;
 }
 
-#logo {
+header #itens-header #logo {
   min-height: 50px;
   min-width: 50px;
-  width: auto;
   height: auto;
+  width: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -665,7 +1140,7 @@ header {
           align-items: center;
 }
 
-#logo img {
+header #itens-header #logo img {
   height: 6.875rem;
   width: 7.188rem;
   border-radius: 50%;
@@ -678,22 +1153,23 @@ header {
           filter: brightness(110%);
 }
 
-#logo img:hover {
+header #itens-header #logo img:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-#logo h1 {
-  font-family: 'Righteous', cursive;
-  font-size: 2.4rem;
+header #itens-header #logo h1 {
   color: #FFF;
+  font-size: 2.4rem;
+  font-weight: 500;
+  text-transform: none;
   letter-spacing: 1px;
   margin-left: 0.5rem;
 }
 
-#nav {
+header #itens-header #nav {
   height: 130px;
   width: 550px;
   display: -webkit-box;
@@ -711,7 +1187,7 @@ header {
           align-items: flex-start;
 }
 
-#nav ul {
+header #itens-header #nav ul {
   height: inherit;
   width: inherit;
   display: -webkit-box;
@@ -729,7 +1205,7 @@ header {
           align-items: center;
 }
 
-#nav ul li {
+header #itens-header #nav ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -743,16 +1219,18 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1.045rem;
+  color: #1f1f1f;
+  font-size: 1rem;
+  font-weight: 400;
   text-transform: uppercase;
+  letter-spacing: none;
 }
 
-#nav ul li a {
+header #itens-header #nav ul li a {
   color: #FFF;
-  text-decoration: none;
 }
 
-#nav ul li a:hover {
+header #itens-header #nav ul li a:hover {
   -webkit-filter: brightness(80%);
           filter: brightness(80%);
 }
@@ -778,7 +1256,7 @@ main {
   padding-top: 20px;
 }
 
-main .itens-main {
+main #itens-main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -794,7 +1272,7 @@ main .itens-main {
           align-items: flex-start;
 }
 
-main .itens-main #filtragem {
+main #itens-main #filtragem {
   min-height: 100px;
   width: 100%;
   display: -webkit-box;
@@ -815,7 +1293,7 @@ main .itens-main #filtragem {
       flex-wrap: wrap;
 }
 
-main .itens-main #filtragem #cardapio {
+main #itens-main #filtragem #cardapio {
   height: 100px;
   width: 215px;
   display: -webkit-box;
@@ -834,40 +1312,40 @@ main .itens-main #filtragem #cardapio {
   position: relative;
 }
 
-main .itens-main #filtragem #cardapio input {
+main #itens-main #filtragem #cardapio input {
   display: none;
 }
 
-main .itens-main #filtragem #cardapio input:checked ~ label .menu {
+main #itens-main #filtragem #cardapio input:checked ~ label .menu {
   height: 500px;
   width: 420px;
   -webkit-transition: .5s;
   transition: .5s;
 }
 
-main .itens-main #filtragem #cardapio input:checked ~ label .hamburger {
+main #itens-main #filtragem #cardapio input:checked ~ label .hamburger {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-main .itens-main #filtragem #cardapio input:checked ~ label .hamburger:after {
+main #itens-main #filtragem #cardapio input:checked ~ label .hamburger:after {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   bottom: 0;
 }
 
-main .itens-main #filtragem #cardapio input:checked ~ label .hamburger:before {
+main #itens-main #filtragem #cardapio input:checked ~ label .hamburger:before {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   top: 0;
 }
 
-main .itens-main #filtragem #cardapio input:checked ~ ul {
+main #itens-main #filtragem #cardapio input:checked ~ ul {
   opacity: 1;
   visibility: visible;
 }
 
-main .itens-main #filtragem #cardapio .menu {
+main #itens-main #filtragem #cardapio .menu {
   background-color: #FFF;
   border-radius: 4px;
   cursor: pointer;
@@ -880,7 +1358,7 @@ main .itens-main #filtragem #cardapio .menu {
   transition: .5s ease-in-out;
 }
 
-main .itens-main #filtragem #cardapio .menu .hamburger {
+main #itens-main #filtragem #cardapio .menu .hamburger {
   position: relative;
   top: 23px;
   left: 10px;
@@ -894,7 +1372,7 @@ main .itens-main #filtragem #cardapio .menu .hamburger {
   transition: .5s ease-in-out;
 }
 
-main .itens-main #filtragem #cardapio .menu .hamburger:after, main .itens-main #filtragem #cardapio .menu .hamburger:before {
+main #itens-main #filtragem #cardapio .menu .hamburger:after, main #itens-main #filtragem #cardapio .menu .hamburger:before {
   background-color: #1f1f1f;
   content: "";
   display: block;
@@ -905,26 +1383,15 @@ main .itens-main #filtragem #cardapio .menu .hamburger:after, main .itens-main #
   height: 100%;
 }
 
-main .itens-main #filtragem #cardapio .menu .hamburger:before {
+main #itens-main #filtragem #cardapio .menu .hamburger:before {
   top: -10px;
 }
 
-main .itens-main #filtragem #cardapio .menu .hamburger:after {
+main #itens-main #filtragem #cardapio .menu .hamburger:after {
   bottom: -10px;
 }
 
-main .itens-main #filtragem #cardapio ul {
-  position: relative;
-  top: 395%;
-  left: 96%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 1.5rem;
-  opacity: 0;
-  -webkit-transition: .7s .1s;
-  transition: .7s .1s;
-  visibility: hidden;
-  z-index: 2;
+main #itens-main #filtragem #cardapio ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -939,9 +1406,20 @@ main .itens-main #filtragem #cardapio ul {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 30px;
+  position: relative;
+  top: 395%;
+  left: 96%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  opacity: 0;
+  -webkit-transition: .7s .1s;
+  transition: .7s .1s;
+  visibility: hidden;
+  z-index: 2;
 }
 
-main .itens-main #filtragem #cardapio ul li {
+main #itens-main #filtragem #cardapio ul li {
   color: #C7491E;
   -webkit-transition: .2s;
   transition: .2s;
@@ -949,7 +1427,7 @@ main .itens-main #filtragem #cardapio ul li {
   cursor: pointer;
 }
 
-main .itens-main #filtragem #cardapio ul li:hover {
+main #itens-main #filtragem #cardapio ul li:hover {
   -webkit-filter: brightness(140%);
           filter: brightness(140%);
   -webkit-transform: scale(1.1);
@@ -958,16 +1436,17 @@ main .itens-main #filtragem #cardapio ul li:hover {
   transition: .3s;
 }
 
-main .itens-main #filtragem #cardapio span {
+main #itens-main #filtragem #cardapio span {
+  color: #1f1f1f;
   font-size: 1.3rem;
   font-weight: 500;
-  color: #1f1f1f;
   text-transform: uppercase;
+  letter-spacing: none;
   position: absolute;
   right: 0;
 }
 
-main .itens-main #filtragem #buscar {
+main #itens-main #filtragem #buscar {
   height: 100px;
   width: 460px;
   display: -webkit-box;
@@ -989,51 +1468,64 @@ main .itens-main #filtragem #buscar {
   position: relative;
 }
 
-main .itens-main #filtragem #buscar #search {
+main #itens-main #filtragem #buscar #search {
   height: 40px;
   width: 330px;
-  border-radius: 3px;
+  color: #FFF;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: none;
   border: 2px solid #FFF;
   padding: 5% 8%;
   border-radius: 3rem;
-  color: #FFF;
   background-color: transparent;
-  font-size: 1.1rem;
-  font-weight: 400;
 }
 
-main .itens-main #filtragem #buscar #search::-webkit-input-placeholder {
+main #itens-main #filtragem #buscar #search::-webkit-input-placeholder {
   color: #FFF;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: none;
+  letter-spacing: none;
 }
 
-main .itens-main #filtragem #buscar #search:-ms-input-placeholder {
+main #itens-main #filtragem #buscar #search:-ms-input-placeholder {
   color: #FFF;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: none;
+  letter-spacing: none;
 }
 
-main .itens-main #filtragem #buscar #search::-ms-input-placeholder {
+main #itens-main #filtragem #buscar #search::-ms-input-placeholder {
   color: #FFF;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: none;
+  letter-spacing: none;
 }
 
-main .itens-main #filtragem #buscar #search::placeholder {
+main #itens-main #filtragem #buscar #search::placeholder {
   color: #FFF;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: none;
+  letter-spacing: none;
 }
 
-main .itens-main #filtragem #buscar #search:focus {
+main #itens-main #filtragem #buscar #search:focus {
   border: 2px solid #e6bb1f;
 }
 
-main .itens-main #filtragem #buscar img {
+main #itens-main #filtragem #buscar img {
   height: 1.2rem;
   width: 1.2rem;
   left: 14px;
   position: absolute;
 }
 
-main .itens-main #filtragem #buscar #pesquisar {
+main #itens-main #filtragem #buscar #pesquisar {
   height: 45px;
   width: 120px;
   display: -webkit-box;
@@ -1049,8 +1541,10 @@ main .itens-main #filtragem #buscar #pesquisar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-transform: uppercase;
   color: #FFF;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: none;
   background-color: #C7491E;
   border: 2px solid #e6bb1f;
   border-radius: .8rem;
@@ -1059,7 +1553,7 @@ main .itens-main #filtragem #buscar #pesquisar {
   transition: .5s;
 }
 
-main .itens-main #filtragem #buscar #pesquisar:hover {
+main #itens-main #filtragem #buscar #pesquisar:hover {
   -webkit-filter: brightness(110%);
           filter: brightness(110%);
   -webkit-transition: .5s;
@@ -1068,19 +1562,20 @@ main .itens-main #filtragem #buscar #pesquisar:hover {
           transform: scale(1.1);
 }
 
-main .itens-main #erro {
+main #itens-main #erro {
   color: #161515;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: none;
   display: block;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  font-size: 1.3rem;
-  font-weight: 400;
-  text-transform: capitalize;
   text-align: center;
 }
 
-main .itens-main #produtos {
+main #itens-main #produtos {
   height: auto;
   width: 100%;
   display: -webkit-box;
@@ -1161,6 +1656,8 @@ main .itens-main #produtos {
   color: #C7491E;
   font-size: 1.5rem;
   font-weight: 500;
+  text-transform: capitalize;
+  letter-spacing: none;
 }
 
 .cards .card-descricao {
@@ -1185,6 +1682,8 @@ main .itens-main #produtos {
   color: #FFF;
   font-size: 1.1rem;
   font-weight: 300;
+  text-transform: none;
+  letter-spacing: none;
 }
 
 .cards .informacoes {
@@ -1209,10 +1708,12 @@ main .itens-main #produtos {
 .cards .informacoes button {
   height: 40px;
   width: 140px;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  background-color: #C7491E;
   color: #FFF;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: none;
+  background-color: #C7491E;
   border: none;
   border-radius: 0.2rem;
   -webkit-transition: .5s;
@@ -1245,12 +1746,15 @@ main .itens-main #produtos {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #e6bb1f;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: none;
   position: absolute;
   right: 0;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  color: #e6bb1f;
-  font-size: 0.9rem;
   text-decoration: line-through;
   top: -6px;
 }
@@ -1258,6 +1762,9 @@ main .itens-main #produtos {
 .cards .informacoes span {
   color: #C7491E;
   font-size: 1.3rem;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: none;
 }
 
 #empresa {
@@ -1279,7 +1786,7 @@ main .itens-main #produtos {
   background-color: #1f1f1f;
 }
 
-#empresa .itens-empresa {
+#empresa #itens-empresa {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1297,13 +1804,13 @@ main .itens-main #produtos {
       flex-wrap: wrap;
 }
 
-#empresa .itens-empresa img {
+#empresa #itens-empresa img {
   height: 29rem;
   width: 33rem;
   border-radius: 8px;
 }
 
-#empresa .itens-empresa #informacoes-empresa {
+#empresa #itens-empresa #informacoes-empresa {
   height: 485px;
   width: 400px;
   display: -webkit-box;
@@ -1322,17 +1829,21 @@ main .itens-main #produtos {
   margin-left: 24px;
 }
 
-#empresa .itens-empresa #informacoes-empresa h2 {
+#empresa #itens-empresa #informacoes-empresa h2 {
+  color: #C7491E;
   font-size: 1.9rem;
   font-weight: 400;
-  color: #C7491E;
+  text-transform: none;
+  letter-spacing: none;
   text-align: center;
 }
 
-#empresa .itens-empresa #informacoes-empresa p {
+#empresa #itens-empresa #informacoes-empresa p {
+  color: #FFF;
   font-size: 1.3rem;
   font-weight: 300;
-  color: #FFF;
+  text-transform: none;
+  letter-spacing: none;
 }
 
 .barra {
@@ -1379,14 +1890,19 @@ main .itens-main #produtos {
 }
 
 .barra h2 {
+  color: #1f1f1f;
   font-size: 2.4rem;
   font-weight: 500;
   text-transform: capitalize;
+  letter-spacing: none;
 }
 
 .barra span {
+  color: #1f1f1f;
   font-size: 1.1rem;
   font-weight: 400;
+  text-transform: none;
+  letter-spacing: none;
 }
 
 .barra img {
@@ -1417,7 +1933,7 @@ main .itens-main #produtos {
   padding-bottom: 15px;
 }
 
-#promocoes .itens-promocoes {
+#promocoes #itens-promocoes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1458,7 +1974,7 @@ main .itens-main #produtos {
   background: linear-gradient(135deg, #C7491E, #e6bb1f);
 }
 
-#destaques .itens-destaque {
+#destaques #itens-destaque {
   height: inherit;
   width: 100%;
   display: -webkit-box;
@@ -1476,11 +1992,13 @@ main .itens-main #produtos {
           align-items: center;
 }
 
-#destaques .itens-destaque h2 {
-  height: 50px;
+#destaques #itens-destaque h2 {
   color: #1f1f1f;
   font-size: 1.9rem;
   font-weight: 400;
+  text-transform: none;
+  letter-spacing: none;
+  height: 50px;
   border-bottom: 4px solid #FFF;
   margin-top: 20px;
 }
@@ -1505,7 +2023,7 @@ footer {
   background-color: #1f1f1f;
 }
 
-footer .itens-footer {
+footer #itens-footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1522,15 +2040,16 @@ footer .itens-footer {
   gap: 10px;
 }
 
-footer .itens-footer .titulo-footer {
+footer #itens-footer .titulo-footer {
   color: #FFF;
   font-size: 1.9rem;
   font-weight: 500;
-  margin-top: 30px;
   text-transform: capitalize;
+  letter-spacing: none;
+  margin-top: 30px;
 }
 
-footer .itens-footer #lojas-footer {
+footer #itens-footer #lojas-footer {
   min-height: 475px;
   width: 436px;
   display: -webkit-box;
@@ -1549,7 +2068,7 @@ footer .itens-footer #lojas-footer {
   gap: 20px;
 }
 
-footer .itens-footer #lojas-footer .unidade {
+footer #itens-footer #lojas-footer .unidade {
   height: auto;
   width: inherit;
   min-height: 50px;
@@ -1571,18 +2090,20 @@ footer .itens-footer #lojas-footer .unidade {
   gap: 10px;
 }
 
-footer .itens-footer #lojas-footer .unidade span {
+footer #itens-footer #lojas-footer .unidade span {
   color: #C7491E;
   font-size: 1.1rem;
   font-weight: 400;
+  text-transform: none;
+  letter-spacing: none;
   cursor: pointer;
 }
 
-footer .itens-footer #lojas-footer .unidade span:hover {
+footer #itens-footer #lojas-footer .unidade span:hover {
   text-decoration: underline;
 }
 
-footer .itens-footer #lojas-footer .unidade .descricao {
+footer #itens-footer #lojas-footer .unidade .descricao {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1598,7 +2119,7 @@ footer .itens-footer #lojas-footer .unidade .descricao {
           align-items: center;
 }
 
-footer .itens-footer #lojas-footer .unidade .descricao img {
+footer #itens-footer #lojas-footer .unidade .descricao img {
   height: 7rem;
   width: 7.2rem;
   margin-right: 10px;
@@ -1608,18 +2129,18 @@ footer .itens-footer #lojas-footer .unidade .descricao img {
   border-radius: 6px;
 }
 
-footer .itens-footer #lojas-footer .unidade .descricao img:hover {
+footer #itens-footer #lojas-footer .unidade .descricao img:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: .5s linear;
   transition: .5s linear;
 }
 
-footer .itens-footer #lojas-footer .unidade .descricao p {
+footer #itens-footer #lojas-footer .unidade .descricao p {
   color: #FFF;
 }
 
-footer .itens-footer #contatos-footer {
+footer #itens-footer #contatos-footer {
   height: inherit;
   width: 380px;
   display: -webkit-box;
@@ -1637,7 +2158,7 @@ footer .itens-footer #contatos-footer {
           align-items: flex-start;
 }
 
-footer .itens-footer #contatos-footer form {
+footer #itens-footer #contatos-footer form {
   height: 235px;
   width: 100%;
   display: -webkit-box;
@@ -1656,7 +2177,7 @@ footer .itens-footer #contatos-footer form {
   margin-top: 20px;
 }
 
-footer .itens-footer #contatos-footer form .caixa {
+footer #itens-footer #contatos-footer form .caixa {
   height: 50px;
   width: 100%;
   display: -webkit-box;
@@ -1677,24 +2198,26 @@ footer .itens-footer #contatos-footer form .caixa {
   padding-right: 10px;
 }
 
-footer .itens-footer #contatos-footer form .caixa .maiusculo {
+footer #itens-footer #contatos-footer form .caixa .maiusculo {
   text-transform: capitalize;
 }
 
-footer .itens-footer #contatos-footer form .caixa label {
+footer #itens-footer #contatos-footer form .caixa label {
   color: #FFF;
-  font-weight: 400;
   font-size: 1.1rem;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: none;
 }
 
-footer .itens-footer #contatos-footer form .caixa .icon-input-footer {
+footer #itens-footer #contatos-footer form .caixa .icon-input-footer {
   position: relative;
   left: 40px;
 }
 
-footer .itens-footer #contatos-footer form .caixa input {
-  width: 55%;
+footer #itens-footer #contatos-footer form .caixa input {
   height: 40px;
+  width: 55%;
   border-radius: 8px;
   outline: none;
   border: 2px solid #c4c4c4;
@@ -1704,11 +2227,11 @@ footer .itens-footer #contatos-footer form .caixa input {
   font-size: 0.9rem;
 }
 
-footer .itens-footer #contatos-footer form .caixa input:focus {
+footer #itens-footer #contatos-footer form .caixa input:focus {
   border: 2px solid #C7491E;
 }
 
-footer .itens-footer #contatos-footer form #button-footer {
+footer #itens-footer #contatos-footer form #button-footer {
   height: 85px;
   width: 100%;
   display: -webkit-box;
@@ -1727,14 +2250,18 @@ footer .itens-footer #contatos-footer form #button-footer {
   padding-right: 10px;
 }
 
-footer .itens-footer #contatos-footer form #button-footer input {
+footer #itens-footer #contatos-footer form #button-footer input {
+  height: 45px;
+  width: 35%;
+  color: #FFF;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: none;
   width: 35%;
   height: 45px;
   background-color: #C7491E;
   border: 2px solid #C7491E;
   border-radius: 8px;
-  color: #fff;
-  font-size: 20px;
   cursor: pointer;
   -webkit-box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
           box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
@@ -1742,7 +2269,7 @@ footer .itens-footer #contatos-footer form #button-footer input {
   transition: 0.5s;
 }
 
-footer .itens-footer #contatos-footer form #button-footer input:hover {
+footer #itens-footer #contatos-footer form #button-footer input:hover {
   -webkit-filter: brightness(110%);
           filter: brightness(110%);
   -webkit-transition: .5s;
@@ -1751,7 +2278,7 @@ footer .itens-footer #contatos-footer form #button-footer input:hover {
           transform: scale(1.1);
 }
 
-footer .itens-footer #contatos-footer #galeria-contatos-footer {
+footer #itens-footer #contatos-footer #galeria-contatos-footer {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -1771,13 +2298,13 @@ footer .itens-footer #contatos-footer #galeria-contatos-footer {
   margin: auto;
 }
 
-footer .itens-footer #contatos-footer #galeria-contatos-footer img {
+footer #itens-footer #contatos-footer #galeria-contatos-footer img {
   height: 1.7rem;
   width: 1.7rem;
   cursor: pointer;
 }
 
-footer .itens-footer #contatos-footer #galeria-contatos-footer img:hover {
+footer #itens-footer #contatos-footer #galeria-contatos-footer img:hover {
   -webkit-filter: brightness(130%);
           filter: brightness(130%);
 }
@@ -1804,472 +2331,5 @@ footer #criador-footer {
 
 footer #criador-footer span {
   color: #FFF;
-}
-
-/* Quebra para Desktop */
-@media (max-width: 1340px) {
-  #nav {
-    width: 480px;
-  }
-  #nav ul li {
-    font-size: 0.9rem;
-  }
-  #logo img {
-    height: 6.2rem;
-    width: 6.3rem;
-  }
-  #logo h1 {
-    font-size: 1.9rem;
-  }
-  #empresa .itens-empresa {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  #empresa .itens-empresa img {
-    height: 25rem;
-    width: 30rem;
-    margin-top: 25px;
-  }
-  #empresa .itens-empresa #informacoes-empresa {
-    margin-bottom: 25px;
-  }
-  #empresa .itens-empresa #informacoes-empresa h2 {
-    margin-top: 25px;
-  }
-  #empresa .itens-empresa #informacoes-empresa p {
-    font-size: 1.2rem;
-  }
-  main .itens-main #produtos {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  #promocoes .itens-promocoes {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-}
-
-/* Quebra para Tablet */
-@media (max-width: 1259px) {
-  #nav {
-    width: 435px;
-  }
-  footer .itens-footer {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  footer .itens-footer #contatos-footer {
-    margin-top: 8px;
-  }
-  main .itens-main #filtragem {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-/* Quebra para Mobile */
-@media (max-width: 648px) {
-  header {
-    height: 80px;
-  }
-  #conteudo-midia {
-    height: 25px;
-  }
-  #contatos {
-    width: 250px;
-  }
-  #contatos .midia {
-    height: 0.9rem;
-    width: 0.9rem;
-  }
-  #contatos #telefone {
-    width: 115px;
-  }
-  #contatos #telefone span {
-    font-size: 0.7rem;
-  }
-  #contatos #hora {
-    display: none;
-  }
-  #redes-sociais {
-    width: 90px;
-  }
-  #redes-sociais img {
-    height: 1.2rem;
-    width: 1.2rem;
-  }
-  #logo img {
-    height: 3.2rem;
-    width: 3.3rem;
-  }
-  #logo h1 {
-    font-size: 1.1rem;
-  }
-  main .itens-main #erro {
-    font-size: 0.9rem;
-  }
-  main .itens-main #filtragem {
-    width: 230px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  main .itens-main #filtragem #cardapio {
-    width: 180px;
-  }
-  main .itens-main #filtragem #cardapio input:checked ~ label .menu {
-    height: 340px;
-    width: 220px;
-  }
-  main .itens-main #filtragem #cardapio .menu {
-    height: 40px;
-    width: 40px;
-  }
-  main .itens-main #filtragem #cardapio .menu .hamburger {
-    top: 19px;
-    left: 5px;
-  }
-  main .itens-main #filtragem #cardapio ul {
-    top: 293%;
-    left: 45%;
-    font-size: 1.2rem;
-  }
-  main .itens-main #filtragem #cardapio ul li {
-    font-size: 1.1rem;
-  }
-  main .itens-main #filtragem #buscar {
-    width: inherit;
-    margin-left: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 8px;
-  }
-  main .itens-main #filtragem #buscar #search {
-    width: inherit;
-    font-size: .8rem;
-    padding: 5% 15%;
-  }
-  main .itens-main #filtragem #buscar #pesquisar {
-    height: 45px;
-    width: 100px;
-    font-size: .8rem;
-  }
-  main .itens-main #filtragem #buscar img {
-    height: 0.9rem;
-    width: 0.9rem;
-    top: 12px;
-  }
-  main .itens-main #filtragem #cardapio span {
-    font-size: 1.1rem;
-  }
-  .cards {
-    height: 420px;
-    width: 210px;
-  }
-  .cards .card-nome {
-    height: 30px;
-  }
-  .cards .card-nome h3 {
-    font-size: 1.1rem;
-  }
-  .cards .card-descricao {
-    height: 90px;
-  }
-  .cards .card-descricao p {
-    font-size: .7rem;
-  }
-  .cards .informacoes button {
-    height: 35px;
-    width: 100px;
-    font-size: 0.7rem;
-  }
-  .cards .informacoes i {
-    font-size: .7rem;
-  }
-  .cards .informacoes span {
-    font-size: 1.1rem;
-  }
-  #empresa .itens-empresa {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  #empresa .itens-empresa img {
-    height: 10rem;
-    width: 10rem;
-  }
-  #empresa .itens-empresa #informacoes-empresa {
-    width: 220px;
-    height: 355px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    gap: 25px;
-    margin-left: 0;
-  }
-  #empresa .itens-empresa #informacoes-empresa h2 {
-    font-size: 1.3rem;
-  }
-  #empresa .itens-empresa #informacoes-empresa p {
-    font-size: .8rem;
-  }
-  .barra {
-    height: 250px;
-  }
-  .barra h2 {
-    font-size: 1.9rem;
-  }
-  .barra span {
-    font-size: 0.9rem;
-    text-align: center;
-  }
-  .barra img {
-    height: 3rem;
-    width: 3rem;
-    top: 18px;
-    right: 20px;
-  }
-  #destaques {
-    height: 370px;
-  }
-  #destaques .itens-destaque h2 {
-    height: 30px;
-    font-size: 1.3rem;
-  }
-  .owl {
-    height: 300px;
-  }
-  .owl-track {
-    width: calc(250px * 15);
-    -webkit-animation: scroll 25s linear infinite;
-            animation: scroll 25s linear infinite;
-  }
-  @-webkit-keyframes scroll {
-    0% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-    100% {
-      -webkit-transform: translateX(calc(-250px * 13.50));
-              transform: translateX(calc(-250px * 13.50));
-    }
-  }
-  @keyframes scroll {
-    0% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-    100% {
-      -webkit-transform: translateX(calc(-250px * 13.50));
-              transform: translateX(calc(-250px * 13.50));
-    }
-  }
-  .owl-img {
-    height: 250px;
-    width: 250px;
-    padding: 10px;
-  }
-  .owl-img img {
-    height: 100%;
-    width: 100%;
-  }
-  .owl::before,
-  .owl::after {
-    width: 6%;
-  }
-  footer .itens-footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  footer .itens-footer .titulo-footer {
-    font-size: 1.3rem;
-  }
-  footer .itens-footer #lojas-footer {
-    width: 220px;
-  }
-  footer .itens-footer #lojas-footer .unidade span {
-    font-size: 0.9rem;
-  }
-  footer .itens-footer #lojas-footer .unidade .descricao img {
-    height: 5.4rem;
-    width: 5.4rem;
-  }
-  footer .itens-footer #lojas-footer .unidade .descricao p {
-    font-size: .6rem;
-  }
-  footer .itens-footer #contatos-footer {
-    width: 230px;
-  }
-  footer .itens-footer #contatos-footer form {
-    width: 230px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  footer .itens-footer #contatos-footer form .caixa {
-    width: 230px;
-  }
-  footer .itens-footer #contatos-footer form .caixa label {
-    font-size: 0.9rem;
-  }
-  footer .itens-footer #contatos-footer form .caixa input {
-    height: 35px;
-    width: 135px;
-    padding: 0 10px;
-    font-size: 0.7rem;
-  }
-  footer .itens-footer #contatos-footer form .caixa .icon-input-footer {
-    display: none;
-  }
-  footer .itens-footer #contatos-footer form #button-footer input {
-    width: 100px;
-    height: 40px;
-    font-size: .9rem;
-  }
-  footer .itens-footer #contatos-footer #galeria-contatos-footer {
-    width: inherit;
-    height: 40px;
-  }
-  footer .itens-footer #contatos-footer #galeria-contatos-footer img {
-    height: 1.5rem;
-    width: 1.5rem;
-  }
-  footer #criador-footer span {
-    font-size: 0.9rem;
-  }
-  [data-anime="right"] {
-    -webkit-transform: translate3d(20px, 0, 0);
-            transform: translate3d(20px, 0, 0);
-  }
-  [data-anime="left"] {
-    -webkit-transform: translate3d(-20px, 0, 0);
-            transform: translate3d(-20px, 0, 0);
-  }
-}
-
-/* Menu drop */
-@media (max-width: 1072px) {
-  #nav {
-    display: none;
-  }
 }
 /*# sourceMappingURL=estilo.css.map */

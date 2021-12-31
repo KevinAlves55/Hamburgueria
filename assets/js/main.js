@@ -2,6 +2,7 @@
 
 import { getProdutos, getProdutosPesquisa, getProdutosCategoria } from "./produtos.js";
 import { getCategorias } from "./categorias.js";
+import { animeScroll } from "./srollAnimation.js";
 
 const CriarCard = ({nome, imagem, percentual, limit}) => {
 
@@ -170,7 +171,7 @@ const carregarImagens = async () => {
 
 const carregarProdutosDesconto = async () => {
 
-    const container = document.querySelector('.itens-promocoes')
+    const container = document.querySelector('#itens-promocoes')
     const produtos = await getProdutos()
     const produtosDesconto = produtos.filter(({desconto}) => desconto >= 1)
     const cards = produtosDesconto.map(CriarCardDesconto)
@@ -182,5 +183,6 @@ carregarProdutosPrincipais()
 carregarCategorias()
 carregarImagens()
 carregarProdutosDesconto()
+animeScroll()
 document.querySelector('#categorias').addEventListener('click', carregarProdutosCatgegoria)
 document.getElementById('pesquisar').addEventListener('click', pesquisarProdutos)

@@ -1,5 +1,5 @@
 // Mixin de display flex padrão
-@mixin display-flex($direction, $justify, $align) {
+@mixin displayFlex($direction, $justify, $align) {
     
     display: flex;
     flex-direction: $direction;
@@ -9,9 +9,20 @@
 }
 
 // Mixin de height e width
-@mixin box($altura, $largura) {
+@mixin tamanho($altura, $largura) {
     
     height: $altura;
     width: $largura;
 
+}
+
+// Mixin para estilização básica
+@mixin textoEstilo($tamanhoLetra: normal, $negrito: medium, $cor: $escura, $case: none, $letter: none) {
+
+    color: $cor;
+    font-size: map-get($size, $tamanhoLetra);
+    font-weight: map-get($densidade, $negrito);
+    text-transform: $case;
+    letter-spacing: $letter;
+    
 }

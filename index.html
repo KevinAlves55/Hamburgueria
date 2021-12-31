@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Site para uma hamburgueria do tipo E-commerce.">
     <meta name="author" content="Kevin Alves">
-    
+
     <!-- Link para definição do favicon -->
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
 
@@ -19,26 +19,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-    
+
     <!-- Arquivos Js -->
     <script src="assets/js/jquery.js" defer></script>
     <script src="assets/js/popper.js" defer></script>
     <script src="assets/js/slide.js" defer></script>
     <script src="assets/js/main.js" defer type="module"></script>
-    <script src="assets/js/srollAnimation.js" defer></script>
     <script src="assets/js/menuEfeito.js" defer></script>
-    <script src="assets/js/carrousel.js" defer></script>
     <script src="assets/js/mascara.js" defer></script>
 
     <!-- Link para CSS/SASS -->
     <link rel="stylesheet" href="assets/sass/estilo.css">
-    
+
     <!-- Título da página -->
     <title>BurguerGods</title>
 </head>
 
 <body>
-    
+
     <header>
         <div id="conteudo-midia">
             <div id="contatos">
@@ -58,10 +56,12 @@
             </div>
         </div>
 
-        <div class="conteudo itens-header">
+        <div id="itens-header">
             <div id="logo">
                 <img src="assets/img/logo.jpg" alt="Logo">
-                <a href="index.html"><h1>Burguer<span id="destaque">Gods</span></h1></a>
+                <a href="index.html">
+                    <h1>Burguer<span id="destaque">Gods</span></h1>
+                </a>
             </div>
             <nav id="nav">
                 <ul>
@@ -74,49 +74,50 @@
             </nav>
         </div>
     </header>
-    
+
     <!-- Slide bootstrap -->
-        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false" data-touch="true">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleFade" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleFade" data-slide-to="1"></li>
-                <li data-target="#carouselExampleFade" data-slide-to="2"></li>
-                <li data-target="#carouselExampleFade" data-slide-to="3"></li>
-                <li data-target="#carouselExampleFade" data-slide-to="4"></li>
-            </ol>
-            <div class="tamanho carousel-inner">
-                <div class="carousel-item active" data-interval="2900">
-                    <img src="assets/img/banner1.jpg" class="densidade-img d-block w-100" alt="Banner">
-                </div>
-                <div class="carousel-item" data-interval="2900">
-                    <img src="assets/img/banner2.jpg" class="densidade-img d-block w-100" alt="Banner">
-                </div>
-                <div class="carousel-item" data-interval="2900">
-                    <img src="assets/img/banner4.jpg" class="densidade-img d-block w-100" alt="Banner">
-                </div>
-                <div class="carousel-item" data-interval="2900">
-                    <img src="assets/img/banner5.jpg" class="densidade-img d-block w-100" alt="Banner">
-                </div>
-                <div class="carousel-item" data-interval="2900">
-                    <img src="assets/img/banner6.jpg" class="densidade-img d-block w-100" alt="Banner">
-                </div>
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false"
+        data-touch="true">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleFade" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleFade" data-slide-to="1"></li>
+            <li data-target="#carouselExampleFade" data-slide-to="2"></li>
+            <li data-target="#carouselExampleFade" data-slide-to="3"></li>
+            <li data-target="#carouselExampleFade" data-slide-to="4"></li>
+        </ol>
+        <div class="tamanho carousel-inner">
+            <div class="carousel-item active" data-interval="2900">
+                <img src="assets/img/banner1.jpg" class="densidade-img d-block w-100" alt="Banner">
             </div>
-            
-            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+            <div class="carousel-item" data-interval="2900">
+                <img src="assets/img/banner2.jpg" class="densidade-img d-block w-100" alt="Banner">
+            </div>
+            <div class="carousel-item" data-interval="2900">
+                <img src="assets/img/banner4.jpg" class="densidade-img d-block w-100" alt="Banner">
+            </div>
+            <div class="carousel-item" data-interval="2900">
+                <img src="assets/img/banner5.jpg" class="densidade-img d-block w-100" alt="Banner">
+            </div>
+            <div class="carousel-item" data-interval="2900">
+                <img src="assets/img/banner6.jpg" class="densidade-img d-block w-100" alt="Banner">
+            </div>
         </div>
+
+        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
     <!-- Slide bootstrap -->
 
     <main id="main">
-        <div class="conteudo itens-main">
+        <div id="itens-main">
             <section id="filtragem">
-                
+
                 <div id="cardapio">
                     <!-- Cardápio animado -->
                     <input id="navbar" type="checkbox">
@@ -130,10 +131,11 @@
 
                     <ul id="categorias"></ul>
                 </div>
-    
+
                 <div id="buscar">
                     <img src="assets/img/lupa-pesquisa.png" alt="Lupa de pesquisa">
-                    <input type="text" value="" id="search" placeholder="Deixe sua fome escolher" maxlength="30" onkeyup="caracteresInvalidos(this)">
+                    <input type="text" value="" id="search" placeholder="Deixe sua fome escolher" maxlength="30"
+                        onkeyup="caracteresInvalidos(this)">
                     <button id="pesquisar">Buscar</button>
                 </div>
             </section>
@@ -143,7 +145,7 @@
             <section id="produtos"></section>
         </div>
     </main>
-    
+
     <div id="barra-empresa" class="barra">
         <div class="itens-barra">
             <h2>Nossa Empresa</h2>
@@ -152,16 +154,20 @@
             <img src="assets/img/raio-faixa.png" alt="Icon">
         </div>
     </div>
-    
+
     <section id="empresa">
-        <div class="conteudo itens-empresa">
+        <div id="itens-empresa">
             <img src="assets/img/banner-empresa.jpg" data-anime="left" alt="">
 
             <div id="informacoes-empresa" data-anime="right">
                 <h2>Prezamos a qualidade de nossos produtos</h2>
 
                 <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet neque tenetur dolorum? Similique quae quas ipsa, nam illo facere facilis repellendus aperiam ut est eos sed dignissimos qui autem praesentium. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo at commodi veniam totam laboriosam dolore exercitationem nulla perspiciatis obcaecati culpa. neque dolorum eum doloremque mollitia.
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet neque tenetur dolorum? Similique
+                    quae quas ipsa, nam illo facere facilis repellendus aperiam ut est eos sed dignissimos qui autem
+                    praesentium. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo at commodi veniam totam
+                    laboriosam dolore exercitationem nulla perspiciatis obcaecati culpa. neque dolorum eum doloremque
+                    mollitia.
                 </p>
             </div>
         </div>
@@ -177,7 +183,7 @@
     </div>
 
     <section id="promocoes">
-        <div class="conteudo itens-promocoes"></div>
+        <div id="itens-promocoes"></div>
     </section>
 
     <div id="barra-destaques" class="barra">
@@ -190,17 +196,17 @@
     </div>
 
     <section id="destaques">
-        <div class="itens-destaque">
+        <div id="itens-destaque">
             <h2>Confira nossos combos</h2>
 
             <div class="owl">
                 <div class="owl-track"></div>
-            </div> 
+            </div>
         </div>
     </section>
 
     <footer id="footer">
-        <div class="conteudo itens-footer">       
+        <div id="itens-footer">
             <div id="lojas-footer" data-anime="left">
                 <h2 class="titulo-footer">nossas lojas</h2>
 
@@ -230,23 +236,26 @@
                     <div class="caixa">
                         <label>Nome: </label>
                         <ion-icon name="person-outline" class="icon-input-footer"></ion-icon>
-                        <input class="maiusculo" type="text" id="nome" name="txtNome" value="" onkeyup="caracteresInvalidos(this)" required placeholder="Informe seu nome" maxlength="100">
+                        <input class="maiusculo" type="text" id="nome" name="txtNome" value=""
+                            onkeyup="caracteresInvalidos(this)" required placeholder="Informe seu nome" maxlength="100">
                     </div>
                     <div class="caixa">
                         <label>Email: </label>
                         <ion-icon name="mail-outline" class="icon-input-footer"></ion-icon>
-                        <input type="email" id="email" name="txtEmail" value="" required placeholder="Digite seu Email" autocomplete="on" maxlength="100">
+                        <input type="email" id="email" name="txtEmail" value="" required placeholder="Digite seu Email"
+                            autocomplete="on" maxlength="100">
                     </div>
                     <div class="caixa">
                         <label>Celular: </label>
                         <ion-icon name="call-outline" class="icon-input-footer"></ion-icon>
-                        <input type="tel" id="telefone" name="txtCelular" value="" required onkeyup="mascaraCelular(this)" placeholder="Informe seu celular" maxlength="15">
+                        <input type="tel" id="telefone" name="txtCelular" value="" required
+                            onkeyup="mascaraCelular(this)" placeholder="Informe seu celular" maxlength="15">
                     </div>
                     <div id="button-footer">
                         <input type="submit" name="btnEnviar" value="Enviar">
                     </div>
                 </form>
-                
+
                 <div id="galeria-contatos-footer">
                     <img src="assets/img/twitter.png" alt="Twitter">
                     <img src="assets/img/slack.png" alt="Slack">
@@ -255,7 +264,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div id="criador-footer">
             <span>Todos os direitos reservados a BurguerGods</span>
         </div>

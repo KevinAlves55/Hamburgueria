@@ -1,0 +1,508 @@
+/* Quebra para Desktop */
+@media (max-width: 1340px) {
+
+    header {
+
+        #itens-header {
+
+            #nav {
+                width: 480px;
+        
+                ul {
+        
+                    li {
+                        font-size: map-get($size, grau5);
+                    }
+        
+                }
+            }
+        
+            #logo {
+        
+                img {
+                    @include tamanho(6.2rem, 6.3rem);
+                }
+        
+                h1 {
+                    font-size: map-get($size, subTitulo);
+                }
+        
+            }
+
+        }
+
+    }
+
+    #empresa {
+
+        #itens-empresa {
+            @include displayFlex(column, flex-start, center);
+
+            img {
+                @include tamanho(25rem, 30rem);
+                margin-top: 25px;
+            }
+
+            #informacoes-empresa {
+                margin-bottom: 25px;
+                
+                h2 {
+                    margin-top: 25px;
+                }
+
+                p {
+                    font-size: map-get($size, grau9);
+                }
+
+            }
+        }
+
+    }
+
+    main {
+
+        #itens-main {
+
+            #produtos {
+                @include displayFlex(row, center, flex-start);
+            }
+
+        }
+
+    }
+
+    #promocoes {
+
+        #itens-promocoes {
+            @include displayFlex(row, center, flex-start);
+        }
+
+    }
+    
+}
+
+/* Quebra para Tablet */
+@media (max-width: 1259px) {
+
+    header {
+
+        .itens-header {
+
+            #nav {
+                width: 435px;
+            }
+
+        }
+
+    }
+
+    main {
+
+        #itens-main {
+
+            #filtragem {
+                @include displayFlex(column, center, center);
+            }
+
+        }
+
+    }
+    
+    footer {
+
+        #itens-footer {
+            flex-wrap: wrap;
+            @include displayFlex(column, flex-start, center);       
+            
+            #contatos-footer {
+                margin-top: 8px;
+            }
+
+        }
+
+    }
+    
+}
+
+/* Quebra para Mobile */
+@media (max-width: 648px) {
+
+    header {
+        height: 80px;
+
+        #conteudo-midia {
+            height: 25px;
+
+            #contatos {
+                width: 250px;
+        
+                .midia {
+                    @include tamanho(0.9rem, 0.9rem);
+                }
+        
+                #telefone {
+                    width: 115px;
+        
+                    span {
+                        font-size: map-get($size, grau8);
+                    }
+                }
+        
+                #hora {
+                    display: none;
+                }
+            }
+        
+            #redes-sociais {
+                width: 90px;
+        
+                img {
+                    @include tamanho(1.2rem, 1.2rem);
+                }
+            }
+        }
+
+        #itens-header {
+
+            #logo {
+
+                img {
+                    @include tamanho(3.2rem, 3.3rem);
+                }
+        
+                h1 {
+                    font-size: map-get($size, grau6);
+                }
+        
+            }
+
+        }
+    }
+
+    main {
+
+        #itens-main {
+
+            #erro {
+                font-size: map-get($size, grau5);
+            }
+            
+            #filtragem {
+                width: 230px;
+                @include displayFlex(column, flex-start, flex-start);
+
+                #cardapio {
+                    width: 180px;
+                }
+
+            }
+
+        }
+
+    }
+
+    main #itens-main #filtragem #cardapio input:checked ~ label .menu {
+        @include tamanho(340px, 220px);
+    }
+
+    main #itens-main #filtragem #cardapio .menu {
+        @include tamanho(40px, 40px);
+    }
+
+    main #itens-main #filtragem #cardapio .menu .hamburger {
+        top: 19px;
+        left: 5px;
+    }
+
+    main #itens-main #filtragem #cardapio ul {
+        top: 293%;
+        left: 45%;
+        font-size: map-get($size, grau9);
+
+        li {
+            font-size: map-get($size, grau6);
+        }
+    }
+
+    main #itens-main #filtragem #buscar {
+        width: inherit;
+        margin-left: 0;
+        @include displayFlex(column, flex-start, center);
+        gap: 8px;
+
+        #search {
+            width: inherit;
+            font-size: .8rem;
+            padding: 5% 15%;
+        }
+
+        #pesquisar {
+            @include tamanho(45px, 100px);
+            font-size: .8rem;
+        }
+
+        img {
+            @include tamanho(0.9rem, 0.9rem);
+            top: 12px;
+        }
+    }
+
+    main #itens-main #filtragem #cardapio span {
+        font-size: map-get($size, grau6);
+    }
+
+    .cards {
+        @include tamanho(420px, 210px);
+
+        .card-nome {
+            height: 30px;
+
+            h3 {
+                font-size: map-get($size, grau6);
+            }
+        }
+
+        .card-descricao {
+            height: 90px;
+
+            p {
+                font-size: .7rem;
+            }
+        }
+
+        .informacoes {
+
+            button {
+                @include tamanho(35px, 100px);
+                font-size: map-get($size, grau8);
+            }
+
+            i {
+                font-size: .7rem;
+            }
+
+            span {
+                font-size: map-get($size, grau6);
+            }
+
+        }
+    }
+
+    #empresa {
+
+        #itens-empresa {
+            @include displayFlex(column, center, center);
+
+            img {
+                @include tamanho(10rem, 10rem);
+            }
+
+            #informacoes-empresa {
+                width: 220px;
+                height: 355px;
+                @include displayFlex(column, flex-start, flex-start);
+                gap: 25px;
+                margin-left: 0;
+
+                h2 {
+                    font-size: map-get($size, grau7);
+                }
+
+                p {
+                    font-size: .8rem;
+                }
+
+            }
+
+        }
+
+    }
+
+    .barra {
+        height: 250px;
+
+        h2 {
+            font-size: map-get($size, subTitulo);
+        }
+
+        span {
+            font-size: map-get($size, grau5);
+            text-align: center;
+        }
+
+        img {
+            @include tamanho(3rem, 3rem);
+            top: 18px;
+            right: 20px;
+        }
+
+    }
+
+    #destaques {
+        height: 370px;
+
+        .itens-destaque {
+
+            h2 {
+                height: 30px;
+                font-size: map-get($size, grau7);
+            }
+
+        }
+
+    }
+
+    .owl {
+        height: 300px;
+    }
+
+    .owl-track {
+        width: calc(250px * 15);
+        animation: scroll 25s linear infinite;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+    
+        100% {
+            transform: translateX(calc(-250px * 13.50));
+        }
+    }
+
+    .owl-img {
+        @include tamanho(250px, 250px);
+        padding: 10px;
+
+        img {
+            @include tamanho(100%, 100%);
+        }
+    }
+
+    .owl::before,
+    .owl::after {
+        width: 6%;
+    }
+
+    footer {
+
+        #itens-footer {
+            @include displayFlex(column, flex-start, flex-start);
+
+            .titulo-footer {
+                font-size: map-get($size, grau7);
+            }
+
+            #lojas-footer {
+                width: 220px;
+
+                .unidade {
+
+                    span {
+                        font-size: map-get($size, grau5);
+                    }
+
+                    .descricao {
+    
+                        img {
+                            @include tamanho(5.4rem, 5.4rem);
+                        }
+    
+                        p {
+                            font-size: .6rem;
+                        }
+    
+                    }
+
+                }
+            }
+
+            #contatos-footer {
+                width: 230px;
+
+                form {
+                    width: 230px;
+                    @include displayFlex(column, flex-start, flex-start);
+
+                    .caixa {
+                        width: 230px;
+                        
+                        label {
+                            font-size: map-get($size, grau5);
+                        }
+
+                        input {
+                            height: 35px;
+                            width: 135px;
+                            padding: 0 10px;
+                            font-size: map-get($size, grau8);
+                        }
+
+                        .icon-input-footer {
+                            display: none;
+                        }
+
+                    }
+
+                    #button-footer {
+                        
+                        input {
+                            width: 100px;
+                            height: 40px;
+                            font-size: .9rem;
+                        }
+
+                    }
+                }
+
+                #galeria-contatos-footer {
+                    width: inherit;
+                    height: 40px;
+
+                    img {
+                        @include tamanho(1.5rem, 1.5rem);
+                    }
+                }
+
+            }
+
+        }
+
+        #criador-footer {
+
+            span {
+                font-size: map-get($size, grau5);
+            }
+
+        }
+
+    }
+
+    [data-anime="right"] {
+        transform: translate3d(20px, 0, 0);
+    }
+
+    [data-anime="left"] {
+        transform: translate3d(-20px, 0, 0);
+    }
+    
+}
+
+/* Menu drop */
+@media (max-width: 1129px) {
+
+    header {
+
+        #itens-header {
+      
+            #nav {
+                display: none;
+            }
+
+        }
+
+    }
+    
+    
+}

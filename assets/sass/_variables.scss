@@ -3,6 +3,7 @@ $alaranjado: #C7491E;
 $amarelado: #e6bb1f;
 $neutra: #FFF;
 $escura: #1f1f1f;
+$Gradientt: linear-gradient(135deg, #C7491E, #e6bb1f);
 
 // Tamanho da letra
 $size: (
@@ -15,7 +16,9 @@ $size: (
     "grau6": 1.1rem,
     "grau7": 1.3rem,
     "grau8": 0.7rem,
-    "grau9": 1.2rem
+    "grau9": 1.2rem,
+    "normal": 1rem
+
 );
 
 // Densidade da letra
@@ -28,5 +31,5 @@ $densidade: (
 
 );
 
-// Box Shadow
-$box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+// Box Shadow padrão
+$boxShadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
